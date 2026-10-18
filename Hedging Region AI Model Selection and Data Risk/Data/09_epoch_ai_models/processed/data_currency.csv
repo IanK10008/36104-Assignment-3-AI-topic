@@ -1,0 +1,2 @@
+dataset,extracted_utc,data_covers_from,data_covers_to,snapshot_note,source_origin_note,source_update_frequency
+Epoch AI models table (ai_models.csv),2026-10-17T22:51:45Z,1950-07-02,2026-10-15,"live file downloaded in this run, so it is as current as the extraction day. The dates covered are the publication dates of the models in the table",Start of the table not recorded in our notes. Check the data page.,Updated daily according to the data page

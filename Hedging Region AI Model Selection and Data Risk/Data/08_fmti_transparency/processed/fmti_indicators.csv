@@ -1,0 +1,101 @@
+domain,subdomain,indicator,definition
+Upstream,Data Acquisition,Data acquisition methods,What methods does the developer use to acquire data used to build the model?
+Upstream,Data Acquisition,Public datasets,What are the top-5 sources (by volume) of publicly available datasets acquired for building the model?
+Upstream,Data Acquisition,Crawling,"If data collection involves web-crawling, what is the crawler name and opt-out protocol?"
+Upstream,Data Acquisition,Usage data used in training,What are the top-5 sources (by volume) of usage data from the developer's products and services that are used for building the model?
+Upstream,Data Acquisition,Notice of usage data used in training,"For the top-5 sources of usage data, how are users of these products and services made aware that this data is used for building the model?"
+Upstream,Data Acquisition,Licensed data sources,What are the top-5 sources (by volume) of licensed data acquired for building the model?
+Upstream,Data Acquisition,Licensed data compensation,"For each of the top-5 sources of licensed data, are details related to compensation disclosed?"
+Upstream,Data Acquisition,New human-generated data sources,What are the top-5 sources (by volume) of new human-generated data for building the model?
+Upstream,Data Acquisition,Instructions for data generation,"For each of the top-5 sources of human-generated data, what instructions does the developer provide for data generation?"
+Upstream,Data Acquisition,Data laborer practices,"For the top-5 sources of human-generated data, how are laborers compensated, where are they located, and what labor protections are in place?"
+Upstream,Data Acquisition,Synthetic data sources,What are the top-5 sources (by volume) of synthetic data acquired for building the model?
+Upstream,Data Acquisition,Synthetic data purpose,"For the top-5 sources of synthetically generated data, what is the primary purpose for data generation?"
+Upstream,Data Processing,Data processing methods,What are the methods the developer uses to process acquired data to determine the data directly used in building the model?
+Upstream,Data Processing,Data processing purpose,"For each data processing method, what is its primary purpose?"
+Upstream,Data Processing,Data processing techniques,"For each data processing method, how does the developer implement the method?"
+Upstream,Data Properties,Data size,Is the size of the data used in building the model disclosed?
+Upstream,Data Properties,Data language composition,"For all text data used in building the model, what is the composition of languages?"
+Upstream,Data Properties,Data domain composition,"For all the data used in building the model, what is the composition of domains covered in the data?"
+Upstream,Data Properties,External data access,Does a third-party have direct access to the data used to build the model?
+Upstream,Data Properties,Data replicability,Is the data used to build the model described in enough detail to be externally replicable?
+Upstream,Compute,Compute usage for final training run,Is the amount of compute used in the model's final training run disclosed?
+Upstream,Compute,Compute usage including R&D,"Is the amount of compute used to build the model, including experiments, disclosed?"
+Upstream,Compute,Development duration for final training run,Is the amount of time required to build the model disclosed?
+Upstream,Compute,Compute hardware for final training run,"For the primary hardware used to build the model, is the amount and type of hardware disclosed?"
+Upstream,Compute,Compute provider,Is the compute provider disclosed?
+Upstream,Compute,Energy usage for final training run,Is the amount of energy expended in building the model disclosed?
+Upstream,Compute,Carbon emissions for final training run,Is the amount of carbon emitted in building the model disclosed?
+Upstream,Compute,Water usage for final training run,Is the amount of clean water used in building the model disclosed?
+Upstream,Compute,Internal compute allocation,How is compute allocated across the teams building and working to release the model?
+Upstream,Methods,Model stages,Are all stages in the model development process disclosed?
+Upstream,Methods,Model objectives,"For all stages that are described, is there a clear description of the associated learning objectives or a clear characterization of the nature of this update to the model?"
+Upstream,Methods,Code access,Does the developer release code that allows third-parties to train and run the model?
+Upstream,Other resources,Organization chart,How are employees developing and deploying the model organized internally?
+Upstream,Other resources,Model cost,What is the cost of building the model?
+Model,Model information,Basic model properties,Are all basic model properties disclosed?
+Model,Model information,Deeper model properties,Is a detailed description of the model architecture disclosed?
+Model,Model information,Model dependencies,Is the model(s) the model is derived from disclosed?
+Model,Model information,Benchmarked inference,Is the compute and time required for model inference disclosed for a clearly-specified task on clearly-specified hardware?
+Model,Model access,Researcher credits,Is a protocol for granting external entities API credits for the model disclosed?
+Model,Model access,Specialized access,Does the developer disclose if it provides specialized access to the model?
+Model,Model access,Open weights,Are the model's weights openly released?
+Model,Model access,Agent Protocols,Are the agent protocols supported for the model disclosed?
+Model,Capabilities,Capabilities taxonomy,Are the specific capabilities or tasks that were optimized for during post-training disclosed?
+Model,Capabilities,Capabilities evaluation,Does the developer evaluate the model's capabilities prior to its release and disclose them concurrent with release?
+Model,Capabilities,External reproducibility of capabilities evaluation,Are code and prompts that allow for an external reproduction of the evaluation of model capabilities disclosed?
+Model,Capabilities,Train-test overlap,Does the developer measure and disclose the overlap between the training set and the dataset used to evaluate model capabilities?
+Model,Risks,Risks taxonomy,Are the risks considered when developing the model disclosed?
+Model,Risks,Risks evaluation,Does the developer evaluate the model's risks prior to its release and disclose them concurrent with release?
+Model,Risks,External reproducibility of risks evaluation,Are code and prompts to allow for an external reproduction of the evaluation of model risks disclosed?
+Model,Risks,Pre-deployment risk evaluation,Are the external entities have evaluated the model pre-deployment disclosed?
+Model,Risks,External risk evaluation,Are the parties contracted to evaluated model risks disclosed?
+Model,Model Mitigations,Mitigations taxonomy,Are the post-training mitigations implemented when developing the model disclosed?
+Model,Model Mitigations,Mitigations taxonomy mapped to risk taxonomy,Does the developer disclose how the post-training mitigations map onto the taxonomy of risks?
+Model,Model Mitigations,Mitigations efficacy,Does the developer evaluate and disclose the impact of post-training mitigations?
+Model,Model Mitigations,External reproducibility of mitigations evaluation,Are code and prompts to allow for an external reproduction of the evaluation of post-training mitigations disclosed?
+Model,Model Mitigations,Model theft prevention measures,Does the developer disclose the security measures used to prevent unauthorized copying (“theft”) or unauthorized public release of the model weights?
+Model,Release,Release stages,Are the stages of the model's release disclosed?
+Model,Release,Risk thresholds,Are risk thresholds disclosed?
+Model,Release,Versioning protocol,Is there a disclosed protocol for versioning and deprecation of the model?
+Model,Release,Change log,Is there a disclosed change log for the model?
+Model,Release,Foundation model roadmap,"Is a forward-looking roadmap for upcoming models, features, or products disclosed?"
+Model,Release,Top distribution channels,Are the top-5 distribution channels for the model disclosed?
+Model,Release,Quantization,Is the quantization of the model served to customers in the top-5 distribution channels disclosed?
+Model,Release,Terms of use,Are the terms of use of the model disclosed?
+Downstream,Usage data,Distribution channels with usage data,What are the top-5 distribution channels for which the developer has usage data?
+Downstream,Usage data,Amount of usage,"For each of the top-5 distribution channels, how much usage is there?"
+Downstream,Usage data,Classification of usage data,"Is a representative, anonymized dataset classifying queries into usage categories disclosed?"
+Downstream,Usage data,Data retention and deletion policy,Is a policy for data retention and deletion disclosed?
+Downstream,Usage data,Geographic statistics,"Across all forms of downstream use, are statistics of model usage across geographies disclosed?"
+Downstream,Impact,Internal products and services,What are the top-5 internal products or services using the model?
+Downstream,Impact,External products and services,What are the top-5 external products or services using the model?
+Downstream,Impact,Users of internal products and services,How many monthly active users are there for each of the top-5 internal products or services using the model?
+Downstream,Impact,Consumer/enterprise usage,"Across all distribution channels for which the developer has usage data, what portion of usage is consumer versus enterprise?"
+Downstream,Impact,Enterprise users,"Across all distribution channels for which the developer has usage data, what are the top-5 enterprises that use the model?"
+Downstream,Impact,Government use,What are the 5 largest government contracts for use of the model?
+Downstream,Impact,Benefits Assessment,Is an assessment of the benefits of deploying the model disclosed?
+Downstream,Post-deployment monitoring,AI bug bounty,Does the developer operate a public bug bounty or vulnerability reward program under which the model is in scope?
+Downstream,Post-deployment monitoring,Responsible disclosure policy,Does the developer clearly define a process by which external parties can disclose model vulnerabilities or flaws?
+Downstream,Post-deployment monitoring,Safe harbor,Does the developer disclose its policy for legal action against external evaluators conducting good-faith research?
+Downstream,Post-deployment monitoring,Security incident reporting protocol,Are major security incidents involving the model disclosed?
+Downstream,Post-deployment monitoring,Misuse incident reporting protocol,Are misuse incidents involving the model disclosed?
+Downstream,Post-deployment monitoring,Post-deployment coordination with government,Does the developer coordinate evaluation with government bodies?
+Downstream,Post-deployment monitoring,Feedback mechanisms,"Does the developer disclose a way to submit user feedback? If so, is a summary of major categories of feedback disclosed?"
+Downstream,Model Behavior Policy,"Permitted, restricted, and prohibited model behaviors","Are model behaviors that are permitted, restricted, and prohibited disclosed?"
+Downstream,Model Behavior Policy,Model response characteristics,Are desired model response characteristics disclosed?
+Downstream,Model Behavior Policy,System prompt,Is the default system prompt for at least one distribution channel disclosed?
+Downstream,Model Behavior Policy,Intermediate tokens,Are intermediate tokens used to generate model outputs available to end users?
+Downstream,Downstream mitigations,Internal product and service mitigations,"For internal products or services using the model, are downstream mitigations against adversarial attacks disclosed?"
+Downstream,Downstream mitigations,External developer mitigations,Does the developer provide built-in or recommended mitigations against adversarial attacks for downstream developers?
+Downstream,Downstream mitigations,Enterprise mitigations,Does the developer disclose additional or specialized mitigations for enterprise users?
+Downstream,Downstream mitigations,Detection of machine-generated content,Are mechanisms that are used for detecting content generated by this model disclosed?
+Downstream,Downstream mitigations,Documentation for responsible use,Does the developer provide documentation for responsible use by downstream developers?
+Downstream,Acceptable use policy,Permitted and prohibited users,Is a description of who can and cannot use the model on the top-5 distribution channels disclosed?
+Downstream,Acceptable use policy,"Permitted, restricted, and prohibited uses","Which uses are explicitly allowed, conditionally permitted, or strictly disallowed under the acceptable use policy for the top-5 distribution channels?"
+Downstream,Acceptable use policy,AUP enforcement process,What are the methods used by the developer to enforce the acceptable policy?
+Downstream,Acceptable use policy,AUP enforcement frequency,Are statistics on the developer's AUP enforcement disclosed?
+Downstream,Acceptable use policy,Regional policy variations,Are differences in the developer's acceptable use or model behavior policy across geographic regions disclosed?
+Downstream,Accountability,Oversight mechanism,Does the developer have an internal or external body that reviews core issues regarding the model prior to deployment?
+Downstream,Accountability,Whistleblower protection,Does the developer disclose a whistleblower protection policy?
+Downstream,Accountability,Government commitments,What commitments has the developer made to government bodies?

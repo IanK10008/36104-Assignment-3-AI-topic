@@ -1,0 +1,10 @@
+{
+  "benchmark_data": {
+    "url": "https://epoch.ai/data/benchmark_data.zip",
+    "file": "benchmark_data.zip",
+    "how": "downloaded",
+    "retrieved_utc": "2026-10-17T22:31:52Z",
+    "bytes": 2401416,
+    "sha256": "cac0542a839ec7230734087fcc65ddbf8edfb094ea9b09989974d0dd0b1f10c0"
+  }
+}

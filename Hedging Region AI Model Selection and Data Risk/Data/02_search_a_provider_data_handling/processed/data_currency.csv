@@ -1,0 +1,2 @@
+dataset,extracted_utc,data_covers_from,data_covers_to,snapshot_note,source_origin_note,source_update_frequency
+Search A provider data handling (provider_data_handling.csv),2026-10-17T22:27:45Z,2024-05-15,2026-10-16,"hand-built table, pages read on 2026-10-16. data_covers_from and data_covers_to show the oldest policy date (2024 for the DeepSeek app policy) and the viewing day. The running of this notebook adds nothing new",Each row's policy_date is the date printed on the provider page,"None. Re-read the pages before submission, policies change"

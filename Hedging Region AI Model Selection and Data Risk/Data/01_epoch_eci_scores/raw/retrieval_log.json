@@ -1,0 +1,10 @@
+{
+  "eci_scores": {
+    "url": "https://epoch.ai/data/eci_scores.csv",
+    "file": "eci_scores.csv",
+    "how": "downloaded",
+    "retrieved_utc": "2026-10-17T22:27:32Z",
+    "bytes": 34152,
+    "sha256": "2f47e90bef5a2559a0acc08aa65d4d98064c04b7fa964428746fa421e8399109"
+  }
+}

@@ -1,0 +1,61 @@
+column,share_filled,example
+Model,1.0,Muse Spark Open
+Domain,0.98,"Language,Multimodal,Vision,Audio,Video"
+Task,0.972,"Language modeling/generation,Question answering"
+Organization,0.979,Meta AI
+Authors,0.743,"Xin Cheng, Xin Liu, Xin Xie, Xinbo Xu, Xingchao Liu, Xingche"
+Publication date,0.997,2026-10-15
+Reference,0.954,Gemini 4 Argon: our next era of frontier intelligence
+Link,0.989,"https://research.meta.ai/blog/muse-spark-open
+https://dev.me"
+Citations,0.409,308.0
+Notability criteria,0.304,Discretionary
+Notability criteria notes,0.238,SOTA through perfect score on MedQA.
+Parameters,0.646,2100000000.0
+Parameters notes,0.529,"Not confirmed in official release but Elon said ""Grok 4.7 wi"
+Training compute (FLOP),0.389,4.32e+24
+Training compute notes,0.459,(Pre-training) - 6 * 16e9 active parameters * 45e12 tokens =
+Training dataset size (total),0.396,45000000000000
+Dataset size notes,0.474,"~12.5 trillion pretraining tokens, measured with the Motif t"
+Training time (hours),0.153,5760.0
+Training time notes,0.168,"""Each model seed took roughly 6.7 days of wall clock time to"
+Training hardware,0.328,NVIDIA H200
+Approach,0.087,"Supervised fine-tuning (SFT),Reinforcement learning"
+Confidence,0.946,Confident
+Abstract,0.853,Gemini 4 Argon delivers frontier performance in complex work
+Epochs,0.223,1.0
+WikiText and Penn Treebank data,0.111,LLaMA-7B (LoRA finetuned)
+Model accessibility,0.767,Open weights (restricted use)
+Country (of organization),0.976,United States of America
+Base model,0.191,Kimi K2.6
+Finetune compute (FLOP),0.072,2.78256e+24
+Finetune compute notes,0.084,"
+"
+Hardware quantity,0.235,1300.0
+Hardware utilization (MFU),0.017,0.283
+Last modified,1.0,2026-10-15 18:37:45+00:00
+Training cloud compute vendor,0.015,Cirrascale Cloud Services
+Training data center,0.019,"Ai2 Jupiter, Austin, Texas"
+Archived links,0.007,Yi-34B
+Batch size,0.069,8000.0
+Batch size notes,0.054,"Multi-stage training strategy:
+    Pre-training Stage 1 (Mai"
+Organization categorization,0.973,Industry
+Foundation model,0.022,True
+Training compute lower bound,0.007,1.152e+24
+Training compute upper bound,0.012,2.3e+25
+Training chip-hours,0.059,50000.0
+Training code accessibility,0.666,Unreleased
+Accessibility notes,0.495,"Available by application only, citing dual-use concerns."
+Possibly over 1e23 FLOP,0.144,True
+Training compute cost (2023 USD),0.062,12400000.0
+Utilization notes,0.024,"Abstract says: ""We achieve 47% Model FLOPs Utilization (MFU)"
+Numerical format,0.101,NVFP4
+Frontier model,0.038,True
+Training power draw (W),0.214,232668778.57984325
+Training compute estimation method,0.398,Reported
+Hugging Face developer id,0.184,deepseek-ai
+Post-training compute (FLOP),0.001,1.8874368e+22
+Post-training compute notes,0.001,Under SFT training details we have 25k steps and 4.2M tokens
+Hardware utilization (HFU),0.007,0.927
+Open model weights?,0.766,Yes

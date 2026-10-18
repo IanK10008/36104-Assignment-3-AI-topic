@@ -1,0 +1,2 @@
+dataset,extracted_utc,data_covers_from,data_covers_to,snapshot_note,source_origin_note,source_update_frequency
+LiteLLM price file (model_price.csv),2026-10-17T22:27:59Z,not stated in the data,2026-10-17,"live file on the main branch, downloaded in this run, so it is as current as the extraction day. The file carries no date of its own. Deprecation dates inside it run from 2024-08-22 to 2028-05-20",Community repository. The first commit date of the price file was not recorded in our notes.,"Continuous, many commits per week"

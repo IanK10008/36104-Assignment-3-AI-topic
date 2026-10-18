@@ -1,0 +1,10 @@
+{
+  "litellm_prices": {
+    "url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
+    "file": "model_prices_and_context_window.json",
+    "how": "downloaded",
+    "retrieved_utc": "2026-10-17T22:27:57Z",
+    "bytes": 2913683,
+    "sha256": "54a0d9c0112817b1c2793dc9441248d4253d162c60859a3f57694950fc724868"
+  }
+}

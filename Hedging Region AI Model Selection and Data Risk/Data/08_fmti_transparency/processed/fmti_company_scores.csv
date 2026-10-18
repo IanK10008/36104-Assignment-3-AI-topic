@@ -1,0 +1,14 @@
+developer,total_score,total_pct,upstream_score,model_score,downstream_score,rank,hq_country,is_china_based
+IBM,95,95.0,34,28,33,1,United States,False
+Writer,72,72.0,24,18,30,2,United States,False
+AI21 Labs,66,66.0,18,21,27,3,Israel,False
+Anthropic,46,46.0,3,17,26,4,United States,False
+Google,41,41.0,8,13,20,5,United States,False
+Amazon,39,39.0,6,15,18,6,United States,False
+OpenAI,35,35.0,1,13,21,7,United States,False
+DeepSeek,32,32.0,11,14,7,8,China,True
+Meta,31,31.0,7,12,12,9,United States,False
+Alibaba,26,26.0,6,12,8,10,China,True
+Mistral,18,18.0,0,6,12,11,France,False
+Midjourney,14,14.0,0,5,9,12,United States,False
+xAI,14,14.0,1,5,8,12,United States,False

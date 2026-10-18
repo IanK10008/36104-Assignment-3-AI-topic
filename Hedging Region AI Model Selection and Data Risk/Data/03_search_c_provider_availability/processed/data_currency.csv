@@ -1,0 +1,2 @@
+dataset,extracted_utc,data_covers_from,data_covers_to,snapshot_note,source_origin_note,source_update_frequency
+Search C provider availability (provider_availability.csv),2026-10-17T22:27:51Z,2026-04-14,2026-10-16,"hand-built table, pages read on 2026-10-16. Oldest page date is shown. OpenAI, Anthropic and Alibaba pages show no date",Each page's own last-updated date is in page_date where shown,"None. Re-check before submission, several pages changed during 2026"

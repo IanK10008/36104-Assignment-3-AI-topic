@@ -1,0 +1,2 @@
+dataset,extracted_utc,data_covers_from,data_covers_to,snapshot_note,source_origin_note,source_update_frequency
+Stanford FMTI December 2025 (fmti_company_scores.csv),2026-10-17T22:51:37Z,2025-12,2025-12,One edition of the index (December 2025). Scores are fixed for that edition and do not change when the repository is downloaded again,"First edition October 2023, second May 2024, third December 2025 (13 developers). The repository README gives the history","Irregular, roughly one edition per year"

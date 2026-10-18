@@ -1,0 +1,18 @@
+{
+  "lmarena_manual_latest-00000-of-00001": {
+    "url": "manual file, see Section 4",
+    "file": "latest-00000-of-00001.parquet",
+    "how": "manual file in Data/raw/lmarena",
+    "retrieved_utc": "2026-10-17T21:55:03Z",
+    "bytes": 613695,
+    "sha256": "1735d8b7e31781eae4433c4ab32c642868dde6bb755d3367f37e51e1094d7a95"
+  },
+  "lmarena_text_latest_0": {
+    "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset/resolve/refs%2Fconvert%2Fparquet/text/latest/0000.parquet",
+    "file": "lmarena_text_latest_0.parquet",
+    "how": "downloaded",
+    "retrieved_utc": "2026-10-17T22:31:32Z",
+    "bytes": 613695,
+    "sha256": "1735d8b7e31781eae4433c4ab32c642868dde6bb755d3367f37e51e1094d7a95"
+  }
+}

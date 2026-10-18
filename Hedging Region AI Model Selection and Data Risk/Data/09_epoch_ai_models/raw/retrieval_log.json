@@ -1,0 +1,10 @@
+{
+  "all_ai_models": {
+    "url": "https://epoch.ai/data/all_ai_models.csv",
+    "file": "all_ai_models.csv",
+    "how": "downloaded",
+    "retrieved_utc": "2026-10-17T22:51:43Z",
+    "bytes": 6827261,
+    "sha256": "4b4a48302d88bf0753c0e8dc0f89ee129c5cf44921cfe21d7851ca79942d5edd"
+  }
+}

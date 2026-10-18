@@ -1,0 +1,2 @@
+dataset,extracted_utc,data_covers_from,data_covers_to,snapshot_note,source_origin_note,source_update_frequency
+Epoch benchmark scores (benchmark_scores.csv),2026-10-17T22:32:04Z,2019-11-05,2026-10-15,archive downloaded in this run,Dates cover the release dates of the evaluated models. The README in the archive is dated 2026-10 in its BibTeX entry. Start date of the Hub not recorded in our notes.,"Irregular, as new runs are added"
