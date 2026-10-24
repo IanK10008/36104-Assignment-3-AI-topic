@@ -1,0 +1,115 @@
+schema_version: 2
+dashboard:
+  title: Population change in Australia and New Zealand
+  subject: world_development_indicators
+  question: How did the populations of Australia and New Zealand change from 2019
+    to 2023?
+  audience: Interested non-specialists
+  entrypoint: app.py
+  pages: []
+  sample_environment_variable: DASHBOARD_SAMPLE_MODE
+sources:
+- id: world_bank_population
+  publisher: World Bank
+  title: 'World Development Indicators: Population, total (SP.POP.TOTL)'
+  url: https://api.worldbank.org/v2/country/AUS;NZL/indicator/SP.POP.TOTL?format=json
+  licence: Creative Commons Attribution 4.0
+  retrieved: '2026-09-04'
+  cadence: Annual with revisions
+  status: snapshot
+  notes: The sample is a documented subset of the API response for 2019-2023.
+datasets:
+- id: population
+  source_ids:
+  - world_bank_population
+  sample: data/sample.csv
+  processed_output: data/processed.csv
+  format: csv
+  date_column: date
+  primary_key:
+  - date
+  - country_code
+  minimum_rows: 10
+  latest_observation: '2023-12-31'
+  columns:
+    date:
+      type: date
+      role: time
+      nullable: false
+      date_minimum: '2019-01-01'
+      date_maximum: '2023-12-31'
+    country_code:
+      type: string
+      role: geography
+      nullable: false
+      allowed_values:
+      - AUS
+      - NZL
+    country:
+      type: string
+      role: geography
+      nullable: false
+      allowed_values:
+      - Australia
+      - New Zealand
+    population:
+      type: integer
+      role: measure
+      nullable: false
+      unit: people
+      minimum: 0
+      maximum: 100000000
+    unit:
+      type: string
+      role: dimension
+      nullable: false
+      allowed_values:
+      - people
+views:
+- id: population_trend
+  dataset_id: population
+  page: app.py
+  title: Population trend
+  unit: people
+  source_ids:
+  - world_bank_population
+  controls:
+  - key: country_filter
+    type: multiselect
+    label: Countries
+    default_value:
+    - Australia
+    - New Zealand
+    test_value:
+    - Australia
+    expected_text: 'Selected: Australia'
+    empty_test_value: []
+    empty_expected_text: No observations match the selected filters.
+    filter:
+      column: country
+      operator: isin
+  outputs:
+  - chart
+  - metric
+  - download
+pipeline:
+  acquisition_method: script
+  acquisition_path: src/data.py
+  transform_command:
+  - python
+  - -m
+  - src.data
+  download_declared: true
+  download_label: Download filtered data
+  date_label: Latest observation
+topic_integrity:
+  indicator_codes:
+  - SP.POP.TOTL
+  original_source_organizations:
+  - National statistical offices
+  - United Nations Population Division
+  - World Bank
+  latest_observation_year: 2023
+  indicator_definition: Total population is based on the de facto definition of population.
+  aggregation_method: No cross-country aggregation is used.
+  classification_vintage: Not applicable to the selected comparison.
