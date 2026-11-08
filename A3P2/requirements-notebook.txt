@@ -1,0 +1,7 @@
+# Extra packages for running the eci_scores notebooks (not needed to run the app).
+# Install the app packages first: pip install -r requirements.txt
+requests==2.34.2
+nbconvert==7.17.2
+ipykernel==7.4.0
+nbformat==5.11.1
+openpyxl==3.1.5
