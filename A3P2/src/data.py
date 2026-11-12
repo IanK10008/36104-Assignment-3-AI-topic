@@ -122,17 +122,21 @@ MATCH_STATUSES = (
 )
 
 # Documented coverage and plausibility bounds checked by validate().
-RELEASE_DATE_RANGE = ("2023-02-24", "2026-10-07")
+# The end date is a guard against parsing errors, not the latest model of a snapshot,
+# so that a refreshed Epoch download passes. The latest release date is read from the data.
+RELEASE_DATE_RANGE = ("2023-02-24", "2030-12-31")
 # ECI is a positive score: the frontier is about 170, while 24 older models in
 # this snapshot score below 100 (lowest 56), so 0..200 (not 100..200) is the
 # bound that catches unit or parsing errors without rejecting real rows.
 ECI_RANGE = (0.0, 200.0)
 ARENA_RANGE = (800.0, 1700.0)
-# Headline counts quoted in the dashboard: models released in 2025-2026 that
+# Headline counts of the 17 Oct 2026 snapshot: models released in 2025-2026 that
 # match in all three sources (with or without a stripped tag) / by same name.
+# They are kept as a reference only. A refreshed download changes them, so validate()
+# no longer requires them and only checks that the counts are plausible.
 RECENT_YEARS = (2025, 2026)
-EXPECTED_RECENT_ALL_THREE = 84
-EXPECTED_RECENT_SAME_NAME = 44
+SNAPSHOT_RECENT_ALL_THREE = 84
+SNAPSHOT_RECENT_SAME_NAME = 44
 
 # Only empty fields are missing; text such as "NA" stays text.
 RAW_READ_OPTIONS = {"keep_default_na": False, "na_values": [""]}
@@ -517,11 +521,10 @@ def validate(frame: pd.DataFrame) -> None:
     recent = frame.loc[pd.to_numeric(frame["release_year"]).between(*RECENT_YEARS), "match_status"]
     all_three = int(recent.isin([ALL_SAME, ALL_TAG]).sum())
     same_name = int(recent.eq(ALL_SAME).sum())
-    if (all_three, same_name) != (EXPECTED_RECENT_ALL_THREE, EXPECTED_RECENT_SAME_NAME):
+    if all_three == 0 or same_name > all_three:
         raise ValueError(
-            f"Expected {EXPECTED_RECENT_ALL_THREE} three-way matches "
-            f"({EXPECTED_RECENT_SAME_NAME} by same name) for {RECENT_YEARS[0]}-"
-            f"{RECENT_YEARS[1]} releases, found {all_three} ({same_name})"
+            f"Implausible three-way matches for {RECENT_YEARS[0]}-{RECENT_YEARS[1]} releases: "
+            f"{all_three} in all three sources, {same_name} by same name"
         )
 
 

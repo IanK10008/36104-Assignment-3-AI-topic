@@ -1,0 +1,2 @@
+dataset,extracted_utc,data_covers_from,data_covers_to,snapshot_note,source_origin_note,source_update_frequency
+LMArena text leaderboard (lmarena_ratings.csv),2026-11-12T19:08:13Z,2026-11-09,2026-11-09,"latest split. The data is one leaderboard snapshot, so it covers the single publish date shown. Votes behind it accumulate over time before that date",Start date of LMArena votes not recorded in our notes. Check the dataset page.,"Leaderboard snapshots are published periodically, the dataset page shows the latest"
