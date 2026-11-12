@@ -20,6 +20,8 @@ for _key in list(st.session_state):
 shell.header()
 
 PAGES = [
+    st.Page("stories/1a_ranked_shortlist/page.py", title="1a · Shortlist: capability for the price",
+            url_path="shortlist"),
     st.Page("stories/1b_licence_route/page.py", title="1b · Self-hosting: what the licence allows",
             url_path="licence"),
     st.Page("stories/2_gap_to_us_models/page.py", title="2 · Waiting for US access: the gap",

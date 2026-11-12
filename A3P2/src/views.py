@@ -8,7 +8,7 @@ filtered records, CSV download, sources and latest-observation line.
 from __future__ import annotations
 
 import math
-from pathlib import Path
+import textwrap
 
 import numpy as np
 import pandas as pd
@@ -17,6 +17,7 @@ import streamlit as st
 
 from src import analysis as an
 from src import data
+from src import snapshot
 
 # Okabe-Ito colours (safe for colour vision deficiency). Route colours are used in View 1,
 # criterion colours in View 2, and never swap meaning.
@@ -63,6 +64,21 @@ def money(value: float) -> str:
     return f"${value:,.2f}"
 
 
+DATE_COLUMN = {"Release date": st.column_config.DateColumn("Release date", format="D MMM YYYY")}
+
+
+def facts(items) -> None:
+    """A row of separate facts, each a label with a large value (like the counts at the top of the page), instead of one long line of text."""
+    for col, (label, value) in zip(st.columns(len(items)), items):
+        col.metric(label, value)
+
+
+def date_text(value) -> str:
+    """A date as day, month name and year, for example 20 Aug 2026 (the data files keep YYYY-MM-DD)."""
+    ts = pd.Timestamp(str(value)[:10])
+    return f"{ts.day} {ts:%b %Y}"
+
+
 def help_button(title: str, body: str) -> None:
     with st.popover(f"? {title}"):
         st.markdown(body)
@@ -98,7 +114,11 @@ def records(frame: pd.DataFrame, columns: list[str], key: str, file_name: str, n
     table = frame[columns].rename(columns=RECORD_COLUMNS)
     with st.expander("**Filtered records** (the rows behind this chart)"):
         st.caption(f"{len(table):,} models match the current selection. {note} The CSV download holds the same rows.")
-        st.dataframe(table, hide_index=True, height=min(35 * (len(table) + 1) + 3, 390), key=f"{key}_table")
+        shown = table.copy()
+        if "Release date" in shown:
+            shown["Release date"] = pd.to_datetime(shown["Release date"].astype(str).str[:10], errors="coerce")
+        st.dataframe(shown, hide_index=True, height=min(35 * (len(table) + 1) + 3, 390), key=f"{key}_table",
+                     column_config=DATE_COLUMN)
     st.download_button(DOWNLOAD_LABEL, data=table.to_csv(index=False).encode("utf-8"), file_name=file_name,
                        mime="text/csv", key=f"{key}_download")
 
@@ -107,7 +127,7 @@ def axis_style(fig: go.Figure, height: int, x_title: str, y_title: str) -> None:
     fig.update_layout(width=CHART_W, height=height, plot_bgcolor="white", paper_bgcolor="white",
                       margin={"l": 70, "r": 20, "t": 20, "b": 60}, showlegend=False,
                       font={"family": "Arial, sans-serif", "size": 12, "color": INK},
-                      hoverlabel={"bgcolor": "white", "font": {"size": 12, "color": INK}})
+                      hoverlabel={"bgcolor": "white", "align": "left", "font": {"size": 12, "color": INK}})
     fig.update_xaxes(title_text=x_title, showgrid=True, gridcolor=GRID, zeroline=False, linecolor="#9aa1a9",
                      ticks="outside")
     fig.update_yaxes(title_text=y_title, showgrid=True, gridcolor=GRID, zeroline=False, linecolor="#9aa1a9",
@@ -129,9 +149,9 @@ CRITIC_HELP = """
 
 - **Idea:** a criterion earns more weight when it differs most from the other criteria, because it then adds
   new information that the other criteria lack.
-- **In this data:** price usually moves against capability and preference, since stronger models tend to cost more,
+- **Typical weights:** price usually moves against capability and preference, since stronger models tend to cost more,
   so price tends to receive the largest weight. Capability and preference agree closely, so they share the rest.
-- **Reading the weights:** they describe the data, and the priorities of the committee are expressed with Custom
+- **Interpretation:** the weights describe the data, and the priorities of the committee are expressed with Custom
   weights.
 - **Numbers:** the table under "Show the CRITIC calculation" lists the spread and the correlations behind each weight.
 """
@@ -192,32 +212,59 @@ def weight_controls(pct: pd.DataFrame, prefix: str = "",
 # --------------------------------------------------------------------------- #
 # View 1: cost against capability
 # --------------------------------------------------------------------------- #
+# {EXAMPLE} in the text below is filled in by frontier_example() from the data in use
 V1_HOW = """
-- **Each dot is one model** with a LiteLLM price. Right = more expensive (log scale: each grid step is about 3 times
-  the price). Up = more capable on the Epoch Capabilities Index.
-- **Colour** is the route: blue models have downloadable weights and can be self-hosted, orange are API only, grey
-  are other or unknown.
-- **The black step line is the price frontier:** Walking from left to right, a model joins the line only when it is
+- **Dots:** each dot is one model with a LiteLLM price. The further right, the higher the price (log scale, so each grid
+  step is about 3 times the price). The higher up, the more capable the model is on the ECI.
+- **Colour:** the route. Blue models have downloadable weights and can be self-hosted, orange models are API only, grey
+  models are other or unknown.
+- **Price frontier:** the black step line. Walking from left to right, a model joins the line only when it is
   stronger than every cheaper model. Nothing is both cheaper and stronger than a model on the line. A dot far below
   the line is beaten on both price and capability by a model on it.
-- **Ringed dots** are also on LMArena, so they are in the ranking of View 2.
-- **Labels** name the models on the price frontier with their capability and price. Every dot has the same size, so
+  - *Example:* {EXAMPLE}
+  - *No winner on the line:* models on the line are not ranked against each other. A cheaper one gives less
+    capability and a stronger one costs more, so the right choice depends on the budget.
+- **Labels:** the models on the price frontier are named with their capability and price. Every dot has the same size, so
   the chart shows only how capability and price relate. The weighted ranking is in View 2.
-- Values without hovering: every labelled model is listed with its numbers in the table under the chart.
+- **Values:** every labelled model is listed with its numbers in the table under the chart.
 """
 
 V1_LIMITS = """
-- **A gap of a few points may mean nothing:** Each Epoch score has a 90% interval, typically 4 to 5 points wide for
-  2026 models, and neighbouring models overlap.
-- **Price is not cost:** It is the median list price per million output tokens across provider rows on one day. It
+- **Small ECI gaps:** a gap of a few points may mean nothing. Each ECI score has a 90% interval, typically {CI} ECI
+  points wide for 2026 models, and neighbouring models overlap.
+- **Price basis:** the price is the median list price per million output tokens across provider rows on one day. It
   leaves out input and cached tokens, batch discounts, regional premiums, enterprise rates and self-hosting costs.
-  Reasoning models produce many more (billed) tokens per answer, so a cheaper token can cost more per task.
-- **Best setting against base price:** Epoch keeps each model's best result across settings such as high reasoning
+  Reasoning models produce many more billed tokens per answer, so a cheaper token can cost more per task.
+- **Setting mismatch:** Epoch keeps each model's best result across settings such as high reasoning
   effort, while the price is the base model's list price.
 - **Not measured:** where a provider is offered (the restriction is the premise of the story), licence terms beyond
   "open weights", data handling, and usefulness for the bank's own tasks.
-- **Unclear versions are left out** (one price row could belong to several dated Epoch versions).
+- **Unclear versions:** one price row could belong to several dated Epoch versions, so these models are left out.
 """
+
+
+def frontier_example(points: pd.DataFrame) -> str:
+    """One pair from the data in use: a model on the price frontier and the closest model that costs a little more
+    and scores less, so it lies below the line. Written for the "How to read this chart" text."""
+    front = an.price_frontier(points).sort_values("output_price_usd_per_million")
+    rest = points.loc[~points["model"].isin(front["model"])]
+    best = None
+    for row in rest.itertuples():
+        cheaper = front.loc[front["output_price_usd_per_million"] <= row.output_price_usd_per_million]
+        if cheaper.empty:
+            continue
+        line = cheaper.iloc[-1]
+        ratio = row.output_price_usd_per_million / line["output_price_usd_per_million"]
+        if ratio >= 1.1 and row.eci < line["eci"]:
+            key = (ratio, -row.eci)
+            if best is None or key < best[0]:
+                best = (key, line, row)
+    if best is None:
+        return "no model in the current selection lies below the line."
+    _, line, row = best
+    return (f"{line['model']} costs {money(line['output_price_usd_per_million'])} and scores {line['eci']:.1f} ECI points. "
+            f"{row.model} costs more ({money(row.output_price_usd_per_million)}) and scores less ({row.eci:.1f}), "
+            "so it sits below the line.").replace("$", "\\$")
 
 
 def chart_view1(points: pd.DataFrame, ranked: pd.DataFrame, mode: str, width: int = CHART_W,
@@ -270,14 +317,17 @@ def chart_view1(points: pd.DataFrame, ranked: pd.DataFrame, mode: str, width: in
             continue
         faded = rank_mode & ~part["model"].isin(score_of)
         sizes = [2 * radius(m) for m in part["model"]]
-        rings = part["model"].isin(score_of)
         fig.add_trace(go.Scatter(
             x=part["output_price_usd_per_million"], y=part["eci"], mode="markers", name=route,
             marker={"size": sizes, "color": colour, "opacity": np.where(faded, 0.28, 0.95),
-                    "line": {"color": np.where(rings, INK, "white"), "width": np.where(rings, 1.2, 0.8)}},
-            customdata=np.stack([part["model"], part["route"], part["organization"].fillna("")], axis=1),
+                    "line": {"color": "white", "width": 0.8}},
+            customdata=np.stack([part["model"], part["route"], part["organization"].fillna(""),
+                                 part["release_date"].map(date_text),
+                                 part["output_price_usd_per_million"].map(money)], axis=1),
             hovertemplate="<b>%{customdata[0]}</b><br>%{customdata[2]}, %{customdata[1]}<br>"
-                          "Capability %{y:.1f} points<br>Output price $%{x:,.3g} per million tokens<extra></extra>"))
+                          "Released %{customdata[3]}<br>"
+                          "Capability <b>%{y:.1f} ECI points</b><br>"
+                          "Output price <b>%{customdata[4]}</b> per million tokens<extra></extra>"))
 
     # Which dots get a label
     if rank_mode:
@@ -325,7 +375,7 @@ def chart_view1(points: pd.DataFrame, ranked: pd.DataFrame, mode: str, width: in
 
     ticks = [t for t in [0.03, 0.1, 0.3, 1, 3, 10, 30, 100] if x0 <= math.log10(t) <= x1]
     axis_style(fig, height, "Output price ($ per million tokens, median across providers, log scale)",
-               "Capability, Epoch Capabilities Index (points)")
+               "Capability, Epoch Capabilities Index (ECI points)")
     fig.update_xaxes(type="log", range=[x0, x1], tickvals=ticks, ticktext=[f"{t:g}" for t in ticks])
     fig.update_yaxes(range=[y0, y1], dtick=5)
     fig.update_layout(dragmode="zoom", width=chart_w, height=height)
@@ -335,53 +385,49 @@ def chart_view1(points: pd.DataFrame, ranked: pd.DataFrame, mode: str, width: in
 
 def render_view1(models: pd.DataFrame, points: pd.DataFrame, ranked: pd.DataFrame, pct: pd.DataFrame,
                  window_label: str) -> tuple[str, dict[str, float]]:
-    st.caption("Unit: capability in Epoch Capabilities Index points, price in US dollars per million output tokens.")
     method, weights = "", {}  # View 1 has no weights: it is a plain scatter plot, the ranking is in View 2
     mode = "Best value only"
     if points.empty:
         st.info("No models match the selected filters. Choose more developers or a wider release window.")
-        footer(["epoch", "litellm", "lmarena"], "7 Oct 2026 (latest Epoch release date in the file)")
         return method, weights
 
     dots = {"Open weights": "🔵 Open weights", "Closed weights": "🟠 Closed weights",
             "Other or unknown": "⚪ Other or unknown"}
     present = [r for r in dots if (points["route"] == r).any()]
     st.session_state["v1_routes"] = [r for r in st.session_state.get("v1_routes", present) if r in present]
-    picked = st.pills("Select the groups of dots to display", present, selection_mode="multi",
+    picked = st.pills("Groups to show", present, selection_mode="multi",
                       format_func=lambda r: dots[r], key="v1_routes",
-                      help="Ringed dots are also on LMArena and in the ranking. Hiding a group also removes it from "
-                           "the price frontier on this chart. The ranking in View 2 does not change.")
+                      help="Hiding a group also removes it from the price frontier on this chart. The ranking in "
+                           "View 2 does not change.")
     points = points.loc[points["route"].isin(picked)].reset_index(drop=True)
     if points.empty:
         st.info("All groups are hidden. Click a group above to show its dots.")
         return method, weights
-    ranked = ranked.loc[ranked["model"].isin(points["model"])]
     fig, labelled = chart_view1(points, ranked, mode)
     frontier = an.price_frontier(points)
-    st.markdown(f"**{len(points)} models with a price**, released {window_label.split(' (')[0]}. "
-                f"**{len(frontier)}** are on the price frontier, and **{len(ranked)}** are in all three sources.")
+    facts([("Models with a price", f"{len(points)}"), ("On the price frontier", f"{len(frontier)}")])
     st.caption("Chart toolbar (top right): drag a box to zoom, use pan, + / - or Autoscale, double-click resets.")
     st.plotly_chart(fig, width="content", key="v1_chart", config=PLOT_CONFIG)
 
     shown = labelled.loc[labelled["placed"], "model"].tolist() if not labelled.empty else []
     table = frontier[["model", "route", "eci", "output_price_usd_per_million"]].rename(columns={
-        "model": "Model", "route": "Route", "eci": "Capability (points)",
-        "output_price_usd_per_million": "Price (USD / M output tokens)"})
+        "model": "Model", "route": "Route", "eci": "Capability (ECI points)",
+        "output_price_usd_per_million": "Output price (USD per million tokens)"})
     caption = "Values of the models on the price frontier, cheapest first"
     missing = set(table["Model"]) - set(shown)
-    st.caption(caption + (". Labels that did not fit without overlapping: " + ", ".join(sorted(missing))
-                          if missing else "."))
-    st.dataframe(table.round(1), hide_index=True, key="v1_values")
 
     with st.expander("**How to read this chart**"):
-        st.markdown(V1_HOW)
+        st.markdown(V1_HOW.replace("{EXAMPLE}", frontier_example(points)))
     with st.expander("**What this chart cannot show**"):
-        st.markdown(V1_LIMITS)
+        st.markdown(V1_LIMITS.replace("{CI}", snapshot.ci_text()))
+    with st.expander("**Values behind the chart** (the models on the price frontier, with their original numbers)"):
+        st.caption(caption + (". Labels that did not fit without overlapping: " + ", ".join(sorted(missing))
+                              if missing else "."))
+        st.dataframe(table, hide_index=True, key="v1_values")
     records(points, ["model", "release_date", "organization", "route", "eci", "eci_ci_low", "eci_ci_high",
                      "output_price_usd_per_million", "output_price_min", "output_price_max", "price_providers",
-                     "litellm_match", "match_status"],
+                     "litellm_match"],
             "v1", "view1_models_with_price.csv", "Models with an unclear version are left out.")
-    footer(["epoch", "litellm", "lmarena"], "7 Oct 2026 (latest Epoch release date), prices as listed on 17 Oct 2026")
     return method, weights
 
 
@@ -390,58 +436,32 @@ def render_view1(models: pd.DataFrame, points: pd.DataFrame, ranked: pd.DataFram
 # --------------------------------------------------------------------------- #
 V2_HOW = """
 - **One bar per model:** the best weighted score is at the top, and the bar length is the weighted score from 0 to 100.
-- **The three coloured parts show why:** each part is weight × percentile for capability (green), human preference
+- **Coloured parts:** each part is weight × percentile for capability (green), human preference
   (purple) and low price (orange). A long orange part means the model ranks high mainly because it is cheap.
-- **The end of each bar:** the number is the score, and the label beside the name gives the developer and the route.
-- **"Wins under any weighting":** the share of all different weightings that the 0 to 10 sliders can produce (1,033 with
-  three criteria) under which the model comes first. A model that wins under many mixes is a safe pick when the
-  committee's priorities are unclear.
+- **Bar end:** the number is the score, and the label beside the name gives the developer and the route.
+- **Detail on click:** click any part of a bar to see why that model ranks where it does and where each number comes from.
+- **First-place share:** the share of all different weightings that the 0 to 10 sliders can
+  produce (1,033 with three criteria) under which the model comes first. A model that ranks first under many mixes is a
+  safe pick when the committee's priorities are unclear.
 """
 
 V2_LIMITS = """
-- **Percentile ranks are relative:** they depend on which models are in the comparison, and a small gap counts the
+- **Relative percentiles:** they depend on which models are in the comparison, and a small gap counts the
   same as a large one when it moves a model by one place.
 - **Ties:** when the Epoch intervals or the LMArena intervals of two models overlap, the data cannot say which one is
   better, so nearby bars should be read as roughly equal.
-- **Capability counted twice:** capability and preference agree at about 0.85, so giving both full weight tilts the
+- **Double counting:** capability and preference agree at about {CORR} at the default settings, so giving both full weight tilts the
   ranking towards quality. CRITIC lowers both automatically.
 - **Name matching:** "same name plus a tag" pairs, for example, a "(High)" LMArena entry with the base model's price.
   High effort produces more billed tokens, so the real cost can be higher. Switching the name-match rule to "same
   name only" checks this, and the top pick changes when capability carries most of the weight.
-- **LMArena covers stated preference only:** voters are self-selected and favour longer, well-formatted answers, and
+- **LMArena scope:** the votes cover stated preference only. Voters are self-selected and favour longer, well-formatted answers, and
   safety, compliance and accuracy on banking tasks lie outside what the score measures.
-- **Route labels are Epoch AI's:** open, closed and other come from the accessibility group in the Epoch file and
+- **Route labels:** open, closed and other are Epoch AI's groups, taken from the accessibility group in the Epoch file and
   describe whether the weights can be downloaded. A model in Other or unknown may become open or closed once Epoch
   classifies it, and "closed" says nothing about where the service can legally be used.
-- **The ranking supports a shortlist:** licence terms, data handling and availability in Hong Kong must be checked
+- **Use of the ranking:** the ranking supports a shortlist. Licence terms, data handling and availability in Hong Kong must be checked
   separately before any approval.
-"""
-
-V2_DECISION = """
-**Visual task:** Rank the candidate models and show *why* each one ranks where it does, so the architect can explain
-the order to the risk committee.
-
-**Form chosen:** A sorted horizontal bar chart (Visual Vocabulary: *ranking*), with each bar split into its
-weighted parts (*part-to-whole*). Bars share one baseline, so lengths are compared accurately, long model names fit
-on the left, and the score is printed at the end of each bar. Hovering a part shows its original value.
-
-**Alternative rejected:** showing the ranking on the View 1 scatter plot by turning it into a bubble chart (dot size =
-weighted score and the top 10 numbered). A small version is shown below. Reasons:
-
-- **Two of the three factors dominate the picture:** the axes are Epoch capability and LiteLLM price, so the eye
-  reads the chart as capability for the price. Human preference (LMArena) appears only as dot size, which is the
-  weakest visual channel, so the third factor is easy to overlook and the three are not weighed fairly.
-- **Size cannot be compared accurately:** two bubbles with scores of 71 and 74 look the same, yet the order of the
-  top 1, 2 and 3 is exactly what the committee needs to explain.
-- **Too many points hide the signal:** with 84 or more models, the dots overlap, only about 10 can be labelled and
-  the rest stay unnamed, so the top ranks are hard to find and compare.
-- **Ranking and correlation are mixed in one chart:** the scatter plot is good for seeing how capability and price
-  relate (the price frontier). Adding a ranking on top makes the chart more complicated and weakens both messages.
-- **The reason for a rank is hidden:** a bubble shows the total only, not how much capability, preference and price
-  each contributed. The stacked bars above show that, so the explanation of the order belongs here.
-
-View 1 therefore shows capability against price only (a scatter plot with the price frontier), and the ranking
-lives here.
 """
 
 
@@ -454,12 +474,91 @@ def _original_text(frame: pd.DataFrame, criterion: str) -> list[str]:
     out = []
     for r in frame.itertuples():
         if criterion == "capability":
-            out.append(f"{r.eci:.1f} points")
+            out.append(f"{r.eci:.1f} ECI points (90% interval {r.eci_ci_low:.0f} to {r.eci_ci_high:.0f})")
         elif criterion == "preference":
-            out.append(f"{r.arena_rating:.0f} rating")
+            out.append(f"{r.arena_rating:.0f} rating points")
         else:
-            out.append(f"{money(r.output_price_usd_per_million)} per M output tokens")
+            out.append(f"{money(r.output_price_usd_per_million)} per million output tokens")
     return out
+
+
+# Licence notes for the models that carry a licence limit. The wording follows stories/1a_ranked_shortlist/docs.md.
+# fields: Epoch label, licence text, key terms (bullets), gap, reading status, source name, source link
+LICENCE_NOTES = {
+    "MiniMax-M3": (
+        "restricted use", "MiniMax Community License",
+        ["A notice (Built with MiniMax M3) is always required.",
+         "Written authorisation is needed above US$20 million yearly revenue.",
+         "Military use is prohibited."],
+        "Epoch's label does not show the notice or the revenue line.",
+        "Group reading, 18 Oct 2026", "Hugging Face LICENSE",
+        "https://huggingface.co/MiniMaxAI/MiniMax-M3/blob/main/LICENSE"),
+    "MiniMax-M2.7": (
+        "non-commercial", "Non-commercial licence",
+        ["Free for personal use, and for non-profits, academics and researchers (non-commercial research or education).",
+         "Commercial use, including paid services and hosted APIs, needs prior written authorisation from MiniMax, and the notice Built with MiniMax M2.7 must be displayed.",
+         "Military use is prohibited. No revenue threshold is stated."],
+        "None found. Epoch's label and the licence text agree.",
+        "Read on the licence page, 13 Nov 2026", "GitHub LICENSE",
+        "https://github.com/MiniMax-AI/MiniMax-M2.7/blob/main/LICENSE"),
+    "Kimi K3": (
+        "non-commercial", "Kimi K3 License",
+        ["Commercial use is allowed.",
+         "A separate agreement is needed only above US$20 million Model-as-a-Service revenue in any 12 months.",
+         "Internal use is exempt."],
+        "Epoch's label is stricter than the licence text.",
+        "Group reading, 18 Oct 2026", "GitHub LICENSE",
+        "https://github.com/MoonshotAI/Kimi-K3/blob/main/LICENSE"),
+    "Mistral Medium 3.5": (
+        "restricted use", "Modified MIT License",
+        ["Rights are not granted if the company's global consolidated monthly revenue exceeded US$20 million in the preceding month.",
+         "Attribution and permission notices must be kept.",
+         "Above the line, a commercial licence from Mistral AI is needed, or Mistral AI's hosted services can be used."],
+        "The name MIT suggests no limit, but a revenue line applies.",
+        "Read on the licence page, 13 Nov 2026", "Hugging Face LICENSE",
+        "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B/blob/main/LICENSE"),
+    "GLM-5.3": (
+        "restricted use", "GLM-5.3 License",
+        ["Free use, including commercial use, with the copyright and permission notice kept.",
+         "A Model-as-a-Service business with revenue above US$10 billion in any 12 months must pass Z.AI's security review before commercial use.",
+         "Model-as-a-Service means giving third parties inference or fine-tuning access, for example by API."],
+        "Epoch's label is stricter than the licence text for most users. The only limit is for Model-as-a-Service businesses above US$10 billion revenue.",
+        "Read on the licence page, 13 Nov 2026", "Hugging Face LICENSE",
+        "https://huggingface.co/zai-org/GLM-5.3/blob/main/LICENSE"),
+    "Kimi K3.1 Pro": (
+        "restricted use", "Kimi K3.1-Pro License",
+        ["Free use with the copyright and permission notice kept. Internal use is exempt from the duties below.",
+         "A Model-as-a-Service business with revenue above US$20 million in any 12 months needs a separate agreement with Moonshot AI.",
+         "A commercial product with over 100 million monthly users or over US$20 million monthly revenue must display Kimi K3.1-Pro in its interface."],
+        "None found. Epoch's label and the licence text agree.",
+        "Read on the licence page, 13 Nov 2026", "Hugging Face LICENSE",
+        "https://huggingface.co/moonshotai/Kimi-K3.1-Pro/blob/main/LICENSE"),
+    "Mistral Large 4": (
+        "restricted use", "Mistral Ecosystem Open-Weight License",
+        ["Free use, including commercial use, with the copyright and permission notice kept.",
+         "A business that operates a Model-as-a-Service offering needs a separate commercial licence from Mistral before commercial use.",
+         "Internal use and use through Mistral's official products are exempt. No revenue threshold is stated."],
+        "A modified MIT licence with no revenue line, unlike Mistral Medium 3.5. The limit is for Model-as-a-Service businesses.",
+        "Read on the licence page, 13 Nov 2026", "Hugging Face LICENSE",
+        "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/LICENSE"),
+}
+LICENCE_ICON_COLOUR = "#b45f06"
+_RULE = "<span style='color:#c9ced3'>" + "─" * 34 + "</span>"
+
+
+def _licence_hover(model: str) -> str:
+    epoch, kind, terms, gap, status, src, _ = LICENCE_NOTES[model]
+    bullets = "<br>".join("• " + "<br>&nbsp;&nbsp;".join(textwrap.wrap(t, 52)) for t in terms)
+    gap_text = "<br>".join(textwrap.wrap(gap, 64))
+    return (f"<b>{model}</b>  <span style='color:#7a8591'>Licence note</span><br>{_RULE}<br>"
+            f"<b>Epoch label:</b> {epoch}<br><b>Licence text:</b> {kind}<br>{_RULE}<br>"
+            f"<b>Key terms:</b><br>{bullets}<br>{_RULE}<br>"
+            f"<b>Gap between the Epoch label and the licence text:</b><br>"
+            f"<span style='color:#8a4b00'>{gap_text}</span><br>{_RULE}<br>"
+            f"<span style='color:#7a8591'><i>{status}</i><br><i>Click ⓘ to open {src} in a new tab</i></span>")
+
+
+LICENCE_CSS = "<style>.st-key-ranked_options .annotation a text, .st-key-ranked_options .annotation a {fill:#b45f06 !important;text-decoration:none !important}</style>"
 
 
 def chart_view2(ranked: pd.DataFrame, top_n: int, criteria: list[str], show_overall: bool = False) -> go.Figure:
@@ -476,7 +575,7 @@ def chart_view2(ranked: pd.DataFrame, top_n: int, criteria: list[str], show_over
             textfont={"size": 11, "color": "#1f2328"},
             customdata=np.stack([top["model"], top[f"pct_{c}"], _original_text(top, c)], axis=1),
             hovertemplate=f"<b>%{{customdata[0]}}</b><br>{an.CRITERION_LABELS[c]}: "
-                          "<b>%{customdata[2]}</b><br>Percentile %{customdata[1]:.0f} · weighted part %{x:.1f}"
+                          "<b>%{customdata[2]}</b><br>Percentile %{customdata[1]:.0f} · weighted points %{x:.1f}"
                           "<extra></extra>"))
     end_text = [f"<b>{r.score:.1f}</b>" for r in top.itertuples()]
     fig.add_trace(go.Scatter(y=labels, x=top["score"] + 1.2, mode="text", text=end_text, textposition="middle right",
@@ -488,15 +587,15 @@ def chart_view2(ranked: pd.DataFrame, top_n: int, criteria: list[str], show_over
                       clickmode="event+select")
     # fixed columns left of the bars: rank and model | developer | route (pixel offsets from the plot edge)
     cut = lambda text, n: text if len(text) <= n else text[: n - 1] + "…"
-    columns = [(-436, "Rank and model"), (-208, "Developer"), (-83, "Route · overall" if show_overall else "Route")]
+    columns = [(-436, "Rank and model"), (-224, "Developer"), (-83, "Route · overall" if show_overall else "Route")]
     notes = []  # all annotations are collected and set once, which is much faster than adding them one by one
     for x, head in columns:
         notes.append(dict(xref="paper", yref="paper", x=0, y=1, xshift=x, yshift=8, text=f"<b>{head}</b>",
                           showarrow=False, xanchor="left", yanchor="bottom", font={"size": 11, "color": MUTED}))
     for key, r in zip(labels, top.itertuples()):
         org = r.organization if isinstance(r.organization, str) else "Not stated"
-        released = str(r.release_date)[:10]
-        for x, text, colour in [(-436, cut(f"{int(r.rank)}. {r.label}", 31), INK), (-208, cut(org, 18), MUTED),
+        released = date_text(r.release_date)
+        for x, text, colour in [(-436, cut(f"{int(r.rank)}. {r.label}", 31), INK), (-224, cut(org, 18), MUTED),
                                 (-83, _route_short(r.route) + (f" · #{int(r.overall_rank)}" if show_overall else ""), MUTED)]:
             notes.append(dict(xref="paper", yref="y", x=0, y=key, xshift=x, text=text, showarrow=False,
                               xanchor="left", yanchor="middle", font={"size": 12, "color": colour}))
@@ -504,6 +603,13 @@ def chart_view2(ranked: pd.DataFrame, top_n: int, criteria: list[str], show_over
         notes.append(dict(xref="paper", yref="y", x=0, y=key, xshift=-452, text="ⓘ", showarrow=False,
                           xanchor="left", yanchor="middle", font={"size": 12, "color": "#7a8591"},
                           hovertext=f"<b>{r.model}</b><br>Released {released}", captureevents=True))
+        if r.model in LICENCE_NOTES:  # licence mark in front of the route, a click opens the licence page
+            notes.append(dict(xref="paper", yref="y", x=0, y=key, xshift=-100, text=f"<a href=\"{LICENCE_NOTES[r.model][6]}\" target=\"_blank\">ⓘ</a>",
+                              showarrow=False, xanchor="left", yanchor="middle",
+                              font={"size": 12, "color": LICENCE_ICON_COLOUR},
+                              hovertext=_licence_hover(r.model), captureevents=True,
+                              hoverlabel={"bgcolor": "white", "bordercolor": LICENCE_ICON_COLOUR,
+                                          "font": {"size": 12, "color": INK}}))
     fig.update_layout(annotations=notes)
     fig.update_traces(unselected={"marker": {"opacity": 1}, "textfont": {"color": "#1f2328"}}, selector={"type": "bar"})
     fig.update_xaxes(range=[0, max(60.0, float(top["score"].max()) * 1.15 + 6)])
@@ -512,12 +618,14 @@ def chart_view2(ranked: pd.DataFrame, top_n: int, criteria: list[str], show_over
     return fig
 
 
+SHORT_CRITERIA = {"capability": "capability", "preference": "preference", "low_price": "price"}
 CRITERION_PILLS = {"capability": "🟢 Capability (Epoch)", "preference": "🟣 Human preference (LMArena)",
                    "low_price": "🟠 Low price (LiteLLM)"}
 CRITERIA_HELP = ("Click a criterion to leave it out and rank with the others only, for example capability + "
                  "preference (no price) or preference + price (no capability). The weights, including CRITIC, are "
                  "recalculated for the criteria that stay. The set of models stays the same: those in all three "
-                 "sources.")
+                 "sources.\n\nThe weights in the line under the pills follow the order of the criteria. A score runs from "
+                 "0 to 100: weight × percentile rank among the models shown.")
 
 
 def _match_text(match_type) -> str:
@@ -531,64 +639,64 @@ def render_origin(row: pd.Series, criteria: list[str]) -> None:
     arena_name = row.get("lmarena_match")
     providers = row.get("price_providers")
     rows = [{"Source": "Epoch AI (capability)", "Name in that source": row["model"], "Match": "same name",
-             "Column read": "eci, eci_ci_low, eci_ci_high", "File": "epoch_eci_scores.csv",
-             "Retrieved": "17 Oct 2026"},
+             "Column read": "eci, eci_ci_low, eci_ci_high", "File": "model_capability.csv",
+             "Retrieved": snapshot.get("epoch_retrieved")},
             {"Source": "LMArena (human preference)", "Name in that source": arena_name if isinstance(arena_name, str) else "",
              "Match": _match_text(row.get("lmarena_match_type")),
-             "Column read": "rating, rating_lower, rating_upper, vote_count", "File": "lmarena_overall.csv",
-             "Retrieved": "snapshot 15 Oct 2026"},
+             "Column read": "rating, rating_lower, rating_upper, vote_count", "File": "lmarena_ratings.csv",
+             "Retrieved": f"{snapshot.get('lmarena_retrieved')}, published {snapshot.get('lmarena_published')}"},
             {"Source": "LiteLLM (list price)", "Name in that source": (litellm_name if isinstance(litellm_name, str) else "")
              + (f" and {int(providers) - 1} more rows" if pd.notna(providers) and int(providers) > 1 else ""),
              "Match": _match_text(row.get("litellm_match_type")),
-             "Column read": "output_usd_per_million, median of the rows", "File": "litellm_chat_prices.csv",
-             "Retrieved": "17 Oct 2026"}]
-    st.markdown("**Where each number comes from**")
+             "Column read": "output_usd_per_million, median of the rows", "File": "model_price.csv",
+             "Retrieved": snapshot.get("litellm_retrieved")}]
     st.dataframe(pd.DataFrame(rows), hide_index=True, key="v2_origin_table")
-    st.caption("The three files are in the app folder data/source. The joined row for this model is in data/models.csv, "
-               "built by the notebook \"11 Dataset combination\". Percentile = (rank − 1) / (n − 1) × 100 among the "
-               "models compared, and contribution = weight × percentile.")
+    st.caption("The three files are in the data folder of this story. The page joins them by model name when it opens "
+               "and writes nothing back to the folder.")
 
 
 def render_detail(row: pd.Series, criteria: list[str], weights: dict[str, float], arena: pd.DataFrame) -> None:
     """The original numbers behind one model's bar: raw value, percentile, weight and contribution per criterion."""
-    st.markdown(f"**{row['label']}** · {row['organization'] if isinstance(row['organization'], str) else 'Not stated'}"
-                f" · {row['route']} · released {str(row['release_date'])[:10]} · rank {int(row['rank'])} "
-                f"(overall rank {int(row['overall_rank'])}) · "
-                f"weighted score **{row['score']:.1f}**")
-    raw = {"capability": f"{row['eci']:.1f} points (90% interval {row['eci_ci_low']:.0f} to {row['eci_ci_high']:.0f})",
-           "preference": f"{row['arena_rating']:.0f} rating ({row['arena_votes']:,.0f} votes)",
+    st.markdown(f"**{int(row['rank'])}. {row['label']}** · weighted score **{row['score']:.1f}**")
+    st.caption(f"{row['organization'] if isinstance(row['organization'], str) else 'Not stated'} · {row['route']} · "
+               f"released {date_text(row['release_date'])}"
+               + (f" · overall rank {int(row['overall_rank'])}" if int(row['overall_rank']) != int(row['rank']) else ""))
+    raw = {"capability": f"{row['eci']:.1f} ECI points (90% interval {row['eci_ci_low']:.0f} to {row['eci_ci_high']:.0f})",
+           "preference": f"{row['arena_rating']:.0f} rating points ({row['arena_votes']:,.0f} votes)",
            "low_price": f"{money(row['output_price_usd_per_million'])} per million output tokens "
                         f"(range {money(row['output_price_min'])} to {money(row['output_price_max'])})"}
     table = pd.DataFrame([{
         "Criterion": an.CRITERION_LABELS[c], "Original value": raw[c], "Percentile (0-100)": round(row[f"pct_{c}"], 1),
-        "Weight": f"{weights[c] * 100:.1f}%", "Contribution to score": round(row[f"part_{c}"], 1)} for c in criteria])
-    st.dataframe(table, hide_index=True, key="v2_detail_table")
-    render_origin(row, criteria)
-    entries = an.arena_entries(arena, row.get("lmarena_match"))
-    if len(entries) > 1:
-        used = row.get("lmarena_match")
-        lines = [f"{'**' if n == used else ''}{n}: {r:.0f}{'  (used)**' if n == used else ''}"
-                 for n, r in zip(entries["model_name"], entries["rating"])]
-        st.caption("LMArena lists several settings for this model, and the one used is shown in bold: "
-                   + " · ".join(lines))
-    elif isinstance(row.get("lmarena_match"), str):
-        st.caption(f"LMArena entry used: {row['lmarena_match']}.")
+        "Weight": f"{weights[c] * 100:.1f}%", "Weighted points": round(row[f"part_{c}"], 1)} for c in criteria])
+    tab_why, tab_source = st.tabs(["Why it ranks here", "Where each number comes from"])
+    with tab_why:
+        st.dataframe(table, hide_index=True, key="v2_detail_table")
+        st.caption("Percentile = (rank − 1) / (n − 1) × 100 among the models compared. "
+                   "Weighted points = weight × percentile.")
+    with tab_source:
+        render_origin(row, criteria)
+        entries = an.arena_entries(arena, row.get("lmarena_match"))
+        if len(entries) > 1:
+            used = row.get("lmarena_match")
+            lines = [f"{'**' if n == used else ''}{n}: {r:.0f}{'  (used)**' if n == used else ''}"
+                     for n, r in zip(entries["model_name"], entries["rating"])]
+            st.caption("LMArena lists several settings for this model, and the one used is shown in bold: "
+                       + " · ".join(lines))
 
 
 def wins_help(k: int, mixes: int) -> str:
-    """Help text for the "Wins under any weighting" line, with the number of weightings for the criteria in use."""
+    """Help text for the "First-place share" line, with the number of weightings for the criteria in use."""
     return (
-        "**How to read this line**\n\n"
-        "- **What a weighting is:** one way of dividing 100% of the weight between the criteria in use, as the "
+        "**First-place share**\n\n"
+        "- **Weighting:** one way of dividing 100% of the weight between the criteria in use, as the "
         "Custom weights sliders do. Each slider runs from 0 to 10 and the settings are turned into shares, so "
         "10 / 5 / 5 means 50% / 25% / 25%.\n"
-        f"- **How {mixes:,} arises:** with {k} criteria, the sliders can be set in 11 × " + " × ".join(["11"] * (k - 1)) +
+        f"- **Number of weightings:** with {k} criteria, the sliders can be set in 11 × " + " × ".join(["11"] * (k - 1)) +
         f" = {11 ** k:,} ways, one of them (all at 0) has no meaning, and settings with the same shares count once, "
         "for example 10 / 10 / 10 and 5 / 5 / 5 are both 33% each. "
         f"What remains is {mixes:,} different weightings.\n"
-        "- **What is counted:** for each weighting, every model gets its weighted score and the model with the "
-        f"highest score ranks first. The percentage is the number of weightings in which a model ranks first, divided "
-        f"by {mixes:,}.\n"
+        "- **Count:** each weighting gives every model a weighted score, and the model with the highest score "
+        f"ranks first. The percentage is the number of weightings in which a model ranks first, divided by {mixes:,}.\n"
         "- **Example:** a model at 79% ranks first under about four in five of all slider settings, so the choice is "
         "robust. A model at 11% ranks first only under a narrow range of settings, for example when price carries "
         "almost no weight.\n"
@@ -627,13 +735,15 @@ def render_view2(ranked: pd.DataFrame, pct: pd.DataFrame, rule_label: str, arena
                  criteria: list[str], advanced=None, summary=None, points=None) -> None:
     # the weight settings sit above, and every clickable control sits directly above the chart it changes
     weights_slot = advanced if advanced is not None else st.container()
+    n_unranked = 0 if points is None or points.empty else int((~points["model"].isin(ranked["model"])).sum())
     head = st.container()
     with head:
         st.session_state.setdefault("v2_criteria", list(an.CRITERIA))
-        picked = st.pills("Criteria in the ranking (click to leave one out)", list(an.CRITERIA),
-                          selection_mode="multi", format_func=lambda c: CRITERION_PILLS[c],
-                          key="v2_criteria", help=CRITERIA_HELP)
-        groups_slot = st.container()
+        col_criteria, groups_slot = st.columns([1.3, 1], gap="medium")  # both pill rows on one line
+        with col_criteria:
+            picked = st.pills("Criteria in the ranking (click to leave one out)", list(an.CRITERIA),
+                              selection_mode="multi", format_func=lambda c: CRITERION_PILLS[c],
+                              key="v2_criteria", help=CRITERIA_HELP)
     if not picked:
         st.info("Select at least one criterion to rank the models.")
         return
@@ -641,14 +751,13 @@ def render_view2(ranked: pd.DataFrame, pct: pd.DataFrame, rule_label: str, arena
     if ranked.empty:
         st.info("No models match the selected filters. Choose more developers, a wider release window or the "
                 "broader name-match rule.")
-        footer(["epoch", "litellm", "lmarena"], "7 Oct 2026 (latest Epoch release date in the file)")
         return
     group = lambda r: r if r in ("Open weights", "Closed weights") else "Other or unknown"
     dots = {"Open weights": "🔵 Open weights", "Closed weights": "🟠 Closed weights", "Other or unknown": "⚪ Other or unknown"}
     present = [g for g in dots if (ranked["route"].map(group) == g).any()]
     with groups_slot:
         st.session_state["v2_routes"] = [g for g in st.session_state.get("v2_routes", present) if g in present]
-        shown_groups = st.pills("Select the groups of models to display", present, selection_mode="multi", format_func=lambda g: dots[g], key="v2_routes",
+        shown_groups = st.pills("Recalculate the ranking among", present, selection_mode="multi", format_func=lambda g: dots[g], key="v2_routes",
                                 help="**Groups come from Epoch AI**, not from this page.\n\n"
                                      "- **Open weights:** Epoch records the weights as downloadable (unrestricted, restricted use or "
                                      "non-commercial), so an organisation can host the model itself.\n"
@@ -657,8 +766,8 @@ def render_view2(ranked: pd.DataFrame, pct: pd.DataFrame, rule_label: str, arena
                                      "- **Other or unknown:** Epoch has not placed the model in either group, for example "
                                      "\"Unknown\" or \"Limited access\". Epoch does not define these two labels in its public "
                                      "documentation.\n\n"
-                                     "The groups chosen define the comparison: percentiles, CRITIC weights, scores, ranks and \"Wins "
-                                     "under any weighting\" are recalculated among them. The rank in the full comparison stays "
+                                     "The groups chosen define the comparison: percentiles, CRITIC weights, scores, ranks and the "
+                                     "first-place share are recalculated among them. The rank in the full comparison stays "
                                      "visible as the overall rank, so a model can be compared with the groups that are switched off.")
         if not shown_groups:
             st.info("All groups are hidden. Click a group above to show its bars.")
@@ -679,11 +788,15 @@ def render_view2(ranked: pd.DataFrame, pct: pd.DataFrame, rule_label: str, arena
     with head:
         ss = st.session_state
         w_text = " / ".join(f"{weights[c] * 100:.0f}" for c in criteria)
-        st.caption(f"Chart settings: {str(ss.get('v2_window', '')).split(' (')[0]} · "
-                   f"{str(ss.get('v2_route', '')).split(' (')[0]} · {len(ranked)} models in all three sources and the groups shown · "
-                   f"weights {method.split(' (')[0]} {w_text} "
-                   f"({', '.join(an.CRITERION_LABELS[c].split(' (')[0].lower() for c in criteria)}). "
-                   "Unit: weighted score from 0 to 100 (weight × percentile rank among the models shown).")
+        col_n, col_w, col_note = st.columns([1, 1.9, 2.1], vertical_alignment="center")  # numbers and notes on one line
+        col_n.metric("Models ranked", f"{len(ranked)}")
+        col_w.metric(f"Weights, {method.split(' (')[0]} ({' / '.join(SHORT_CRITERIA[c] for c in criteria)})", w_text)
+        with col_note:
+            notes = [f"Release window: {str(ss.get('v2_window', '')).split(' (')[0]} · "
+                     f"Route: {str(ss.get('v2_route', '')).split(' (')[0]}"]
+            if n_unranked:
+                notes.append(f"{n_unranked} more models have a price but no LMArena rating, so they are not ranked.")
+            st.caption("  \n".join(notes))
         n = len(view)
         pages, start = [], 0  # pages of 25 rows, and the last page takes up to 40 rows so no tiny page is left over
         while n - start > 40:
@@ -695,10 +808,12 @@ def render_view2(ranked: pd.DataFrame, pct: pd.DataFrame, rule_label: str, arena
             saved = st.session_state.get("v2_page")
             if saved not in page_names:
                 st.session_state["v2_page"] = page_names[0]
-            chosen_page = st.pills("Models shown (rank positions in this chart)", page_names, selection_mode="single",
-                                   key="v2_page",
-                                   help="Each button shows one block of the ranking, about 25 models. Scores and rank "
-                                        "numbers stay the same, and only the rows drawn change.") or page_names[0]
+            with st.container(horizontal=True, vertical_alignment="center", gap="small"):  # label and buttons side by side
+                st.markdown("Models shown (rank positions in this chart):", width="content",
+                            help="Each button shows one block of the ranking, about 25 models. Scores and rank "
+                                 "numbers stay the same, and only the rows drawn change.")
+                chosen_page = st.pills("Models shown (rank positions in this chart)", page_names, selection_mode="single",
+                                       key="v2_page", label_visibility="collapsed", width="content") or page_names[0]
             a, b = pages[page_names.index(chosen_page)]
         else:
             a, b = 0, n
@@ -706,8 +821,13 @@ def render_view2(ranked: pd.DataFrame, pct: pd.DataFrame, rule_label: str, arena
     page_view = view.iloc[a:b]
     top_n = len(page_view)
     legend_line([(CRITERION_COLOURS[c], an.CRITERION_LABELS[c] + ", weighted points") for c in criteria])
+    st.markdown(LICENCE_CSS, unsafe_allow_html=True)
     event = st.plotly_chart(chart_view2(page_view, top_n, criteria, subset), width="content", key="v2_chart",
                             config=PLOT_CONFIG, on_select="rerun", selection_mode="points")
+    _marked = [m for m in page_view["model"] if m in LICENCE_NOTES]  # clickable links to the licence pages under the chart
+    if _marked:
+        st.caption("**Licence mark (ⓘ):** the licence has conditions. Hover for a summary, or open the licence page: " + " · ".join(
+            f"[{m} ({LICENCE_NOTES[m][5]})]({LICENCE_NOTES[m][6]})" for m in _marked))
     clicked = None
     try:
         for point in event.selection.points:
@@ -721,51 +841,45 @@ def render_view2(ranked: pd.DataFrame, pct: pd.DataFrame, rule_label: str, arena
     if len(chosen_row):
         render_detail(chosen_row.iloc[0], criteria, weights, arena)
     else:
-        st.caption("Showing the model ranked first. Click any part of another bar to see the original numbers and "
-                   "sources behind that model. The toolbar on the chart zooms, pans and resets.")
-        render_detail(ranked.iloc[0], criteria, weights, arena)
+        st.caption("Click any part of a bar to see why that model ranks where it does and where each of its numbers "
+                   "comes from. The toolbar on the chart zooms, pans and resets.")
 
     share = an.first_place_share(ranked, ranked[[f"pct_{c}" for c in an.CRITERIA]].set_axis(an.CRITERIA, axis=1),
                                  criteria=criteria)
     ranked = ranked.assign(wins=share.values)
     winners = ranked.loc[ranked["wins"] > 0].sort_values("wins", ascending=False)
     mixes = len(an.slider_grid(len(criteria)))
-    st.markdown(f"**Wins under any weighting** (share of all {mixes:,} weight mixes in which the model ranks first): "
-                + ", ".join(f"{r.label} {r.wins:.0f}%" for r in winners.head(6).itertuples()) + ".",
-                help=wins_help(len(criteria), mixes))
+    top = winners.head(3)
+    more = len(winners) - len(top)
+    def share_text(value: float) -> str:
+        return f"{value:.0f}%" if value >= 0.5 else "under 1%"  # a model that ranks first sometimes is never shown as 0%
+
+    st.markdown("**First-place share:** " + ", ".join(f"{r.label} {share_text(r.wins)}" for r in top.itertuples())
+                + (f" and {more} more" if more > 0 else "") + ".",
+                help="**Ranked first at least once:** "
+                     + ", ".join(f"{r.label} {share_text(r.wins)}" for r in winners.itertuples()) + ".\n\n"
+                     + wins_help(len(criteria), mixes))
 
     with st.expander("**How to read this chart**"):
         st.markdown(V2_HOW)
-    with st.expander("**How the score is calculated** (CRITIC weights and custom weights)"):
-        picture = Path(__file__).resolve().parents[1] / "assets" / "critic_vs_custom_workflow.png"
-        if picture.exists():
-            st.image(str(picture), caption="Both ways of setting the weights lead to the same score formula. "
-                                           "Example: GLM-5.3-Flash with the default settings.")
-        else:
-            st.caption("The workflow picture is missing from the assets folder.")
-    with st.expander("**Design decision for this view** (task, form, rejected alternative)"):
-        st.markdown(V2_DECISION)
-        mini_view1(ranked, pct, points)
     with st.expander("**What this chart cannot show**"):
-        st.markdown(V2_LIMITS)
+        st.markdown(V2_LIMITS.replace("{CORR}", snapshot.corr_text()))
     ranked = ranked.assign(developer=ranked["organization"].where(ranked["organization"].notna(), "Not stated"))
     cols = ["rank", "overall_rank", "label", "developer", "route", "release_date", "score", "eci", "arena_rating", "output_price_usd_per_million",
             "wins"]
     table = ranked.loc[page_view.index][cols]
     names = {"rank": "Rank", "overall_rank": "Overall rank", "label": "Model (LMArena setting)", "developer": "Developer", "route": "Route", "release_date": "Release date",
-             "score": "Weighted score", "eci": "Capability (points)", "arena_rating": "LMArena rating",
-             "output_price_usd_per_million": "Price (USD / M output tokens)", "wins": "Wins under any weighting (%)"}
+             "score": "Weighted score", "eci": "Capability (ECI points)", "arena_rating": "LMArena rating",
+             "output_price_usd_per_million": "Output price (USD per million tokens)", "wins": "First-place share (% of weightings)"}
     with st.expander("**Values behind the chart** (the models drawn above, with their original numbers)"):
         shown = table.rename(columns=names).copy()
-        shown["Release date"] = table["release_date"].astype(str).str[:10]
-        shown = shown.round(1)
-        shown["Price (USD / M output tokens)"] = table["output_price_usd_per_million"].map(
-            lambda v: money(v) if pd.notna(v) else "")
-        st.dataframe(shown, hide_index=True, key="v2_values")
+        for c in ("Weighted score", "First-place share (% of weightings)"):  # computed here, so shown to 1 decimal; the source values stay as they are
+            shown[c] = shown[c].round(1)
+        shown["Release date"] = pd.to_datetime(table["release_date"].astype(str).str[:10], errors="coerce")
+        one_dp = {c: st.column_config.NumberColumn(c, format="%.1f") for c in ("Weighted score", "First-place share (% of weightings)")}
+        st.dataframe(shown, hide_index=True, key="v2_values", column_config={**DATE_COLUMN, **one_dp})
     records(ranked, ["model", "release_date", "organization", "route", "eci", "eci_ci_low", "eci_ci_high",
                      "arena_rating", "arena_rating_lower", "arena_rating_upper", "arena_votes",
                      "output_price_usd_per_million", "litellm_match", "lmarena_match", "match_status"],
             "v2", "view2_three_source_models.csv",
             f"Only models found in all three sources under the rule \"{rule_label}\".")
-    footer(["epoch", "litellm", "lmarena"], "7 Oct 2026 (latest Epoch release date), prices 17 Oct 2026, "
-                                            "LMArena 15 Oct 2026")
