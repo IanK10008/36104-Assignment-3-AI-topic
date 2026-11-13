@@ -10,11 +10,13 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parents[1]))  # so that "src" is found when this file is run on its own
+sys.path.insert(0, str(HERE))  # so that this story's own licence_mix.py is found
 
 import streamlit as st  # noqa: E402
 
 from src import epoch_models, shell  # noqa: E402
 from src.views_context import render_view3  # noqa: E402
+from licence_mix import render_licence_mix  # noqa: E402
 
 
 shell.standalone_page_config()
@@ -35,6 +37,8 @@ with st.container(key="licence_classes", border=True):
     @st.fragment  # a click inside View 3 re-runs only View 3
     def view_three():
         render_view3(models, licence_check)
+        st.divider()
+        render_licence_mix(models, licence_check)  # second chart of story 1b, same controls
 
     view_three()
 

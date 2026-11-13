@@ -2,7 +2,7 @@
 
 **Owner:** Anh  **Data snapshot:** Epoch file retrieved 17 Oct 2026 22:27 UTC (18 Oct 2026 in Sydney)
 
-**Status:** page built and checked against the A3P1 app. Story 1b is a proposed split of user story 1 and the group has not agreed to it yet.
+**Status:** page built and checked against the A3P1 app. View 3b (licence mix by year) added by Anh on 13 Nov 2026. Story 1b is a proposed split of user story 1 and the group has not agreed to it yet.
 
 ## Persona, scenario, task and constraints
 
@@ -34,8 +34,21 @@ Source: [Alternative Proposal (No Search ABC), section "Primary persona, scenari
 | Proposal chart | App view | Chart type | What it shows |
 |---|---|---|---|
 | V7 | View 3 | Dot strip | Each model as a dot by licence class, with the best model of each class labelled and the best model of any kind marked |
+| new (Anh) | View 3b | 100% stacked bar | Licence mix of the open-weight models released each year: unrestricted, restricted use, non-commercial, with the count and share in every segment |
 
-**Visual Vocabulary family:** distribution (as recorded in MEMORY.md section 8p).
+**Visual Vocabulary family:** View 3, distribution (as recorded in MEMORY.md section 8p). View 3b, part-to-whole.
+
+## View 3b: licence mix by release year (added by Anh, 13 Nov 2026)
+
+**Why it was added:** View 3 shows how much capability each licence class holds today, but not whether the self-hosting route is widening. The committee's question "which models may the bank run itself?" depends on the licences of new releases as well as on today's best model. View 3b also ties story 1b to the rise of AI: it shows a change over time in what the bank is allowed to do.
+
+**Finding (all developer countries, all years):** the share of open-weight releases that Epoch labels unrestricted rose from 36% in 2023 (11 of 31) to 76% in 2025 (25 of 33) and 79% in 2026 (22 of 28, releases to 7 Oct). Restricted-use licences fell from 14 of 31 to 4 of 28. For China-based developers alone: 0 of 11 in 2023 to 18 of 22 in 2026.
+
+**Controls:** the chart uses View 3's "Developer based in" control. It ignores the release window on purpose and always shows every year, because the default window (2025 to 2026) would cut the trend to two bars. An empty country selection, or countries with no open-weight models, shows a message instead of the chart.
+
+**Code:** `licence_mix.py` in this folder (counts from `data/model_capability.csv`, no new data file), called from `page.py` inside View 3's fragment. Nothing in the shared `src/` folder was changed.
+
+**Design decision:** visual task, how the licence mix of new open-weight models changed. Form chosen, 100% stacked bar per year with the count and share written in each segment (no hovering needed), Okabe-Ito colours. Rejected: stacked counts (2026 is a part year, so totals differ), one pie per year (angles across pies are hard to compare), a line of the unrestricted share only (hides the trade between restricted-use and non-commercial licences).
 
 ## Data sources and dates
 
@@ -64,6 +77,7 @@ Epoch's accessibility label is read as what it allows a bank to do. **Restricted
 
 - **Licence label:** Epoch's label can disagree with the licence text. Epoch labels Kimi K3 non-commercial, but the licence text allows commercial use with a revenue condition.
 - **Coverage of readings:** Only five licences were read. Every other open-weight model keeps Epoch's label.
+- **View 3b, part year:** 2026 covers releases to 7 Oct 2026 only, so its total is lower and its share may still move. Counts cover only models Epoch has scored.
 - **Capability index:** Epoch's index leans to maths and reasoning, covers smaller and non-US models less well, and the 90% intervals of neighbouring models overlap.
 - **Not covered:** Licence terms beyond "open weights", provider data handling, security review, hosting cost and performance on the bank's own documents.
 - **Not legal advice.** A bank deploying any of these models should check the full licence text with its own counsel.
@@ -82,5 +96,8 @@ Epoch's accessibility label is read as what it allows a bank to do. **Restricted
 | Notebook run in a cloud copy, output compared with the original `model_capability.csv` | Same content (277 rows, 16 columns). Only the line endings differ between Windows and the cloud |
 | Whole build from zero in a fresh virtual environment (`pip install -r requirements.txt -r requirements-notebook.txt`, Python 3.13): notebook run, `processed/model_capability.csv` copied by hand into `data/` | Same content as the earlier files (277 rows, 16 columns). Run on 9 Nov 2026 |
 | Page run inside `app.py` and on its own (`streamlit run stories/<story>/page.py`), text from "User story" down compared with the A3P1 tab | No difference in both cases. Screenshot of the in-app page checked by eye |
+
+| View 3b counts against the data file by hand (Anh, to do before commit): in `data/model_capability.csv`, open-weight rows released in 2023 = 31, of which `epoch_accessibility` = "Open weights (unrestricted)" = 11; in 2026 = 28, of which 22 | Must match the chart labels 11 (36%) and 22 (79%) |
+| View 3b in the app (`streamlit.testing`, 13 Nov 2026): default page, China only, "Not stated" only (no open-weight models), empty selection; whole app with all four pages | No errors; the empty and no-open-weight states show their messages |
 
 These checks were run by Claude. Ian has not reviewed them yet.
