@@ -8,7 +8,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-DATA_PATH = Path(__file__).resolve().parent / "data" / "processed" / "gpqa_reported_vs_epoch.csv"
+DATA_PATH = Path(__file__).resolve().parent / "notebooks" / "eci_scores" / "processed" / "gpqa_reported_vs_epoch.csv"
 SOURCE = "https://epoch.ai/data-insights/self-reported-gpqa"
 
 
