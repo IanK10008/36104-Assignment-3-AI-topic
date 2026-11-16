@@ -2,7 +2,7 @@
 
 **Owner:** Anh  **Data snapshot:** Epoch file retrieved 17 Oct 2026 22:27 UTC (18 Oct 2026 in Sydney)
 
-**Status:** page built and checked against the A3P1 app. View 3b (licence mix by year) added by Anh on 13 Nov 2026. Story 1b is a proposed split of user story 1 and the group has not agreed to it yet.
+**Status:** page built and checked against the A3P1 app. View 3b (licence mix by year) added by Anh on 13 Nov 2026, restyled to Ian's layout and palette on 15 to 17 Nov 2026. Story 1b is a proposed split of user story 1 and the group has not agreed to it yet.
 
 ## Persona, scenario, task and constraints
 
@@ -34,21 +34,28 @@ Source: [Alternative Proposal (No Search ABC), section "Primary persona, scenari
 | Proposal chart | App view | Chart type | What it shows |
 |---|---|---|---|
 | V7 | View 3 | Dot strip | Each model as a dot by licence class, with the best model of each class labelled and the best model of any kind marked |
-| new (Anh) | View 3b | 100% stacked bar | Licence mix of the open-weight models released each year: unrestricted, restricted use, non-commercial, with the count and share in every segment |
+| new (Anh) | View 3b | Horizontal 100% stacked bar | Licence mix of the open-weight models released each year: unrestricted, restricted use, non-commercial, with the count and share in every segment and a 50% reference line |
 
 **Visual Vocabulary family:** View 3, distribution (as recorded in MEMORY.md section 8p). View 3b, part-to-whole.
 
 ## View 3b: licence mix by release year (added by Anh, 13 Nov 2026)
 
-**Why it was added:** View 3 shows how much capability each licence class holds today, but not whether the self-hosting route is widening. The committee's question "which models may the bank run itself?" depends on the licences of new releases as well as on today's best model. View 3b also ties story 1b to the rise of AI: it shows a change over time in what the bank is allowed to do.
+**Rationale (why it was added):**
+
+1. **A gap in story 1b.** View 3 is a snapshot: how much capability each licence class holds today. The architect is also deciding whether the bank should build a self-hosting route at all (servers, a licence-review step), which only pays off if self-hostable models keep coming. That needs the trend in the licences of new releases, which View 3 cannot show.
+2. **It ties story 1b to the rise of AI.** The brief asks about the rise of AI; View 3b is a change over time in what the bank is allowed to do with new models.
+3. **It widens the chart families.** It adds *part-to-whole* to the app (check 14), next to correlation and ranking (1a), distribution (View 3), change over time (story 2) and the incident charts (story 3).
+4. **No new data and no shared code.** It counts rows of the same `data/model_capability.csv` as View 3 and uses View 3's country filter, so every number traces to the data package (check 7).
 
 **Finding (all developer countries, all years):** the share of open-weight releases that Epoch labels unrestricted rose from 36% in 2023 (11 of 31) to 76% in 2025 (25 of 33) and 79% in 2026 (22 of 28, releases to 7 Oct). Restricted-use licences fell from 14 of 31 to 4 of 28. For China-based developers alone: 0 of 11 in 2023 to 18 of 22 in 2026.
 
 **Controls:** the chart uses View 3's "Developer based in" control. It ignores the release window on purpose and always shows every year, because the default window (2025 to 2026) would cut the trend to two bars. An empty country selection, or countries with no open-weight models, shows a message instead of the chart.
 
+**Layout and colours (Ian's view pattern, updated 17 Nov 2026 after Ian's style note):** subheading as a question, unit caption, three metrics (unrestricted share in the first and last year, number of models), "Selected" line with the zoom note, HTML legend above the chart, fixed-width Plotly chart (1200 px, Arial, Ian's `_layout`) with no title inside it, answer text, visible values table, then how to read, design decision, limits, filtered records with the CSV download and the shared sources footer. Open weights keep View 3's blue (#0072B2); the three licence classes are three steps of that blue (#0072B2, #56B4E9, #D6E9F6), darkest for the most permissive. Checked in a browser at 1366x768 on 15 Nov 2026: every segment label readable, no horizontal scrolling.
+
 **Code:** `licence_mix.py` in this folder (counts from `data/model_capability.csv`, no new data file), called from `page.py` inside View 3's fragment. Nothing in the shared `src/` folder was changed.
 
-**Design decision:** visual task, how the licence mix of new open-weight models changed. Form chosen, 100% stacked bar per year with the count and share written in each segment (no hovering needed), Okabe-Ito colours. Rejected: stacked counts (2026 is a part year, so totals differ), one pie per year (angles across pies are hard to compare), a line of the unrestricted share only (hides the trade between restricted-use and non-commercial licences).
+**Design decision:** visual task, how the licence mix of new open-weight models changed. Form chosen, a horizontal 100% stacked bar per year with the count and share written in each segment (no hovering needed), in three steps of View 3's open-weight blue because the classes are ordered. Rejected: the first draft, vertical bars in blue, orange and grey with the legend under the chart (its orange read as "closed", close to the colour of closed models in Views 3 and 4, and the unrelated colours hid that the classes are ordered; shown small in the app's design-decision section), stacked counts (2026 is a part year, so totals differ), one pie per year (angles across pies are hard to compare), a line of the unrestricted share only (hides the trade between restricted-use and non-commercial licences).
 
 ## Data sources and dates
 
@@ -98,6 +105,9 @@ Epoch's accessibility label is read as what it allows a bank to do. **Restricted
 | Page run inside `app.py` and on its own (`streamlit run stories/<story>/page.py`), text from "User story" down compared with the A3P1 tab | No difference in both cases. Screenshot of the in-app page checked by eye |
 
 | View 3b counts against the data file by hand (Anh, to do before commit): in `data/model_capability.csv`, open-weight rows released in 2023 = 31, of which `epoch_accessibility` = "Open weights (unrestricted)" = 11; in 2026 = 28, of which 22 | Must match the chart labels 11 (36%) and 22 (79%) |
-| View 3b in the app (`streamlit.testing`, 13 Nov 2026): default page, China only, "Not stated" only (no open-weight models), empty selection; whole app with all four pages | No errors; the empty and no-open-weight states show their messages |
+| View 3b in the app (`streamlit.testing`, 13 and 15 Nov 2026): default page, China only, "Not stated" only (no open-weight models), empty selection; whole app with all four pages | No errors; the empty and no-open-weight states show their messages |
+| View 3b in a browser at 1366x768 (15 Nov 2026) | Every segment label readable without hovering, no horizontal scrolling, values table visible |
+| View 3b colour check (17 Nov 2026): the chart screenshot run through protanopia, deuteranopia and tritanopia simulations (Machado et al. 2009) | The three shades stay distinct in all three (lightness about 46, 70 and 91 in normal vision; 44 to 49, 68 to 73 and 91 to 92 when simulated), and every segment also carries its count and share as text |
+| View 3b filter response (`streamlit.testing`, 17 Nov 2026) | Changing "Developer based in" re-runs the view in 0.1 to 0.2 s |
 
 These checks were run by Claude. Ian has not reviewed them yet.
