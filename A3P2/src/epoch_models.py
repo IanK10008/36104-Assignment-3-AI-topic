@@ -1,6 +1,6 @@
 """Epoch-only tables for stories 1b and 2.
 
-Views 3 and 4 need only Epoch columns (name, date, developer, country, access label, capability score and its
+The Epoch-only views of Stories 1b and 2 need only Epoch columns (name, date, developer, country, access label, capability score and its
 interval) plus the group's own licence readings. This module builds them from the story's own copy of
 ``model_capability.csv``, the table written by the eci_scores notebook. The result has the same columns, the same
 types and the same row order as the matching columns of ``models.csv`` in the A3P1 app, so the view code is

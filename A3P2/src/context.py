@@ -1,4 +1,4 @@
-"""Data and calculations for Views 3 to 5 (licence classes, capability gap, reported incidents).
+"""Data and calculations for the A3P1 views 3 to 5 (licence classes, capability gap, reported incidents). In this app they are View 1 of Story 1b, View 1 of Story 2 and Views 1 and 2 of Story 3.
 
 The three views reuse the processed model table (``data/models.csv``) and add two small source extracts that were
 built by the project notebooks and copied here unchanged:
@@ -22,7 +22,7 @@ US = "United States of America"
 DATA_END = pd.Timestamp("2026-10-07")  # latest release date in the Epoch file
 
 # --------------------------------------------------------------------------- #
-# View 3: what the licence allows
+# Story 1b View 1: what the licence allows
 # --------------------------------------------------------------------------- #
 # Epoch's accessibility label, read as what it means for a bank that wants to run the model on its own servers.
 # Order = top to bottom on the chart, from "can be self-hosted" to "cannot".
@@ -78,7 +78,7 @@ def best_per_class(frame: pd.DataFrame) -> pd.DataFrame:
 
 
 # --------------------------------------------------------------------------- #
-# View 4: capability gap to the restricted US models
+# Story 2 View 1: capability gap to the restricted US models
 # --------------------------------------------------------------------------- #
 ACCESS_OPTIONS = {
     "Open weights (self-hosted)": "open",
@@ -134,7 +134,7 @@ def gap_summary(models: pd.DataFrame, accessible: list[str], at: pd.Timestamp = 
 
 
 # --------------------------------------------------------------------------- #
-# View 5: reported incidents
+# Reported incidents (A3P1 View 5, now Views 1 and 2 of Story 3)
 # --------------------------------------------------------------------------- #
 # AIID company name -> Epoch developer names, to count each company's models in the Epoch list.
 EPOCH_NAMES = {

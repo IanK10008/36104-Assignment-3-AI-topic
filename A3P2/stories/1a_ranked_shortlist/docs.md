@@ -77,6 +77,7 @@ All three notebooks have `REFRESH = False`, so they reuse the files in `raw/` an
 - **Price frontier:** the explanation has an example (Qwen3.5-9B against Qwen3-14B) and the note that models on the line are not ranked against each other.
 - **Page-end block:** Story 1a has its own "Data, methods and limitations" (`limitations_1a()` in `src/shell.py`) that lists only the sources and methods of its two views. Stories 1b, 2 and 3 keep the shared block.
 - **Text style:** bold lead-ins are short noun phrases, the word after the colon is lower case unless it is a proper noun, and there are no semicolons.
+- **Help icons:** every help (?) icon sits right after its label in the whole app, in Stories 1a, 1b, 2 and 3 (`help_icons_left()` in `src/shell.py`, 16 Nov 2026).
 
 ## Refreshing the data
 
@@ -84,6 +85,7 @@ All three notebooks have `REFRESH = False`, so they reuse the files in `raw/` an
 2. Copy the three tables from `processed/` into `data/` by hand (the notebooks never write there).
 3. Restart the app. The dates, the counts, the frontier example, the correlation and the ECI interval width in the page text follow the data (`src/snapshot.py`).
 4. By hand: the licence marks for new models with a limit (`LICENCE_NOTES` in `src/views.py`) and the numbers in this file.
+5. Licence check: every time the data is downloaded again, for each new open-weight model and each model that Epoch labels restricted use, non-commercial or unknown, open the LICENSE file on Hugging Face or GitHub and read it. Epoch's label and news pages do not replace it. Record the licence name, whether commercial use is allowed, the condition (revenue line, user line or Model-as-a-Service clause), whether internal use is exempt, whether Epoch's label agrees with the text, the link and the date read. Add the reading to `LICENCE_NOTES` and to `licence_check.csv`. So far the label and the text have disagreed for Kimi K3 and GLM-5.3.
 
 ## Limitations
 

@@ -1,0 +1,2 @@
+dataset,extracted_utc,zip_retrieved_utc,zip_how,zip_sha256,scores,models,benchmarks,note
+Epoch Benchmarking Hub benchmark_data.zip (hub_scores_by_model.csv),2026-11-17T08:34:12Z,"2026-11-16T04:17:00Z (date of the files inside the ZIP, download time not recorded)",reused,8e7c44abefe2d11bd161bc1ab3684d41953c813c802c70d10f8d90acc82e36a2,2093,174,57,Release year and access group come from model_capability.csv (17 Oct 2026 snapshot).

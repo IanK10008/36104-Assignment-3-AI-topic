@@ -1,0 +1,493 @@
+hub_model_version,capability_model
+Baichuan2-13B-Chat,Baichuan2-13B
+Cerebras-GPT-13B,Cerebras-GPT-13B
+claude-2.1,Claude 2.1
+claude-3-haiku-20240307,Claude 3 Haiku
+claude-3-opus-20240229,Claude 3 Opus
+claude-3-sonnet-20240229,Claude 3 Sonnet
+claude-3-5-haiku-20241022,Claude 3.5 Haiku
+claude-3-5-sonnet-20240620,Claude 3.5 Sonnet
+claude-3-5-sonnet-20241022,Claude 3.5 Sonnet
+claude-3-7-sonnet-20250219,Claude 3.7 Sonnet
+claude-3-7-sonnet-20250219_unknown,Claude 3.7 Sonnet
+claude-fable-5,Claude Fable 5
+claude-fable-5_high,Claude Fable 5
+claude-fable-5_low,Claude Fable 5
+claude-fable-5_max,Claude Fable 5
+claude-fable-5_medium,Claude Fable 5
+claude-fable-5_unknown,Claude Fable 5
+claude-fable-5_xhigh,Claude Fable 5
+claude-fable-5-1_high,Claude Fable 5.1
+claude-fable-5-1_low,Claude Fable 5.1
+claude-fable-5-1_max,Claude Fable 5.1
+claude-fable-5-1_medium,Claude Fable 5.1
+claude-fable-5-1_unknown,Claude Fable 5.1
+claude-fable-5-1_xhigh,Claude Fable 5.1
+claude-haiku-4-5-20251001,Claude Haiku 4.5
+claude-haiku-4-5-20251001_low,Claude Haiku 4.5
+claude-haiku-4-5-20251001_unknown,Claude Haiku 4.5
+claude-haiku-5-5_high,Claude Haiku 5.5
+claude-haiku-5-5_low,Claude Haiku 5.5
+claude-haiku-5-5_max,Claude Haiku 5.5
+claude-haiku-5-5_medium,Claude Haiku 5.5
+claude-haiku-5-5_none,Claude Haiku 5.5
+claude-haiku-5-5_xhigh,Claude Haiku 5.5
+claude-opus-4-20250514,Claude Opus 4
+claude-opus-4-20250514_unknown,Claude Opus 4
+claude-opus-4-1-20250805,Claude Opus 4.1
+claude-opus-4-1-20250805_unknown,Claude Opus 4.1
+claude-opus-4-5-20251101,Claude Opus 4.5
+claude-opus-4-5-20251101_high,Claude Opus 4.5
+claude-opus-4-5-20251101_low,Claude Opus 4.5
+claude-opus-4-5-20251101_unknown,Claude Opus 4.5
+claude-opus-4-6,Claude Opus 4.6
+claude-opus-4-6_high,Claude Opus 4.6
+claude-opus-4-6_low,Claude Opus 4.6
+claude-opus-4-6_max,Claude Opus 4.6
+claude-opus-4-6_medium,Claude Opus 4.6
+claude-opus-4-6_unknown,Claude Opus 4.6
+claude-opus-4-7,Claude Opus 4.7
+claude-opus-4-7_high,Claude Opus 4.7
+claude-opus-4-7_low,Claude Opus 4.7
+claude-opus-4-7_max,Claude Opus 4.7
+claude-opus-4-7_medium,Claude Opus 4.7
+claude-opus-4-7_unknown,Claude Opus 4.7
+claude-opus-4-7_xhigh,Claude Opus 4.7
+claude-opus-4-8_high,Claude Opus 4.8
+claude-opus-4-8_low,Claude Opus 4.8
+claude-opus-4-8_max,Claude Opus 4.8
+claude-opus-4-8_medium,Claude Opus 4.8
+claude-opus-4-8_none,Claude Opus 4.8
+claude-opus-4-8_unknown,Claude Opus 4.8
+claude-opus-4-8_xhigh,Claude Opus 4.8
+claude-opus-5,Claude Opus 5
+claude-opus-5_high,Claude Opus 5
+claude-opus-5_low,Claude Opus 5
+claude-opus-5_max,Claude Opus 5
+claude-opus-5_medium,Claude Opus 5
+claude-opus-5_unknown,Claude Opus 5
+claude-opus-5_xhigh,Claude Opus 5
+claude-opus-5-5_high,Claude Opus 5.5
+claude-opus-5-5_low,Claude Opus 5.5
+claude-opus-5-5_max,Claude Opus 5.5
+claude-opus-5-5_medium,Claude Opus 5.5
+claude-opus-5-5_unknown,Claude Opus 5.5
+claude-opus-5-5_xhigh,Claude Opus 5.5
+claude-sonnet-4-20250514,Claude Sonnet 4
+claude-sonnet-4-20250514_unknown,Claude Sonnet 4
+claude-sonnet-4-5-20250929,Claude Sonnet 4.5
+claude-sonnet-4-5-20250929_low,Claude Sonnet 4.5
+claude-sonnet-4-5-20250929_unknown,Claude Sonnet 4.5
+claude-sonnet-4-6,Claude Sonnet 4.6
+claude-sonnet-4-6_high,Claude Sonnet 4.6
+claude-sonnet-4-6_low,Claude Sonnet 4.6
+claude-sonnet-4-6_max,Claude Sonnet 4.6
+claude-sonnet-4-6_medium,Claude Sonnet 4.6
+claude-sonnet-4-6_unknown,Claude Sonnet 4.6
+claude-sonnet-5,Claude Sonnet 5
+claude-sonnet-5_high,Claude Sonnet 5
+claude-sonnet-5_low,Claude Sonnet 5
+claude-sonnet-5_max,Claude Sonnet 5
+claude-sonnet-5_medium,Claude Sonnet 5
+claude-sonnet-5_unknown,Claude Sonnet 5
+claude-sonnet-5_xhigh,Claude Sonnet 5
+claude-sonnet-5-5_high,Claude Sonnet 5.5
+claude-sonnet-5-5_low,Claude Sonnet 5.5
+claude-sonnet-5-5_max,Claude Sonnet 5.5
+claude-sonnet-5-5_medium,Claude Sonnet 5.5
+claude-sonnet-5-5_unknown,Claude Sonnet 5.5
+claude-sonnet-5-5_xhigh,Claude Sonnet 5.5
+CodeQwen1.5-7B,CodeQwen1.5-7B
+deepseek-llm-67b-chat,DeepSeek LLM 67B
+deepseek-v4-flash-0731_high,DeepSeek V4 Flash 0731
+deepseek-v4-flash-0731_low,DeepSeek V4 Flash 0731
+deepseek-v4-flash-0731_max,DeepSeek V4 Flash 0731
+deepseek-v4-flash-0731_none,DeepSeek V4 Flash 0731
+deepseek-v4-flash-0731_unknown,DeepSeek V4 Flash 0731
+deepseek-v4-pro-0813_high,DeepSeek V4 Pro 0813
+deepseek-v4-pro-0813_low,DeepSeek V4 Pro 0813
+deepseek-v4-pro-0813_max,DeepSeek V4 Pro 0813
+deepseek-v4-pro-0813_none,DeepSeek V4 Pro 0813
+deepseek-v4-pro-0813_unknown,DeepSeek V4 Pro 0813
+deepseek-v4.1-flash_high,DeepSeek V4.1 Flash
+deepseek-v4.1-flash_low,DeepSeek V4.1 Flash
+deepseek-v4.1-flash_max,DeepSeek V4.1 Flash
+deepseek-v4.1-flash_none,DeepSeek V4.1 Flash
+deepseek-v4.1-flash_unknown,DeepSeek V4.1 Flash
+DeepSeek-Coder-V2-Lite-Base,DeepSeek-Coder-V2-Lite-Base
+DeepSeek-R1,DeepSeek-R1
+DeepSeek-R1-Distill-Qwen-14B,DeepSeek-R1-Distill-Qwen-14B
+DeepSeek-R1-Distill-Qwen-32B,DeepSeek-R1-Distill-Qwen-32B
+DeepSeek-V3,DeepSeek-V3
+DeepSeek-V3.1,DeepSeek-V3.1
+DeepSeek-V3.1_thinking,DeepSeek-V3.1
+DeepSeek-V3.2-Exp,DeepSeek-V3.2-Exp
+DeepSeek-V3.2-Exp_high,DeepSeek-V3.2-Exp
+DeepSeek-V3.2-Exp_thinking,DeepSeek-V3.2-Exp
+deepseek-v4-flash_high,DeepSeek-V4-Flash
+deepseek-v4-flash_max,DeepSeek-V4-Flash
+deepseek-v4-flash_unknown,DeepSeek-V4-Flash
+deepseek-v4-pro_high,DeepSeek-V4-Pro
+deepseek-v4-pro_max,DeepSeek-V4-Pro
+deepseek-v4-pro_none,DeepSeek-V4-Pro
+falcon-180B,Falcon-180B
+falcon-40b,Falcon-40B
+falcon-40b-instruct,Falcon-40B
+falcon-7b,Falcon-7B
+glm-4.7,GLM-4.7
+glm-5,GLM-5
+glm-5.1,GLM-5.1
+glm-5.1_none,GLM-5.1
+glm-5.2_high,GLM-5.2
+glm-5.2_low,GLM-5.2
+glm-5.2_max,GLM-5.2
+glm-5.2_medium,GLM-5.2
+glm-5.2_minimal,GLM-5.2
+glm-5.2_none,GLM-5.2
+glm-5.2_unknown,GLM-5.2
+glm-5.3_max,GLM-5.3
+glm-5.3_unknown,GLM-5.3
+glm-5.3-flash_high,GLM-5.3-Flash
+glm-5.3-flash_low,GLM-5.3-Flash
+glm-5.3-flash_max,GLM-5.3-Flash
+glm-5.3-flash_unknown,GLM-5.3-Flash
+gpt-4.1-2025-04-14,GPT-4.1
+gpt-4.1-mini-2025-04-14,GPT-4.1 mini
+gpt-4.1-nano-2025-04-14,GPT-4.1 nano
+gpt-4o-mini-2024-07-18,GPT-4o mini
+gpt-5-2025-08-07_high,GPT-5
+gpt-5-2025-08-07_low,GPT-5
+gpt-5-2025-08-07_medium,GPT-5
+gpt-5-2025-08-07_minimal,GPT-5
+gpt-5-2025-08-07_unknown,GPT-5
+gpt-5-chat,GPT-5
+gpt-5-pro-2025-10-06_high,GPT-5 Pro
+gpt-5-pro-2025-10-06_unknown,GPT-5 Pro
+gpt-5-mini-2025-08-07_high,GPT-5 mini
+gpt-5-mini-2025-08-07_low,GPT-5 mini
+gpt-5-mini-2025-08-07_medium,GPT-5 mini
+gpt-5-mini-2025-08-07_minimal,GPT-5 mini
+gpt-5-mini-2025-08-07_unknown,GPT-5 mini
+gpt-5-nano-2025-08-07_high,GPT-5 nano
+gpt-5-nano-2025-08-07_low,GPT-5 nano
+gpt-5-nano-2025-08-07_medium,GPT-5 nano
+gpt-5-nano-2025-08-07_minimal,GPT-5 nano
+gpt-5-nano-2025-08-07_unknown,GPT-5 nano
+gpt-5.1-2025-11-13_high,GPT-5.1
+gpt-5.1-2025-11-13_low,GPT-5.1
+gpt-5.1-2025-11-13_medium,GPT-5.1
+gpt-5.1-2025-11-13_none,GPT-5.1
+gpt-5.1-2025-11-13_unknown,GPT-5.1
+gpt-5.2-2025-12-11_high,GPT-5.2
+gpt-5.2-2025-12-11_low,GPT-5.2
+gpt-5.2-2025-12-11_medium,GPT-5.2
+gpt-5.2-2025-12-11_none,GPT-5.2
+gpt-5.2-2025-12-11_unknown,GPT-5.2
+gpt-5.2-2025-12-11_xhigh,GPT-5.2
+gpt-5.2-pro-2025-12-11,GPT-5.2 Pro
+gpt-5.2-pro-2025-12-11_high,GPT-5.2 Pro
+gpt-5.2-pro-2025-12-11_medium,GPT-5.2 Pro
+gpt-5.2-pro-2025-12-11_xhigh,GPT-5.2 Pro
+gpt-5.3-codex,GPT-5.3 Codex
+gpt-5.3-codex_xhigh,GPT-5.3 Codex
+gpt-5.4-2026-03-05_high,GPT-5.4
+gpt-5.4-2026-03-05_low,GPT-5.4
+gpt-5.4-2026-03-05_medium,GPT-5.4
+gpt-5.4-2026-03-05_none,GPT-5.4
+gpt-5.4-2026-03-05_unknown,GPT-5.4
+gpt-5.4-2026-03-05_xhigh,GPT-5.4
+gpt-5.4-mini-2026-03-17_high,GPT-5.4 Mini
+gpt-5.4-mini-2026-03-17_low,GPT-5.4 Mini
+gpt-5.4-mini-2026-03-17_medium,GPT-5.4 Mini
+gpt-5.4-mini-2026-03-17_none,GPT-5.4 Mini
+gpt-5.4-mini-2026-03-17_unknown,GPT-5.4 Mini
+gpt-5.4-mini-2026-03-17_xhigh,GPT-5.4 Mini
+gpt-5.4-nano-2026-03-17_high,GPT-5.4 Nano
+gpt-5.4-nano-2026-03-17_low,GPT-5.4 Nano
+gpt-5.4-nano-2026-03-17_medium,GPT-5.4 Nano
+gpt-5.4-nano-2026-03-17_none,GPT-5.4 Nano
+gpt-5.4-nano-2026-03-17_xhigh,GPT-5.4 Nano
+gpt-5.4-pro-2026-03-05_none,GPT-5.4 Pro
+gpt-5.4-pro-2026-03-05_unknown,GPT-5.4 Pro
+gpt-5.4-pro-2026-03-05_xhigh,GPT-5.4 Pro
+gpt-5.5_high,GPT-5.5
+gpt-5.5_low,GPT-5.5
+gpt-5.5_medium,GPT-5.5
+gpt-5.5_none,GPT-5.5
+gpt-5.5_unknown,GPT-5.5
+gpt-5.5_xhigh,GPT-5.5
+gpt-5.5-instant,GPT-5.5 Instant
+gpt-5.5-pro_high,GPT-5.5 Pro
+gpt-5.5-pro_unknown,GPT-5.5 Pro
+gpt-5.5-pro_xhigh,GPT-5.5 Pro
+gpt-5.6-luna_high,GPT-5.6 Luna
+gpt-5.6-luna_low,GPT-5.6 Luna
+gpt-5.6-luna_max,GPT-5.6 Luna
+gpt-5.6-luna_medium,GPT-5.6 Luna
+gpt-5.6-luna_none,GPT-5.6 Luna
+gpt-5.6-luna_unknown,GPT-5.6 Luna
+gpt-5.6-luna_xhigh,GPT-5.6 Luna
+gpt-5.6-sol_high,GPT-5.6 Sol
+gpt-5.6-sol_low,GPT-5.6 Sol
+gpt-5.6-sol_max,GPT-5.6 Sol
+gpt-5.6-sol_medium,GPT-5.6 Sol
+gpt-5.6-sol_none,GPT-5.6 Sol
+gpt-5.6-sol_unknown,GPT-5.6 Sol
+gpt-5.6-sol_xhigh,GPT-5.6 Sol
+gpt-5.6-terra_high,GPT-5.6 Terra
+gpt-5.6-terra_low,GPT-5.6 Terra
+gpt-5.6-terra_max,GPT-5.6 Terra
+gpt-5.6-terra_medium,GPT-5.6 Terra
+gpt-5.6-terra_none,GPT-5.6 Terra
+gpt-5.6-terra_unknown,GPT-5.6 Terra
+gpt-5.6-terra_xhigh,GPT-5.6 Terra
+gpt-6-astra_high,GPT-6 Astra
+gpt-6-astra_low,GPT-6 Astra
+gpt-6-astra_max,GPT-6 Astra
+gpt-6-astra_medium,GPT-6 Astra
+gpt-6-astra_none,GPT-6 Astra
+gpt-6-astra_unknown,GPT-6 Astra
+gpt-6-astra_xhigh,GPT-6 Astra
+gpt-6-luna_high,GPT-6 Luna
+gpt-6-luna_low,GPT-6 Luna
+gpt-6-luna_max,GPT-6 Luna
+gpt-6-luna_medium,GPT-6 Luna
+gpt-6-luna_none,GPT-6 Luna
+gpt-6-luna_unknown,GPT-6 Luna
+gpt-6-luna_xhigh,GPT-6 Luna
+gpt-6-sol_high,GPT-6 Sol
+gpt-6-sol_low,GPT-6 Sol
+gpt-6-sol_max,GPT-6 Sol
+gpt-6-sol_medium,GPT-6 Sol
+gpt-6-sol_none,GPT-6 Sol
+gpt-6-sol_unknown,GPT-6 Sol
+gpt-6-sol_xhigh,GPT-6 Sol
+gpt-6.1-sol_high,GPT-6.1 Sol
+gpt-6.1-sol_low,GPT-6.1 Sol
+gpt-6.1-sol_max,GPT-6.1 Sol
+gpt-6.1-sol_medium,GPT-6.1 Sol
+gpt-6.1-sol_unknown,GPT-6.1 Sol
+gpt-6.1-sol_xhigh,GPT-6.1 Sol
+gemini-3.1-flash-lite,Gemini 3.1 Flash-Lite
+gemini-3.1-flash-lite_high,Gemini 3.1 Flash-Lite
+gemini-3.1-flash-lite_low,Gemini 3.1 Flash-Lite
+gemini-3.1-flash-lite_minimal,Gemini 3.1 Flash-Lite
+gemini-3.5-flash_high,Gemini 3.5 Flash
+gemini-3.5-flash_low,Gemini 3.5 Flash
+gemini-3.5-flash_medium,Gemini 3.5 Flash
+gemini-3.5-flash_minimal,Gemini 3.5 Flash
+gemini-3.5-flash_unknown,Gemini 3.5 Flash
+gemini-3.5-flash-lite,Gemini 3.5 Flash-Lite
+gemini-3.5-flash-lite_high,Gemini 3.5 Flash-Lite
+gemini-3.5-flash-lite_low,Gemini 3.5 Flash-Lite
+gemini-3.5-flash-lite_medium,Gemini 3.5 Flash-Lite
+gemini-3.5-flash-lite_minimal,Gemini 3.5 Flash-Lite
+gemini-3.6-flash_high,Gemini 3.6 Flash
+gemini-3.6-flash_low,Gemini 3.6 Flash
+gemini-3.6-flash_medium,Gemini 3.6 Flash
+gemini-3.6-flash_minimal,Gemini 3.6 Flash
+gemini-3.6-flash_unknown,Gemini 3.6 Flash
+gemini-3.7-flash_high,Gemini 3.7 Flash
+gemini-3.7-flash_low,Gemini 3.7 Flash
+gemini-3.7-flash_medium,Gemini 3.7 Flash
+gemini-3.7-flash_unknown,Gemini 3.7 Flash
+gemini-3.8-flash_high,Gemini 3.8 Flash
+gemini-3.8-flash_low,Gemini 3.8 Flash
+gemini-3.8-flash_medium,Gemini 3.8 Flash
+gemini-3.8-flash_unknown,Gemini 3.8 Flash
+gemini-4-argon_high,Gemini 4 Argon
+gemini-4-argon_low,Gemini 4 Argon
+gemini-4-argon_medium,Gemini 4 Argon
+gemini-4-argon_unknown,Gemini 4 Argon
+gemma-2-27b,Gemma 2 27B
+gemma-2-9b,Gemma 2 9B
+gemma-2b,Gemma 2B
+gemma-4-26b-a4b,Gemma 4 26B A4B
+gemma-4-31b-it,Gemma 4 31B IT
+gemma-4-31b-it_minimal,Gemma 4 31B IT
+gemma-7b,Gemma 7B
+grok-3,Grok 3
+grok-4-fast,Grok 4 Fast
+grok-4-20,Grok 4.20
+grok-4.5_high,Grok 4.5
+grok-4.5_low,Grok 4.5
+grok-4.5_medium,Grok 4.5
+grok-4.5_unknown,Grok 4.5
+grok-4.6_high,Grok 4.6
+grok-4.6_low,Grok 4.6
+grok-4.6_medium,Grok 4.6
+grok-4.6_unknown,Grok 4.6
+grok-4.6_xhigh,Grok 4.6
+grok-4.7_high,Grok 4.7
+grok-4.7_low,Grok 4.7
+grok-4.7_medium,Grok 4.7
+grok-4.7_unknown,Grok 4.7
+grok-4.7_xhigh,Grok 4.7
+grok-3-mini_high,Grok-3 mini
+grok-3-mini_low,Grok-3 mini
+INTELLECT-1-Instruct,INTELLECT-1
+Inkling,Inkling
+Inkling_high,Inkling
+Inkling_xhigh,Inkling
+inkling-small,Inkling-Small
+inkling-small_high,Inkling-Small
+inkling-small_low,Inkling-Small
+inkling-small_medium,Inkling-Small
+inkling-small_minimal,Inkling-Small
+inkling-small_none,Inkling-Small
+inkling-small_xhigh,Inkling-Small
+kimi-k2-thinking,Kimi K2 Thinking
+kimi-k2.5,Kimi K2.5
+kimi-k2.6,Kimi K2.6
+kimi-k2.6_none,Kimi K2.6
+kimi-k2.7-code,Kimi K2.7 Code
+kimi-k3_high,Kimi K3
+kimi-k3_low,Kimi K3
+kimi-k3_max,Kimi K3
+kimi-k3_unknown,Kimi K3
+LLaMA-13B,LLaMA-13B
+LLaMA-33B,LLaMA-33B
+LLaMA-65B,LLaMA-65B
+LLaMA-7B,LLaMA-7B
+Llama-2-13b,Llama 2-13B
+Llama-2-13b-chat,Llama 2-13B
+Llama-2-34b,Llama 2-34B
+Llama-2-70b-chat,Llama 2-70B
+Llama-2-7b,Llama 2-7B
+Llama-3.1-405B,Llama 3.1-405B
+Llama-3.1-405B-Instruct,Llama 3.1-405B
+Llama-3.1-70B-Instruct,Llama 3.1-70B
+Llama-3.1-8B-Instruct,Llama 3.1-8B
+Llama-3.2-1B-Instruct,Llama 3.2 1B
+Llama-3.3-70B-Instruct,Llama 3.3 70B
+mpt-30b,MPT-30B
+mpt-30b-instruct,MPT-30B
+mpt-7b,MPT-7B
+MiniMax-M2.5,MiniMax-M2.5
+MiniMax-M2.7,MiniMax-M2.7
+MiniMax-M3,MiniMax-M3
+MiniMax-M3_none,MiniMax-M3
+Mistral-7B-v0.1,Mistral 7B v0.1
+muse-spark,Muse Spark
+muse-spark-1.1,Muse Spark 1.1
+muse-spark-1.1_high,Muse Spark 1.1
+muse-spark-1.1_xhigh,Muse Spark 1.1
+muse-spark-1.2,Muse Spark 1.2
+muse-spark-1.2_xhigh,Muse Spark 1.2
+muse-spark-1.3_max,Muse Spark 1.3
+muse-spark-1.3_unknown,Muse Spark 1.3
+muse-spark-1.3_xhigh,Muse Spark 1.3
+nemotron-3-ultra,Nemotron 3 Ultra
+Nemotron-4 15B,Nemotron-4 15B
+PaLM 2-L,PaLM 2-L
+PaLM 2-M,PaLM 2-M
+PaLM 2-S,PaLM 2-S
+phi-1_5,Phi-1.5
+phi-2,Phi-2
+phi-4,Phi-4
+QwQ-32B,QwQ-32B
+qwen3.6-35b-a3b,Qwen 3.6 35B-A3B
+qwen3.6-35b-a3b_none,Qwen 3.6 35B-A3B
+qwen3.6-flash,Qwen 3.6 Flash
+qwen3.6-flash_none,Qwen 3.6 Flash
+qwen3.6-max-preview,Qwen 3.6 Max (Preview)
+qwen3.6-max-preview_none,Qwen 3.6 Max (Preview)
+qwen3.6-plus,Qwen 3.6 Plus
+qwen3.6-plus_none,Qwen 3.6 Plus
+qwen3.8-27b,Qwen 3.8 27B
+qwen3.8-27b_low,Qwen 3.8 27B
+qwen3.8-27b_medium,Qwen 3.8 27B
+qwen3.8-27b_none,Qwen 3.8 27B
+qwen3.8-27b_xhigh,Qwen 3.8 27B
+qwen3.8-max_unknown,Qwen 3.8 Max
+qwen3.8-max_xhigh,Qwen 3.8 Max
+Qwen-14B,Qwen-14B
+Qwen-14B-Chat,Qwen-14B
+Qwen-1_8B,Qwen-1_8B
+Qwen-7B,Qwen-7B
+qwen2-72b-instruct,Qwen2-72B
+qwen2.5-32b-instruct,Qwen2.5-32B
+Qwen2.5-72B,Qwen2.5-72B
+qwen2.5-72b-instruct,Qwen2.5-72B
+qwen2.5-7b-instruct,Qwen2.5-7B
+Qwen2.5-Coder-1.5B,Qwen2.5-Coder (1.5B)
+Qwen2.5-Coder-7B,Qwen2.5-Coder (7B)
+Qwen2.5-Coder-7B-Instruct,Qwen2.5-Coder (7B)
+Qwen2.5-Coder-0.5B,Qwen2.5-Coder-0.5B
+Qwen2.5-Coder-14B,Qwen2.5-Coder-14B
+Qwen2.5-Coder-14B-Instruct,Qwen2.5-Coder-14B
+Qwen2.5-Coder-32B,Qwen2.5-Coder-32B
+Qwen2.5-Coder-32B-Instruct,Qwen2.5-Coder-32B
+Qwen2.5-Coder-3B,Qwen2.5-Coder-3B
+Qwen2.5-Coder-3B-Instruct,Qwen2.5-Coder-3B
+qwen3-14b,Qwen3-14B
+qwen3-14b_none,Qwen3-14B
+Qwen3-235B-A22B,Qwen3-235B-A22B
+qwen3-235b-a22b,Qwen3-235B-A22B
+Qwen3-30B-A3B,Qwen3-30B-A3B
+Qwen3-30B-A3B_none,Qwen3-30B-A3B
+Qwen3-32B,Qwen3-32B
+Qwen3-32B_none,Qwen3-32B
+qwen3-8b,Qwen3-8B
+qwen3-8b_none,Qwen3-8B
+qwen3-max-2025-09-23,Qwen3-Max
+qwen3.5-397b-a17b,Qwen3.5 397B-A17B
+qwen3.5-397b-a17b_none,Qwen3.5 397B-A17B
+qwen3.5-35b-a3b,Qwen3.5-35B-A3B
+qwen3.5-35b-a3b_none,Qwen3.5-35B-A3B
+qwen3.5-9B,Qwen3.5-9B
+qwen3.5-9B_none,Qwen3.5-9B
+qwen3.6-27b,Qwen3.6 27B
+qwen3.6-27b_none,Qwen3.6 27B
+qwen3.7-flash,Qwen3.7 Flash
+qwen3.7-flash_none,Qwen3.7 Flash
+qwen3.7-max,Qwen3.7-Max
+qwen3.7-max_none,Qwen3.7-Max
+qwen3.7-plus,Qwen3.7-Plus
+qwen3.7-plus_none,Qwen3.7-Plus
+qwen3.8-max-0902_xhigh,Qwen3.8 Max (0902)
+RedPajama-INCITE-7B-Base,RedPajama-INCITE-7B-Base
+StableBeluga2,Stable Beluga 2
+starcoder2-15b,StarCoder 2 15B
+starcoder2-3b,StarCoder 2 3B
+starcoder2-7b,StarCoder 2 7B
+Yi-6B,Yi 6B
+Yi-6B-Chat,Yi 6B
+Yi-34B,Yi-34B
+Yi-34B-Chat,Yi-34B
+Yi-9B,Yi-9B
+chatglm2-6b,chatglm2-6b
+gpt-oss-120b,gpt-oss-120b
+gpt-oss-120b_high,gpt-oss-120b
+gpt-oss-120b_medium,gpt-oss-120b
+gpt-oss-120b_unknown,gpt-oss-120b
+gpt-oss-20b,gpt-oss-20b
+gpt-oss-20b_high,gpt-oss-20b
+gpt-oss-20b_low,gpt-oss-20b
+gpt-oss-20b_medium,gpt-oss-20b
+gpt-oss-20b_unknown,gpt-oss-20b
+internlm-20b,internlm-20b
+internlm-7b,internlm-7b
+o1-2024-12-17_high,o1
+o1-2024-12-17_low,o1
+o1-2024-12-17_medium,o1
+o1-mini-2024-09-12_high,o1-mini
+o1-mini-2024-09-12_medium,o1-mini
+o1-mini-2024-09-12_unknown,o1-mini
+o1-preview-2024-09-12,o1-preview
+o3-2025-04-16_high,o3
+o3-2025-04-16_low,o3
+o3-2025-04-16_medium,o3
+o3-2025-04-16_unknown,o3
+o3-mini-2025-01-31_high,o3-mini
+o3-mini-2025-01-31_low,o3-mini
+o3-mini-2025-01-31_medium,o3-mini
+o3-pro-2025-06-10_high,o3-pro
+o3-pro-2025-06-10_low,o3-pro
+o3-pro-2025-06-10_medium,o3-pro
+o4-mini-2025-04-16_high,o4-mini
+o4-mini-2025-04-16_low,o4-mini
+o4-mini-2025-04-16_medium,o4-mini
+open_llama_7b,open_llama_7b
+stablelm-tuned-alpha-7b,stablelm-tuned-alpha-7b
+vicuna-13b-v1.1,vicuna-13b-v1.1

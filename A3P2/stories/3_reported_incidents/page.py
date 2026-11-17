@@ -1,6 +1,6 @@
 """Story 3: how openly each developer builds its models and how often it appears in reported incidents.
 
-View 5a (Stanford FMTI, December 2025) and View 5b (AI Incident Database model incidents with Epoch model
+View 1 (Stanford FMTI, December 2025) and View 2 (AI Incident Database model incidents with Epoch model
 releases). Reads only this folder's own data: data/fmti_dec2025_scores_tidy.csv and data/fmti_companies.csv (FMTI),
 data/aiid_model_incidents_by_developer.csv (AI Incident Database) and data/model_capability.csv (Epoch). Nothing is
 joined in a notebook. Runs inside app.py or on its own:
@@ -30,7 +30,7 @@ epoch = load_epoch(str(HERE / "data"))
 
 shell.story(3, "")
 with st.container(key="fmti_view", border=True):
-    st.subheader("5a. How openly does each developer build its models?", anchor="view-5a")
+    st.subheader("1. How openly does each developer build its models?", anchor="view-1")
 
     @st.fragment
     def view_a():
@@ -39,8 +39,8 @@ with st.container(key="fmti_view", border=True):
     view_a()
 
 with st.container(key="incident_view", border=True):
-    st.subheader("5b. How often does each developer appear in reported model incidents, and what went wrong?",
-                 anchor="view-5b")
+    st.subheader("2. How often does each developer appear in reported model incidents, and what went wrong?",
+                 anchor="view-2")
 
     @st.fragment
     def view_b():

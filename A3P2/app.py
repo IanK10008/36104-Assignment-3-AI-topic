@@ -26,7 +26,7 @@ PAGES = [
             url_path="licence"),
     st.Page("stories/2_gap_to_us_models/page.py", title="2 · Waiting for US access: the gap",
             url_path="gap"),
-    st.Page("stories/3_reported_incidents/page.py", title="3 · Reported AI incidents by developer",
+    st.Page("stories/3_reported_incidents/page.py", title="3 · Openness and reported incidents by developer",
             url_path="incidents"),
 ]
 st.navigation(PAGES, position="top").run()

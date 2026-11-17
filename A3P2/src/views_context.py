@@ -1,8 +1,8 @@
-"""Views 3 to 5 of the Model Choice Explorer, one per tab after the shortlist.
+"""The A3P1 views 3 to 5 of the Model Choice Explorer, one per tab after the shortlist (View 1 of Story 1b, View 1 of Story 2 and Views 1 and 2 of Story 3 in this app).
 
-- View 3 (user story 1, second half): capability by licence class, i.e. what the bank may run on its own servers.
-- View 4 (user story 2): the capability gap between the restricted US models and the accessible ones over time.
-- View 5 (user story 3): reported AI incidents by year and by developer.
+- Story 1b View 1 (user story 1, second half): capability by licence class, i.e. what the bank may run on its own servers.
+- Story 2 View 1 (user story 2): the capability gap between the restricted US models and the accessible ones over time.
+- A3P1 View 5 (user story 3): reported AI incidents by year and by developer. Story 3 of this app uses its own Views 1 and 2 instead.
 
 Each view follows the pattern of Views 1 and 2: title, unit, controls above the chart, chart with the zoom toolbar,
 values table, how to read, design decision with the rejected alternatives, limits, filtered records with a CSV
@@ -84,7 +84,7 @@ def _date(value) -> str:
 
 
 # --------------------------------------------------------------------------- #
-# View 3: capability by licence class
+# Story 1b View 1: capability by licence class
 # --------------------------------------------------------------------------- #
 WINDOW_ALL = "All releases, Feb 2023 to Oct 2026"
 
@@ -307,7 +307,7 @@ def render_view3(models: pd.DataFrame, check: pd.DataFrame) -> None:
 
 
 # --------------------------------------------------------------------------- #
-# View 4: capability gap over time
+# Story 2 View 1: capability gap over time
 # --------------------------------------------------------------------------- #
 V4_HOW = """
 - **Orange step line:** the best restricted model released so far, that is a model from a US developer whose weights
@@ -539,7 +539,7 @@ def render_view4(models: pd.DataFrame) -> None:
 
 
 # --------------------------------------------------------------------------- #
-# View 5: reported incidents
+# A3P1 View 5: reported incidents (not used by Story 3 of this app)
 # --------------------------------------------------------------------------- #
 V5_HOW = """
 - **Top chart:** AI incidents reported per year in the AI Incident Database, split into incidents involving

@@ -1,14 +1,14 @@
-"""Story 1b, View 3b (owner: Anh): the licence mix of open-weight releases by year.
+"""Story 1b, View 2 (owner: Anh): the licence mix of open-weight releases by year.
 
-View 3 (the dot strip) shows how much capability each licence class holds today. View 3b adds the trend: of the
+View 1 (the dot strip) shows how much capability each licence class holds today. View 2 adds the trend: of the
 open-weight models released each year, how many may a bank self-host for commercial use under Epoch's label?
 
 Layout and colours follow Ian's views in src/views_context.py: unit caption, metrics, "Selected" line, HTML legend
 above the chart, fixed-width Plotly chart with no title inside it, visible values table, then how to read, design
-decision, limits, filtered records with a CSV download, and the shared sources footer. Open weights stay in View 3's
+decision, limits, filtered records with a CSV download, and the shared sources footer. Open weights stay in View 1's
 blue (#0072B2); the three licence classes are steps of that one blue, darkest for the most permissive.
 
-It reads the same table and View 3's developer-country control, and always shows every release year, because the
+It reads the same table and View 1's developer-country control, and always shows every release year, because the
 trend is the point of the chart. Counts come straight from data/model_capability.csv; nothing is hand-coded.
 """
 from __future__ import annotations
@@ -21,7 +21,7 @@ from src.views import INK, MUTED, PLOT_CONFIG, footer
 from src.views_context import (OPEN, WINDOW_ALL, ZOOM_NOTE, _layout, download_records, legend_html,
                                view3_data)
 
-# One hue (View 3's open-weight blue) in three steps, darkest = most permissive. Lightness alone separates the steps,
+# One hue (View 1's open-weight blue) in three steps, darkest = most permissive. Lightness alone separates the steps,
 # so they survive every colour vision deficiency; each segment also carries its count and share as text.
 MIX_CLASSES = {
     "Open weights, unrestricted": ("Commercial self-hosting allowed", OPEN, "white"),
@@ -51,23 +51,23 @@ HOW_TO_READ = f"""
 """
 
 DESIGN_DECISION = """
-**Why this view was added (story 1b):** View 3 is a snapshot: how much capability each licence class holds today.
+**Why this view was added (story 1b):** View 1 is a snapshot: how much capability each licence class holds today.
 The architect is also deciding whether the bank should build a self-hosting route at all, which only pays off if
-self-hostable models keep coming. View 3b answers that with the trend: of each year's new open-weight models, how many
+self-hostable models keep coming. View 2 answers that with the trend: of each year's new open-weight models, how many
 may the bank run for its business. It also shows a change over time, which ties story 1b to the rise of AI.
 
 **Visual task:** Show how the licence mix of new open-weight models has changed, so the architect can tell the
 committee whether the self-hosting route is widening or narrowing.
 
 **Form chosen:** A horizontal 100% stacked bar per release year (Visual Vocabulary: *part-to-whole*), with the count
-and share written in every segment, so no value needs hovering. The three classes are steps of View 3's open-weight
+and share written in every segment, so no value needs hovering. The three classes are steps of View 1's open-weight
 blue, darkest for the most permissive, because the classes are ordered (from "allowed" to "not allowed") and every
-model here is open-weight. Rows read top to bottom in time, with the year's total under each label, as in View 3.
+model here is open-weight. Rows read top to bottom in time, with the year's total under each label, as in View 1.
 
 **Alternatives rejected:**
 
 1. **Vertical 100% bars in blue, orange and grey (the first draft, shown small below).**
-   - **Orange read as "closed":** it is close to the closed-model colour of Views 3 and 4, so the restricted-use
+   - **Orange read as "closed":** it is close to the closed-model colour of View 1 and of Story 2 View 1, so the restricted-use
      segment looked like a closed model, yet every model here is open-weight.
    - **Unrelated colours hid the order:** blue, orange and grey say "three kinds", not "allowed, review needed, not
      allowed", which is the order the architect reads.
@@ -186,11 +186,11 @@ def answer_text(table: pd.DataFrame) -> str:
 
 
 def render_licence_mix(models: pd.DataFrame, check: pd.DataFrame) -> None:
-    """View 3b. Uses View 3's developer-country control (key v3_countries). It always shows every release year,
+    """View 2. Uses View 1's developer-country control (key v3_countries). It always shows every release year,
     because a trend cut to the release window above (two years by default) would hide the change."""
     countries = st.session_state.get("v3_countries") or []
     frame = view3_data(models, check, WINDOW_ALL, countries)
-    st.subheader("3b. Are the open-weight models released each year becoming easier to self-host?", anchor="view-3b")
+    st.subheader("2. Are the open-weight models released each year becoming easier to self-host?", anchor="view-2")
     st.caption("Unit: share of the open-weight models released in each year (%), with the number of models. Licence "
                "class from Epoch AI's accessibility label. Uses the developer countries chosen above and always "
                f"every release year (24 Feb 2023 to {LATEST_LONG}), since the trend needs all years.")

@@ -1,8 +1,8 @@
-# Story 3: developers, what they disclose and what is reported (Views 5a and 5b)
+# Story 3: developers, what they disclose and what is reported (Views 1 and 2)
 
 **Built by:** Ian, with Claude's help.  **Data snapshots:** AI Incident Database export of 12 Oct 2026 (latest incident 3 Oct 2026), Stanford FMTI December 2025 edition, Epoch Capabilities Index file retrieved 17 Oct 2026 22:27 UTC.
 
-**Status:** Views 5a and 5b are built and read only this folder's own data. Open items are listed under "Limitations" and "Checks". The Story 3 notebooks and the app files were last changed on 14 to 16 Nov 2026.
+**Status:** Views 1 and 2 are built and read only this folder's own data. Open items are listed under "Limitations" and "Checks". The Story 3 notebooks and the app files were last changed on 14 to 16 Nov 2026. The chart names were changed on 18 Nov 2026 (see "Chart names").
 
 ## Persona, scenario, task and constraints
 
@@ -27,10 +27,10 @@ Source: [Alternative Proposal (No Search ABC), section "Primary persona, scenari
 
 **Questions answered:**
 
-- **View 5a:** How much does each developer disclose about how it builds its models?
-- **View 5b:** How often does each developer appear in reported model incidents, and what went wrong?
+- **View 1:** How much does each developer disclose about how it builds its models?
+- **View 2:** How often does each developer appear in reported model incidents, and what went wrong?
 
-**Framing:** Story 3 shows what public evidence exists about each developer and shows the gaps as gaps. It contains no benchmark data. The FMTI score is read as an indicator of disclosure practice and not as a score of the models in View 1 and View 2.
+**Framing:** Story 3 shows what public evidence exists about each developer and shows the gaps as gaps. It contains no benchmark data. The FMTI score is read as an indicator of disclosure practice and not as a score of the models in Story 1a View 1 and Story 1a View 2.
 
 ## The 11 developers
 
@@ -42,16 +42,18 @@ The page covers the 11 developers in scope: OpenAI, Anthropic, Google, Meta, xAI
 | Not scored by FMTI | Z.ai, Moonshot, MiniMax | 3 |
 | Scored by FMTI, not one of the 11 | AI21 Labs, Amazon, IBM, Midjourney, Writer | 5 |
 
-FMTI scores 13 companies in total (8 of the 11 and 5 others). View 5a shows light grey names for the five others and grey rows for the three unscored developers.
+FMTI scores 13 companies in total (8 of the 11 and 5 others). View 1 shows light grey names for the five others and grey rows for the three unscored developers.
 
 ## Charts used
 
 | View | Chart type | What it shows |
 |---|---|---|
-| 5a | Heatmap, 16 rows by 19 subdomains | Indicators disclosed by each company in each FMTI subdomain, with rows grouped by headquarters region and columns grouped by domain |
-| 5b | Event timeline (dot strip plot) with an aligned monthly stacked bar on a shared time axis | Model incidents by developer and incident type, with Epoch model releases as triangles |
+| 1 | Heatmap, 16 rows by 19 subdomains | Indicators disclosed by each company in each FMTI subdomain, with rows grouped by headquarters region and columns grouped by domain |
+| 2 | Event timeline (dot strip plot) with an aligned monthly stacked bar on a shared time axis | Model incidents by developer and incident type, with Epoch model releases as triangles |
 
-**Filters:** 5a has headquarters region, domain, companies and subdomains. 5b has a period slider (default 2020 to 2026), incident type, headquarters region, developers and a toggle for Epoch model releases.
+**Filters:** View 1 has headquarters region, domain, companies and subdomains. View 2 has a period slider (default 2020 to 2026), incident type, headquarters region, developers and a toggle for Epoch model releases.
+
+**Chart names:** Until 17 Nov 2026 the charts were called View 1, 2, 3, 3b, 4, 4B, V3, 5a and 5b. On 18 Nov 2026 the charts of each story were numbered from 1 in page order. Story 1a has View 1 and View 2 (unchanged). Story 1b has View 1 (earlier View 3) and View 2 (earlier View 3b). Story 2 has View 1 (earlier View 4), View 2 (earlier View 4B) and View 3 (earlier V3, the proposal chart). Story 3 has View 1 (earlier View 5a) and View 2 (earlier View 5b). A chart of another story is named with its story, for example Story 2 View 1. File names (`view4b.py`, `v3_difference.py`, `DATA_DICTIONARY_4B.md`, `DATA_DICTIONARY_V3.md`, `PROVENANCE_V3_DRAFT.md`) and the proposal chart ids (V1 to V7) are unchanged. MEMORY.md sections up to 8al and the earlier decision logs use the old names.
 
 ## Data sources and dates
 
@@ -76,18 +78,18 @@ FMTI scores 13 companies in total (8 of the 11 and 5 others). View 5a shows ligh
 | `notebooks/aiid_model_incidents/aiid_model_incidents.ipynb` | `aiid_model_incidents_by_developer.csv`, `aiid_not_counted_incidents.csv`, `data_currency.csv` | `aiid_model_incidents_by_developer.csv` |
 | `notebooks/eci_scores/eci_scores.ipynb` | `model_capability.csv`, `data_currency.csv` | `model_capability.csv` |
 
-The files `incidents.csv` and `incident_developers.csv` in `data/` and the notebook `notebooks/aiid_incidents/` come from the earlier version of this page. Views 5a and 5b do not read them.
+The files `incidents.csv` and `incident_developers.csv` in `data/` and the notebook `notebooks/aiid_incidents/` come from the earlier version of this page. Views 1 and 2 do not read them.
 
 ## What the page shows
 
-**View 5a. FMTI heatmap.**
+**View 1. FMTI heatmap.**
 
 - **Cell:** the indicators a company discloses in a subdomain, over the indicators in that subdomain.
 - **Rows:** one row per company, grouped by headquarters region and sorted A to Z inside each group, so the order is not a ranking. The China group comes last.
 - **Grey rows:** Z.ai, Moonshot and MiniMax close the China group. FMTI did not score them, so a grey row is a gap in the evidence.
 - **Total score:** the official total out of 100 is not drawn in the chart. It is in the table under "Values behind the chart".
 
-**View 5b. Incident timeline.**
+**View 2. Incident timeline.**
 
 - **Counted:** 1,481 incidents since 2020, of which 400 name one of the 11 developers and 318 are model incidents. The other 82 are platform products (61), operations cases (5) and cases that name a developer only as the place of a scam (16).
 - **Dots:** one dot per incident and named developer, which gives 377 dots for 318 incidents.
@@ -96,9 +98,9 @@ The files `incidents.csv` and `incident_developers.csv` in `data/` and the noteb
 
 ## Changes after A3P1
 
-- **Replaced:** the A3P1 tab on developers in reported incidents (a stacked column chart by year above a ranking by developer) is replaced by Views 5a and 5b.
-- **Added:** the openness half of the story is now covered by View 5a, and the incident half by View 5b with MIT risk domains and Epoch release dates.
-- **Settled during the build:** Z.ai, Moonshot and MiniMax are kept as grey rows. The metric "Mean of the 13" and the total score column are removed from 5a. The incident type filter is the only control for type in 5b. Help icons sit next to their labels in the whole app.
+- **Replaced:** the A3P1 tab on developers in reported incidents (a stacked column chart by year above a ranking by developer) is replaced by Views 1 and 2.
+- **Added:** the openness half of the story is now covered by View 1, and the incident half by View 2 with MIT risk domains and Epoch release dates.
+- **Settled during the build:** Z.ai, Moonshot and MiniMax are kept as grey rows. The metric "Mean of the 13" and the total score column are removed from View 1. The incident type filter is the only control for type in View 2. Help icons sit next to their labels in the whole app.
 
 ## Refreshing the data
 
@@ -108,15 +110,15 @@ The files `incidents.csv` and `incident_developers.csv` in `data/` and the noteb
 
 ## Limitations
 
-- **Disclosure, not practice (5a):** an indicator counts when the company publishes the item. How well the company does it is not measured.
-- **One flagship model per company (5a):** the assessed models are those of May 2025. Newer models are not covered.
-- **Different evidence (5a):** seven companies submitted their own reports and six did not. A zero for the six can mean that the item was not found.
-- **Eight of 11 (5a):** nothing in the page says how Z.ai, Moonshot or MiniMax compare, because FMTI does not score them.
-- **Reports, not failures (5b):** a count shows what was reported and not how often a model fails. Counts follow use and press attention as well as risk.
-- **Language (5b):** the database draws on English-language media, so the five developers based in China cannot be compared with those based in the United States.
-- **Types set by the group (5b):** 66 incidents had no MIT risk domain, mostly from 2025 and 2026. The group assigned the closest domain, with AI assistance in the reading. A second group member has not yet checked these types or the 400 labels.
-- **Export age (5b):** a newer weekly export exists and has not been used.
-- **Developer as recorded (5b):** naming a developer is not proof of fault.
+- **Disclosure, not practice (View 1):** an indicator counts when the company publishes the item. How well the company does it is not measured.
+- **One flagship model per company (View 1):** the assessed models are those of May 2025. Newer models are not covered.
+- **Different evidence (View 1):** seven companies submitted their own reports and six did not. A zero for the six can mean that the item was not found.
+- **Eight of 11 (View 1):** nothing in the page says how Z.ai, Moonshot or MiniMax compare, because FMTI does not score them.
+- **Reports, not failures (View 2):** a count shows what was reported and not how often a model fails. Counts follow use and press attention as well as risk.
+- **Language (View 2):** the database draws on English-language media, so the five developers based in China cannot be compared with those based in the United States.
+- **Types set by the group (View 2):** 66 incidents had no MIT risk domain, mostly from 2025 and 2026. The group assigned the closest domain, with AI assistance in the reading. A second group member has not yet checked these types or the 400 labels.
+- **Export age (View 2):** a newer weekly export exists and has not been used.
+- **Developer as recorded (View 2):** naming a developer is not proof of fault.
 
 ## Restrictions
 
@@ -133,10 +135,16 @@ The files `incidents.csv` and `incident_developers.csv` in `data/` and the noteb
 |---|---|
 | FMTI scores file, 100 indicators per company, summed against the published totals | All 13 match. Direct evidence for 7 companies (IBM, DeepSeek, Alibaba, xAI, Midjourney, Meta, Mistral). The other 6 rest on a news article and the paper's averages |
 | FMTI domains, indicator order against the indicator file | 100 of 100 matched, Upstream 34, Model 30 and Downstream 36 in 19 subdomains |
-| 5a unit tests (pytest, cloud copy) | 4 passed. Row order, grey rows without values, 13 scored rows equal to the tidy file, no click order that breaks the page |
+| View 1 unit tests (pytest, cloud copy) | 4 passed. Row order, grey rows without values, 13 scored rows equal to the tidy file, no click order that breaks the page |
 | Help icon gap in the browser, Stories 1a, 1b, 2 and 3 | 6 px between label and icon. Before the change it was 270 to 1426 px on sliders and multiselects |
-| 5b controls look | Developers and Incident type start within 1 to 2 px at three window widths |
+| View 2 controls look | Developers and Incident type start within 1 to 2 px at three window widths |
+| Page at 1366x768 in headless Chromium, run on the local code (18 Nov 2026) | Document width 1366, charts 1174 px wide, no element beyond the window, so no horizontal scroll (rubric check 23) |
+| Empty selections (`streamlit.testing`, 18 Nov 2026): no company or no subdomain in View 1, no developer or no incident type in View 2 | Each shows a "Choose at least one" message and raises no exception (rubric check 22). The period slider cannot give an empty period |
+| Colour vision simulation (protan, deutan and tritan, 18 Nov 2026) of the colours of both views | Incident types: smallest colour difference 17.0 to 22.7 under colour vision deficiency, 53.6 in normal vision (CIE76). Domains 17.0 to 55.7. The heatmap steps keep their order by lightness and the smallest step difference is 15.6 to 24.2. No pair collapses and tritan is the lowest. Simulation only, not seen in a browser (rubric check 18) |
+| Values readable without hovering (18 Nov 2026) | Partly met. View 1 shows the value in every heatmap cell. In View 2 the monthly totals are on the chart but the value of each incident dot shows on hover, and the values tables of both views sit in closed sections (rubric check 17) |
 
-**Not yet checked:** the look of the grey rows, the 5a hover and the colourbar title spacing in a browser, the second group member's check of the 66 types and 400 labels, and a full run of the three notebooks on Ian's computer.
+**Not yet checked:** the look of the grey rows, the View 1 hover and the colourbar title spacing in a browser, the second group member's check of the 66 types and 400 labels, and a full run of the three notebooks on Ian's computer.
+
+**Open before submission:** a data dictionary file for the Story 3 data, a provenance row, the disclosure sentence for View 1, the credit and change captions for Views 1 and 2 in the app, and a decision on opening the values tables by default. The two files `src/views_story3.py` and `src/shell.py` that this page needs were not on the shared GitHub branch on 17 Nov 2026, so the page failed to load there (Anh's review).
 
 These checks were run by Claude. Ian has not reviewed them yet.

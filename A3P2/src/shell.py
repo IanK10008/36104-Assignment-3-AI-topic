@@ -1,7 +1,8 @@
 """Page furniture copied word for word from the A3P1 app (app.py), so stories 1b and 2 read the same.
 
 header(): title, question and persona box.  story(): the user-story line.  limitations(): the
-"Data, methods and limitations" block.  Nothing here is new text.
+"Data, methods and limitations" block.  limitations_1a() and limitations_3() are the blocks of Stories 1a and 3.
+The rest is copied word for word.
 """
 from __future__ import annotations
 
@@ -20,11 +21,27 @@ STORIES = {
     2: "As a group enterprise architect, I want to measure how far the best accessible model trails the best model "
        "overall " + GREY.format("and check whether independent benchmarks agree with developer claims") + ", so "
        "that I can judge whether waiting for US access is worth it.",
-    3: "As a group enterprise architect, I want to see " + GREY.format("how openly each developer builds its models "
-       "and") + " how often it appears in reported incidents, so that I can tell the committee what is known and "
-       "unknown about the developers we would rely on.",
+    3: "As a group enterprise architect, I want to see how openly each developer builds its models and how often it "
+       "appears in reported incidents, so that I can tell the committee what is known and unknown about the "
+       "developers we would rely on.",
 }
 NOT_YET = " Grey text: not covered by this page, see \"What this chart cannot show\"."
+
+
+# The help (?) icon of every widget label sits right after the label text, as it already does for the pills.
+HELP_ICON_CSS = """<style>
+label[data-testid="stWidgetLabel"] { justify-content: flex-start !important; }
+label[data-testid="stWidgetLabel"] > div:has(> [data-testid="stTooltipIcon"]) {
+    flex: 0 0 auto !important; width: auto !important; margin-left: 6px !important; justify-content: flex-start !important; }
+div:has(> [data-testid="stMarkdownContainer"] + label > [data-testid="stTooltipIcon"]) {
+    justify-content: flex-start !important; align-items: flex-start !important; gap: 6px !important; }
+div:has(> label > [data-testid="stTooltipIcon"]) > [data-testid="stMarkdownContainer"] {
+    flex: 0 0 auto !important; width: auto !important; }
+</style>"""
+
+
+def help_icons_left() -> None:
+    st.html(HELP_ICON_CSS)
 
 
 def standalone_page_config() -> None:
@@ -33,6 +50,7 @@ def standalone_page_config() -> None:
         st.set_page_config(page_title="Model Choice Explorer", layout="wide")
     except st.errors.StreamlitAPIException:
         pass
+    help_icons_left()
 
 
 def story(number: int, part: str) -> None:
@@ -42,6 +60,7 @@ def story(number: int, part: str) -> None:
 
 
 def header() -> None:
+    help_icons_left()
     st.title("Model Choice Explorer: capability for the cost, where closed US models are restricted")
     st.markdown(f"**Question:** {QUESTION}")
 
@@ -82,13 +101,13 @@ def limitations() -> None:
             "- **Percentile rank:** (rank - 1) / (n - 1) × 100 among the models shown, cheaper ranks higher.\n"
             "- **Weights:** CRITIC (Diakoulaki, Mavrotas and Papayannakis, 1995), or custom (the sliders start at 5/5/5 = equal). **First-place share:** SMAA first-rank acceptability (Lahdelma and Salminen, 2001) over the 1,033 different weightings that the three 0 to 10 sliders can produce (settings with the same shares count once).\n"
             "- **Price frontier:** models that are stronger than every cheaper model.\n"
-            "- **Licence class (View 3):** Epoch AI's accessibility label, read as what it allows a bank to do. Five "
+            "- **Licence class (Story 1b View 1):** Epoch AI's accessibility label, read as what it allows a bank to do. Five "
             "licences were also read by the group on 18 Oct 2026 and are shown beside Epoch's label.\n"
-            "- **Restricted and accessible (View 4):** restricted = a US developer and no downloadable weights. "
+            "- **Restricted and accessible (Story 2 View 1):** restricted = a US developer and no downloadable weights. "
             "Accessible = open weights from any country, or a service from a developer outside the US. Each line is the "
             "best score released up to that date. Months behind = time since the restricted models first reached the "
             "best accessible score.\n"
-            "- **Incident counts (View 5):** one count per incident and named company, from the AI Incident Database "
+            "- **Incident counts (Story 3 Views 1 and 2):** one count per incident and named company, from the AI Incident Database "
             "export of 12 Oct 2026 (notebook 10).")
     with st.expander("**Source choice and where the sources can mislead**"):
         st.markdown(
@@ -114,6 +133,73 @@ def limitations() -> None:
     st.caption("Last data refresh: Epoch and LiteLLM files retrieved 17 Oct 2026. LMArena snapshot published "
                "15 Oct 2026. Licence pages read 18 Oct 2026. AI Incident Database export of 12 Oct 2026. Latest model "
                "release date in the data: 7 Oct 2026, latest incident: 3 Oct 2026.")
+
+
+def limitations_3() -> None:
+    """The "Data, methods and limitations" block of Story 3: only the sources, methods and limits that Views 1 and 2 use."""
+    from src.views_story3 import SOURCES_3
+    st.subheader("Data, methods and limitations", anchor="data-methods")
+    files = {"fmti": "fmti_dec2025_scores_tidy.csv and fmti_companies.csv, View 1",
+             "aiid": "aiid_model_incidents_by_developer.csv, View 2", "mit": "the same file, View 2",
+             "epoch": "model_capability.csv, View 2"}
+    with st.expander("**Sources**"):
+        st.markdown("\n".join(f"- **{SOURCES_3[k][0]}**, {SOURCES_3[k][1]}. [{SOURCES_3[k][2]}]({SOURCES_3[k][2]}). {SOURCES_3[k][3]}. "
+                              f"File in the app: {files[k]}." for k in ["fmti", "aiid", "mit", "epoch"]))
+    with st.expander("**Methods**"):
+        st.markdown(
+            "- **FMTI scores (View 1):** 100 yes-or-no indicators for 13 companies, each for one flagship model assessed "
+            "in May 2025.\n"
+            "  - *Domains:* the scores file has no domain column, so each indicator takes its domain and subdomain from its "
+            "position in the indicator file of the same edition.\n"
+            "  - *Check:* all 100 indicators matched, with Upstream 34, Model 30 and Downstream 36 in 19 subdomains.\n"
+            "- **Heatmap cell:** the indicators a company discloses, over the indicators in the subdomain.\n"
+            "  - *Rows:* grouped by headquarters region as given in Table 1 of the FMTI paper and sorted A to Z inside each "
+            "group, so the order is not a ranking.\n"
+            "- **Model incidents (View 2):** the AI Incident Database export of 12 Oct 2026 holds 1,481 incidents since "
+            "2020.\n"
+            "  - *Developers:* 400 name one of the eleven, 378 in the developer field and 22 only in the implicated systems.\n"
+            "  - *Counted:* 318 are model incidents.\n"
+            "  - *Not counted:* 82, of which 61 are platform products, 5 are operations cases and 16 name a developer only "
+            "as the place where a scam appeared.\n"
+            "- **Dots and counts:** one dot per incident and named developer, which gives 377 dots for 318 incidents.\n"
+            "  - *Monthly strip:* it counts each incident once.\n"
+            "- **Incident type:** the MIT risk domain grouped into four types.\n"
+            "  - *MIT:* set the domain for 252 incidents (circles).\n"
+            "  - *Project group:* for the other 66 incidents only, which MIT has not classified yet (diamonds), the group "
+            "assigned the closest MIT risk domain manually, with AI assistance in the reading of the incident title, the "
+            "description and the developer, deployer and implicated-system fields.\n"
+            "  - *Counts by type:* 137 wrong output or failure, 38 data and security, 78 misuse by others and 65 harm to "
+            "users or society.\n"
+            "- **Epoch model releases:** the release date of each model in the Epoch capability list, with its ECI score "
+            "and 90% interval in the hover.\n"
+            "  - *Period:* it starts in 2020, the same first year as the other incident charts of the app, with 2020 to "
+            "2022 as the years before ChatGPT.")
+    with st.expander("**Source choice and where the sources can mislead**"):
+        st.markdown(
+            "- **FMTI:** it measures what a company discloses and not what it does.\n"
+            "  - *Evidence:* seven companies submitted their own reports (AI21 Labs, Amazon, Google, IBM, Meta, OpenAI and "
+            "Writer). For the other six the researchers gathered public information, partly with an AI agent that they "
+            "checked by hand, so a zero can mean the item was not found.\n"
+            "  - *Scope:* one flagship model per company, and no later edition was found.\n"
+            "- **AI Incident Database:** people submit and edit the incidents.\n"
+            "  - *Consequence:* reports follow usage and English-language media, so a count is the number of reports and not "
+            "a failure rate.\n"
+            "- **MIT AI Risk Repository domains:** the classification lags behind new incidents.\n"
+            "  - *Consequence:* 48 of the 76 incidents of 2026 had no domain, so the project group assigned their type "
+            "manually and the page marks them as diamonds.\n"
+            "- **Epoch:** the capability list holds 277 models, 229 of them from the eleven developers.")
+    with st.expander("**What the data cannot show**"):
+        st.markdown(
+            "- **Openness of three developers:** FMTI does not score Z.ai, Moonshot and MiniMax.\n"
+            "- **Safety of a developer's models:** an empty lane means few reports found and does not mean that no incident "
+            "happened.\n"
+            "- **Cause of incidents:** the triangles show release dates only, so the page does not test whether a release "
+            "causes incidents.\n"
+            "- **Severity and fault:** the data does not say how severe an incident was or who was at fault.\n"
+            "- **Legal position:** the page gives no legal advice, no licence terms and no view on whether a developer may "
+            "serve Hong Kong.")
+    st.caption("Last data refresh: FMTI edition of December 2025. AI Incident Database export of 12 Oct 2026, latest "
+               "incident 3 Oct 2026. Epoch file retrieved 17 Oct 2026, latest model release 7 Oct 2026.")
 
 
 def _names(items: list[str]) -> str:
