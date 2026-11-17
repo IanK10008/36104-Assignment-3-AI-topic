@@ -1,0 +1,10 @@
+{
+  "fmti_repository": {
+    "url": "https://github.com/stanford-crfm/fmti/archive/refs/heads/main.zip",
+    "file": "fmti-main.zip",
+    "how": "downloaded",
+    "retrieved_utc": "2026-10-17T22:51:36Z",
+    "bytes": 15145526,
+    "sha256": "f7c2e5c6feddf7f24a0bf5866f7cea00694d065d06cec3b071699aaa6eb78b15"
+  }
+}

@@ -1,8 +1,9 @@
-"""Story 3: which developers appear in reported AI incidents, View 5.
+"""Story 3: how openly each developer builds its models and how often it appears in reported incidents.
 
-Reads only this folder's own data: data/model_capability.csv (Epoch), data/incidents.csv and
-data/incident_developers.csv (AI Incident Database). The tables are joined here, not in the notebooks.
-Runs inside app.py or on its own:
+View 5a (Stanford FMTI, December 2025) and View 5b (AI Incident Database model incidents with Epoch model
+releases). Reads only this folder's own data: data/fmti_dec2025_scores_tidy.csv and data/fmti_companies.csv (FMTI),
+data/aiid_model_incidents_by_developer.csv (AI Incident Database) and data/model_capability.csv (Epoch). Nothing is
+joined in a notebook. Runs inside app.py or on its own:
     streamlit run stories/3_reported_incidents/page.py
 """
 from __future__ import annotations
@@ -15,35 +16,36 @@ sys.path.insert(0, str(HERE.parents[1]))  # so that "src" is found when this fil
 
 import streamlit as st  # noqa: E402
 
-from src import aiid, epoch_models, shell  # noqa: E402
-from src.views_context import render_view5  # noqa: E402
-
-# First year shown. A3P1 uses 2015 for the slider and 2012 for the top chart. Here both start in 2020: before
-# 2020 the database has at most 50 incidents a year and 11 to 22 incidents naming a company, too few to compare
-# developers. 2020 to 2022 are the years before ChatGPT (November 2022), shown as the baseline.
-SLIDER_FIRST_YEAR = 2020
-CHART_FIRST_YEAR = 2020
+from src import epoch_models, shell, views_story3  # noqa: E402
 
 shell.standalone_page_config()
 
 
 @st.cache_data(show_spinner=False)
-def load(folder: str):
-    models = epoch_models.load_epoch_models(f"{folder}/model_capability.csv")
-    incidents, named = aiid.load_incidents(f"{folder}/incidents.csv", f"{folder}/incident_developers.csv")
-    return models, incidents, named
+def load_epoch(folder: str):
+    return epoch_models.load_epoch_models(f"{folder}/model_capability.csv")
 
 
-models, incidents, incident_developers = load(str(HERE / "data"))
+epoch = load_epoch(str(HERE / "data"))
 
 shell.story(3, "")
-with st.container(key="reported_incidents", border=True):
-    st.subheader("5. Which developers appear in reported AI incidents, and how often?", anchor="view-5")
+with st.container(key="fmti_view", border=True):
+    st.subheader("5a. How openly does each developer build its models?", anchor="view-5a")
 
     @st.fragment
-    def view_five():
-        render_view5(models, incidents, incident_developers, SLIDER_FIRST_YEAR, CHART_FIRST_YEAR)
+    def view_a():
+        views_story3.render_fmti()
 
-    view_five()
+    view_a()
 
-shell.limitations()
+with st.container(key="incident_view", border=True):
+    st.subheader("5b. How often does each developer appear in reported model incidents, and what went wrong?",
+                 anchor="view-5b")
+
+    @st.fragment
+    def view_b():
+        views_story3.render_incidents(epoch)
+
+    view_b()
+
+shell.limitations_3()

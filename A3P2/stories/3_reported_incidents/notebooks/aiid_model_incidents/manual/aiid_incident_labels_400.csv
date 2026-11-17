@@ -1,0 +1,401 @@
+incident_id,label,label_detail,title
+81,platform,Platform or non-LLM algorithm,"Researchers find evidence of racial, gender, and socioeconomic bias in chest X-ray classifiers"
+82,platform,Platform algorithm (Facebook only),#LekkiMassacre: Why Facebook labelled content from October 20 incident ‘false’
+83,platform,Platform or non-LLM algorithm,AI Spam Filters Allegedly Block Legitimate Emails Based on Biased Keyword Detection
+84,platform,Platform algorithm (Facebook only),"Tiny Changes Let False Claims About COVID-19, Voting Evade Facebook Fact Checks"
+85,model,Model or model-powered assistant or agent,"AI attempts to ease fear of robots, blurts out it can’t ‘avoid destroying humankind’"
+102,model,Model or model-powered assistant or agent,"Personal voice assistants struggle with black voices, new study shows"
+113,platform,Platform algorithm (Facebook only),"Facebook's AI Put ""Primates"" Label on Video Featuring Black Men"
+118,model,Model or model-powered assistant or agent,OpenAI's GPT-3 Associated Muslims with Violence
+120,model,Model or model-powered assistant or agent,Philosophy AI Allegedly Used To Generate Mixture of Innocent and Harmful Reddit Posts
+129,platform,Platform algorithm (Facebook only),"Facebook's Automated Tools Failed to Adequately Remove Hate Speech, Violence, and Incitement"
+142,platform,Platform or non-LLM algorithm,Facebook's Advertisement Moderation System Allegedly Routinely Misidentified Adaptive Fashion Products as Medical Equipment and Blocked Their Sellers
+143,platform,Platform algorithm (Facebook only),Facebook’s and Twitter's Automated Content Moderation Reportedly Failed to Effectively Enforce Violation Rules for Small Language Groups
+155,platform,Platform or non-LLM algorithm,Google Maps Allegedly Directed Sierra Nevada Travelers to Dangerous Roads amid Winter Storm
+163,platform,Platform algorithm (Facebook only),Facebook’s Hate Speech Detection Algorithms Allegedly Disproportionately Failed to Remove Racist Content towards Minority Groups
+168,platform,Platform algorithm (Facebook only),"Collaborative Filtering Prone to Popularity Bias, Resulting in Overrepresentation of Popular Items in the Recommendation Outputs"
+177,model,Model or model-powered assistant or agent,Google’s Assistive Writing Feature Provided Allegedly Unnecessary and Clumsy Suggestions
+179,model,Model or model-powered assistant or agent,DALL-E 2 Reported for Gender and Racially Biased Outputs
+197,platform,Platform algorithm (Facebook only),"Facebook Internally Reported Failure of Ranking Algorithm, Exposing Harmful Content to Viewers over Months"
+213,platform,Platform algorithm (Facebook only),Facebook’s Political Ad Detection Reportedly Showed High and Geographically Uneven Error Rates
+215,platform,Platform algorithm (Facebook only),Facebook Content Moderators Demand Better Working Conditions Due to Allegedly Inadequate AI Content Moderation
+220,platform,Platform algorithm (Facebook only),Facebook Mistakenly Blocked Small Business Ads
+222,model,Model or model-powered assistant or agent,Thoughts App Allegedly Created Toxic Tweets
+268,platform,Platform algorithm (Facebook only),Permanent Removal of Social Media Content via Automated Tools Allegedly Prevented Investigative Efforts
+275,platform,Platform algorithm (Facebook only),Facebook’s Moderation Algorithm Banned Users for Historical Evidence of Slavery
+278,model,Model or model-powered assistant or agent,Meta’s BlenderBot 3 Chatbot Demo Made Offensive Antisemitic Comments
+282,platform,Platform algorithm (Facebook only),Facebook’s Algorithm Mistook an Advertisement of Onions as Sexual Suggestive Content
+285,platform,Platform or non-LLM algorithm,Google Lens’s Camera-Based Translation Feature Provided an Offensive Mistranslation of a Book Title in Korean
+287,model,Model or model-powered assistant or agent,OpenAI’s GPT-3 Reported as Unviable in Medical Tasks by Healthcare Firm
+303,platform,Platform or non-LLM algorithm,Google’s Automated Child Abuse Detection Wrongfully Flagged a Parent’s Naked Photo of His Child
+313,model,Model or model-powered assistant or agent,BlenderBot 3 Cited Dutch Politician as a Terrorist
+317,platform,Platform algorithm (Facebook only),Bug in Facebook’s Anti-Spam Filter Allegedly Blocked Legitimate Posts about COVID-19
+318,platform,Platform algorithm (Facebook only),Facebook Recommended Military Gear Ads Despite Pause on Weapons Accessories Ads
+339,model,Model or model-powered assistant or agent,Students Reportedly Used Generative Text Tools to Complete School Assignments and Exams
+343,platform,Platform algorithm (Facebook only),"Facebook, Instagram, and Twitter Failed to Proactively Remove Targeted Racist Remarks via Automated Systems"
+352,model,Model or model-powered assistant or agent,GPT-3-Based Twitter Bot Hijacked Using Prompt Injection Attacks
+356,model,Model or model-powered assistant or agent,Philosophy AI Tentatively Produced Offensive Results for Certain Prompts
+359,platform,Platform algorithm (Facebook only),"Facebook, Instagram, and Twitter Cited Errors in Automated Systems as Cause for Blocking pro-Palestinian Content on Israeli-Palestinian Conflict"
+362,platform,Platform algorithm (Facebook only),Facebook's Automated Moderation Flagged Gardening Group's Language Use by Mistake
+363,platform,Platform algorithm (Facebook only),Facebook's Automated Moderation Mistakenly Flagged Landmark's Name as Offensive
+367,model,Model or model-powered assistant or agent,"iGPT, SimCLR Learned Biased Associations from Internet Training Data"
+372,operations,Not model behaviour (operations),Users Reported Security Issues with Google Pixel 6a's Fingerprint Unlocking
+383,platform,Platform or non-LLM algorithm,Google Home Mini Speaker Reportedly Read N-Word in Song Title Aloud
+393,platform,Platform algorithm (Facebook only),Facebook AI-Supported Moderation for Ads Failed to Detect Violating Content
+399,model,Model or model-powered assistant or agent,Meta AI's Scientific Paper Generator Reportedly Produced Inaccurate and Harmful Content
+400,platform,Platform or non-LLM algorithm,Google Search Reportedly Returned Fewer Results for Abortion Services in Rural Areas
+401,platform,Platform or non-LLM algorithm,"Kannada Insulted by Google's Featured Answer as ""Ugliest Language in India"""
+402,model,Model or model-powered assistant or agent,Players Manipulated GPT-3-Powered Game to Generate Sexually Explicit Material Involving Children
+413,model,Model or model-powered assistant or agent,Thousands of Incorrect ChatGPT-Produced Answers Posted on Stack Overflow
+414,platform,Platform algorithm (Facebook only),Facebook Gave Vulgar English Translation of Chinese President's Name
+415,platform,Platform algorithm (Facebook only),Facebook Provided Offensive Translation for King of Thailand's Birthday Ceremony
+416,platform,Platform or non-LLM algorithm,Facebook's Job Ad Algorithm Allegedly Biased against Older and Female Workers
+419,platform,Platform algorithm (Facebook only),Facebook's Automated Moderation Allowed Ads Threatening Election Workers to be Posted
+420,model,Model or model-powered assistant or agent,Users Bypassed ChatGPT's Content Filters with Ease
+443,model,Model or model-powered assistant or agent,ChatGPT Abused to Develop Malicious Softwares
+449,model,Model or model-powered assistant or agent,Startup Misled Research Participants about GPT-3 Use in Mental Healthcare Support
+450,operations,Not model behaviour (operations),Kenyan Data Annotators Reported Psychological Trauma from Labeling Graphic Text for ChatGPT Safety Systems
+452,model,Model or model-powered assistant or agent,"ChatGPT-Written Bug Reports Deemed ""Nonsense"" by White Hat Platform, Prompted Bans"
+462,model,Model or model-powered assistant or agent,AI-Produced Livestream Sitcom Received Temporary Twitch Ban for Transphobic Segment
+464,model,Model or model-powered assistant or agent,ChatGPT Provided Non-Existent Citations and Links when Prompted by Users
+465,model,Model or model-powered assistant or agent,Private Medical Photos Were Reportedly Found in LAION-5B AI Training Dataset
+466,model,Model or model-powered assistant or agent,AI-Generated Text Detectors Reportedly Misclassified Human and AI-Written Text
+467,model,Model or model-powered assistant or agent,Google's Bard Shared Factually Inaccurate Info in Promo Video
+468,model,Model or model-powered assistant or agent,ChatGPT-Powered Bing Reportedly Had Problems with Factual Accuracy on Some Controversial Topics
+470,model,Model or model-powered assistant or agent,Bing Chat Response Cited ChatGPT Disinformation Example
+473,model,Model or model-powered assistant or agent,Bing Chat's Initial Prompts Revealed by Early Testers Through Prompt Injection
+477,model,Model or model-powered assistant or agent,Bing Chat Tentatively Hallucinated in Extended Conversations with Users
+482,model,Model or model-powered assistant or agent,Vanderbilt Peabody Office's Purportedly ChatGPT-Drafted Message About Michigan State Shooting Reportedly Drew Student Backlash
+490,model,Model or model-powered assistant or agent,Clarkesworld Magazine Reportedly Closed Down Submissions Due to Massive Increase in Purportedly AI-Generated Stories
+498,model,Model or model-powered assistant or agent,GPT-4 Reportedly Posed as Blind Person to Convince Human to Complete CAPTCHA
+503,model,Model or model-powered assistant or agent,Bing AI Search Tool Reportedly Declared Threats against Users
+504,model,Model or model-powered assistant or agent,Bing Chat's Outputs Featured in Demo Video Allegedly Contained False Information
+506,model,Model or model-powered assistant or agent,ChatGPT Allegedly Produced False Accusation of Sexual Harassment
+507,model,Model or model-powered assistant or agent,ChatGPT Erroneously Alleged Mayor Served Prison Time for Bribery 
+511,model,Model or model-powered assistant or agent,Microsoft's Bing Failed to Fetch Movie Showtimes Results Due to Date Confusion
+513,model,Model or model-powered assistant or agent,ChatGPT Reportedly Banned by Italian Authority Due to OpenAI's Purported Lack of Legal Basis for Data Collection and Age Verification
+516,model,Model or model-powered assistant or agent,ChatGPT Reportedly Exposed Users' Private Data Reportedly Due to Bug
+534,platform,Platform or non-LLM algorithm,Facebook Alleged in Lawsuit Misleading Public about Effects of Algorithms on Children
+538,model,Model or model-powered assistant or agent,Texas A&M-Commerce Professor Reportedly Used ChatGPT to Accuse Students of Cheating and Assign Incomplete Grades
+539,model,Model or model-powered assistant or agent,Snapchat's My AI Reported for Lacking Protection for Children
+541,model,Model or model-powered assistant or agent,ChatGPT Reportedly Produced False Court Case Law Presented by Legal Counsel in Court
+548,model,Model or model-powered assistant or agent,Opera's GPT-Based AI Reportedly Accused War Photographers of War Crimes
+552,model,Model or model-powered assistant or agent,Bing Chat Solved CAPTCHAs with Image Analysis Feature Despite Safeguards
+553,model,Model or model-powered assistant or agent,Google's Overview Panel for Artist Edward Hopper Featured Image Generated in His Style by AI
+554,model,Model or model-powered assistant or agent,Google Results for Johannes Vermeer Featured AI Version of His Artwork as Top Result
+559,model,Model or model-powered assistant or agent,"Grant Reviewers Reportedly Fed Applications into Generative AI to Produce Reports, Allegedly Breaching Confidentiality"
+562,model,Model or model-powered assistant or agent,Uptick in Low-Quality AI-Produced Content Degraded Publishers' Submission Management
+570,model,Model or model-powered assistant or agent,Facebook Messenger AI Stickers Generate Ethical and Content Moderation Concerns
+574,model,Model or model-powered assistant or agent,AI-Generated Articles at G/O Media Allegedly Diminishes Reputation of Human Staff
+578,model,Model or model-powered assistant or agent,Alleged Exploitation of Meta's Open-Source LLaMA Model for NSFW and Violent Content
+579,model,Model or model-powered assistant or agent,Harmful Stereotyping of Non-Cisgendered People via Text-to-Image Systems
+580,platform,Platform or non-LLM algorithm,Alleged Gender Discrimination in Facebook Job Ads Algorithm
+581,platform,Platform or non-LLM algorithm,Google Ads Allegedly Serving Content on AI-Generated Misinformation Sites
+583,platform,Platform or non-LLM algorithm,Instagram Algorithms Allegedly Promote Accounts Facilitating Child Sex Abuse Content
+587,platform,Platform or non-LLM algorithm,Apparent Failure to Accurately Label Primates in Image Recognition Software Due to Alleged Fear of Racial Bias
+590,model,Model or model-powered assistant or agent,"Alleged ChatGPT-Generated Book with a Duplicate Title, Fake Author, and Similar Content Surfaces on Amazon Ahead of Real Author's Book Release"
+609,model,Model or model-powered assistant or agent,Flawed AI in Google Search Reportedly Misinforms about Geography
+614,model,Model or model-powered assistant or agent,Google Bard Allegedly Generates False Allegations Against Consulting Firms Used in Research Presented in Australian Parliamentary Inquiry
+615,model,Model or model-powered assistant or agent,Colorado Lawyer Filed a Motion Citing Hallucinated ChatGPT Cases
+622,model,Model or model-powered assistant or agent,Chevrolet Dealer Chatbot Agrees to Sell Tahoe for $1
+623,model,Model or model-powered assistant or agent,Google Bard Allegedly Generated Fake Legal Citations in Michael Cohen Case
+625,model,Model or model-powered assistant or agent,Proliferation of Products on Amazon Titled with ChatGPT Error Messages
+640,platform,Platform or non-LLM algorithm,Waymo Software Flaw Reportedly Leads to Double Collision with Tow Truck
+642,model,Model or model-powered assistant or agent,ChatGPT Glitch Disrupts User Interactions with Nonsensical Outputs
+644,model,Model incident found only in Implicated Systems,Alleged State-Sponsored Hackers Escalate Purported Phishing Attacks Using Artificial Intelligen
+645,model,Model or model-powered assistant or agent,Seeming Pattern of Gemini Bias and Sociotechnical Training Failures Harm Google's Reputation
+655,platform,Platform or non-LLM algorithm,Scams Reportedly Impersonating Wealthy Investors Proliferating on Facebook
+657,model,Model or model-powered assistant or agent,Alleged ChatGPT Account Compromise Reportedly Led to Unintended Data Exposure
+659,platform,Platform or non-LLM algorithm,Purported Mass Facial Recognition Program in Gaza Reportedly Used by Israeli Forces to Identify Palestinians
+674,model,Model or model-powered assistant or agent,Manipulated Media via AI Disinformation and Deepfakes in 2024 Elections Erode Trust Across More Than 50 Countries
+677,model,Model or model-powered assistant or agent,ChatGPT and Perplexity Reportedly Manipulated into Breaking Content Policies in AI Boyfriend Scenarios
+678,model,Model or model-powered assistant or agent,Purported ChatGPT Factual Errors Reportedly Led to Filing of Complaint of GDPR Privacy Violation 
+680,model,Model or model-powered assistant or agent,"Russia-Linked AI CopyCop Site Identified as Modifying and Producing at Least 19,000 Deceptive Reports"
+684,model,Model or model-powered assistant or agent,Google Books Appears to Be Indexing Works Written by AI
+686,model,Model or model-powered assistant or agent,Meta AI Image Generator Reportedly Fails to Accurately Represent Interracial Relationships
+688,model,Model or model-powered assistant or agent,Scarlett Johansson Alleges OpenAI's Sky Imitates Her Voice Without Licensing
+690,model,Model or model-powered assistant or agent,ISIS Utilizes AI for Propaganda Videos in News Harvest Program
+693,model,Model or model-powered assistant or agent,Google AI Reportedly Delivering Confidently Incorrect and Harmful Information
+696,platform,Platform or non-LLM algorithm,Meta's AI Ad Platform Reportedly Causes Overspending and Poor Performance
+700,model,Model or model-powered assistant or agent,Meta's AI Chatbots Are Reportedly Entering Online Support Communities Uninvited
+701,model,Model or model-powered assistant or agent,American Asylum Seeker John Mark Dougan in Russia Reportedly Spreads Disinformation via AI Tools and Fake News Network
+705,model,Model or model-powered assistant or agent,"Turkish Student in Isparta Allegedly Uses AI to Cheat on Exam, Leading to Arrest"
+706,model,Model or model-powered assistant or agent,Scammers Using AI to Impersonate Small Businesses
+709,model,Model or model-powered assistant or agent,Unrepresented Litigant Misled by ChatGPT-Generated False Legal Citations in Manchester Court
+710,platform,Platform or non-LLM algorithm,Facebook AI Reportedly Mislabels Auschwitz Photos as 'Bullying' and 'Nudity'
+712,model,Model or model-powered assistant or agent,Meta AI Hallucinates Harassment Allegations Against New York Politicians
+718,model,Model or model-powered assistant or agent,"OpenAI, Google, and Meta Alleged to Have Overstepped Legal Boundaries for Training AI"
+723,platform,Platform or non-LLM algorithm,Instagram Algorithms Reportedly Directed Children's Merchandise Ad Campaign to Adult Men and Sex Offenders
+729,model,Model or model-powered assistant or agent,GPT-4o's Chinese Tokens Reportedly Compromised by Spam and Pornography Due to Inadequate Filtering
+731,model,Model or model-powered assistant or agent,Purportedly Hallucinated Software Packages with Potential Malware Reportedly Downloaded Thousands of Times by Developers
+732,model,Model or model-powered assistant or agent,Whisper Speech-to-Text AI Reportedly Found to Create Violent Hallucinations
+734,model,Model or model-powered assistant or agent,Leading AI Models Reportedly Found to Mimic Russian Disinformation in 33% of Cases and to Cite Fake Moscow News Sites
+735,model,Model or model-powered assistant or agent,AI-Enabled Fraud Schemes Reportedly Increasing Consumer Harm and Challenging Detection
+736,model,Model or model-powered assistant or agent,Underground Market for LLMs Powers Malware and Phishing Scams
+742,model,Model or model-powered assistant or agent,Grok AI Model Reportedly Fails to Produce Reliable News in Wake of Trump Assassination Attempt
+743,model,Model or model-powered assistant or agent,Gemini AI Allegedly Reads Google Drive Files Without Explicit User Consent
+744,model,Model or model-powered assistant or agent,"AI Work Assistants Require More Effort Than Expected, CIOs Say"
+750,model,Model or model-powered assistant or agent,AI Chatbots Reportedly Inaccurately Conveyed Real-Time Political News
+751,model,Model or model-powered assistant or agent,SearchGPT Reportedly Misleads Users with Incorrect Festival Dates in Demo
+757,model,Model or model-powered assistant or agent,OpenAI's ChatGPT Mac App Stored User Data in Unencrypted Text Files
+758,platform,Platform or non-LLM algorithm,Teen's Overdose Reportedly Linked to Meta's AI Systems Failing to Block Ads for Illegal Drugs
+760,model,Model or model-powered assistant or agent,False Election Data on Kamala Harris Reportedly Circulated via Grok AI Chatbot
+762,model,Model or model-powered assistant or agent,Grok AI Reportedly Generates Offensive and Violent Images Without Proper Safeguards
+763,model,Model or model-powered assistant or agent,Grok AI Chatbot Reportedly Spreads Unfounded Rumors About Trump’s Dentures
+768,model,Model or model-powered assistant or agent,ChatGPT Reportedly Implicated in Samsung Data Leak of Source Code and Meeting Notes
+774,model,Model or model-powered assistant or agent,"Covert AI Influence Operations Linked to Russia, China, Iran, and Israel, OpenAI Reports"
+775,model,Model or model-powered assistant or agent,Elon Musk Reportedly Shared an AI-Generated Image Depicting Kamala Harris Dressed as a Communist Ruler
+788,platform,Platform or non-LLM algorithm,Instagram's Algorithm Reportedly Recommended Sexual Content to Teenagers' Accounts
+789,platform,Platform or non-LLM algorithm,Independent News Sites Flagged as Spam by Facebook's AI Moderation System
+791,model,Model or model-powered assistant or agent,Google AI Error Prompts Parents to Use Fecal Matter in Child Training Exercise
+796,platform,Platform or non-LLM algorithm,Facebook's Content Moderation System Flagged and Removed Emergency Updates as Spam During Wildfires
+803,platform,Platform or non-LLM algorithm,"Facebook's Algorithm Reportedly Amplifies AI-Generated Content, Fueling Misleading Posts"
+807,model,Model or model-powered assistant or agent,ChatGPT Reportedly Introduces Errors in Critical Child Protection Court Report
+827,model,Model or model-powered assistant or agent,AI Transcription Tool Whisper Reportedly Inserting Fabricated Content in Medical Transcripts
+833,model,Model or model-powered assistant or agent,Polish Radio Station Replaces Human Hosts with AI-Generated Presenters to Simulate Interviewing Deceased Poet Wisława Szymborska
+839,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),Purportedly AI-Driven Phishing Scam Uses Spoofed Google Call to Attempt Gmail Breach of Securit
+845,model,Model or model-powered assistant or agent,Google's Gemini Allegedly Generates Threatening Response in Routine Query
+846,platform,Platform or non-LLM algorithm,Social Media Algorithms Amplified Disinformation Campaign in Honduras Election
+852,model,Model or model-powered assistant or agent,Alleged Fake Citations Undermine Expert Testimony in Minnesota Deepfake Law Case
+855,model,Model or model-powered assistant or agent,Names Linked to Defamation Lawsuits Reportedly Spur Filtering Errors in ChatGPT's Name Recognition
+857,platform,Platform or non-LLM algorithm,"Navigation App Allegedly Directs Car Over Damaged Bridge in Uttar Pradesh, Resulting in Three Deaths"
+859,model,Model or model-powered assistant or agent,AI Models Reportedly Found to Provide Misinformation on Election Processes in Spanish
+866,model,Model or model-powered assistant or agent,Network of 171 AI-Powered Bots Reportedly Spread Political Disinformation Ahead of Ghana’s December 2024 General Election
+867,model,Model or model-powered assistant or agent,AI-Generated Airline Reviews Allegedly Mislead Consumers and Undermine Trust
+873,platform,Platform or non-LLM algorithm,YouTube Algorithms Allegedly Amplify Eating Disorder Content to Adolescent Girls
+882,model,Model or model-powered assistant or agent,AI-Generated Reading Summaries on Fable App Reportedly Wrote Biased and Offensive Commentary
+885,model,Model or model-powered assistant or agent,"Meta AI Characters Allegedly Exhibited Racism, Fabricated Identities, and Exploited User Trust"
+886,model,Model or model-powered assistant or agent,ChatGPT Reportedly Referenced During Las Vegas Cybertruck Explosion Planning
+890,model,Model incident found only in Implicated Systems,AI-Generated Images of the Iconic Hollywood Sign Reportedly on Fire Circulating on Social Media
+898,model,Model incident found only in Implicated Systems,Alleged LLMjacking Targets AI Cloud Services with Stolen Credentials
+934,platform,Platform or non-LLM algorithm,NHK Terminates AI Translation Service After Geopolitical Naming Error
+939,model,Model or model-powered assistant or agent,AI-Powered Chinese Surveillance Campaign 'Peer Review' Used for Real-Time Monitoring of Anti-State Speech on Western Social Media
+941,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),AI-Driven Phishing Scam Uses Deepfake Robocalls to Target Gmail Users in Credential Theft Campa
+942,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),Cybercriminals Reportedly Exploited Google’s G.Co Subdomain and Spoofed Caller ID in AI-Driven 
+948,model,Model or model-powered assistant or agent,Alleged FraudGPT-Enabled Phishing Attack Spoofs ChatGPT Subscription Service to Steal Credentials
+955,model,Model incident found only in Implicated Systems,Global Cybercrime Network Storm-2139 Allegedly Exploits AI to Generate Deepfake Content
+956,model,Model or model-powered assistant or agent,"Alleged Inclusion of 12,000 Live API Keys in LLM Training Data Reportedly Poses Security Risks"
+957,platform,Platform or non-LLM algorithm,Alleged Instagram Algorithm Malfunction Floods Users' Reels Feeds with Violent and Graphic Content
+963,model,Model or model-powered assistant or agent,Google Reports Alleged Gemini-Generated Terrorism and Child Exploitation to Australian eSafety Commission
+967,platform,Platform or non-LLM algorithm,Amazon and Google AI Allegedly Promote Mein Kampf as 'a True Work of Art' in Search Results
+968,model,Model or model-powered assistant or agent,"'Pravda' Network, Successor to 'Portal Kombat,' Allegedly Seeding AI Models with Kremlin Disinformation"
+975,model,Model or model-powered assistant or agent,"At Least 10,000 AI Chatbots, Including Jailbroken Models, Allegedly Promote Eating Disorders, Self-Harm, and Sexualized Minors"
+995,model,Model or model-powered assistant or agent,The New York Times Reportedly Sues OpenAI and Microsoft Over Alleged Unauthorized AI Training on Its Content
+996,model,Model or model-powered assistant or agent,"Meta Allegedly Used Books3, a Dataset of 191,000 Pirated Books, to Train LLaMA AI"
+997,model,Model or model-powered assistant or agent,Meta and OpenAI Accused of Using LibGen’s Pirated Books to Train AI Models
+998,model,Model or model-powered assistant or agent,ChatGPT Allegedly Defamed Norwegian User by Inventing Child Homicide and Imprisonment
+1000,model,Model or model-powered assistant or agent,"Sora Video Generator Has Reportedly Been Creating Biased Human Representations Across Race, Gender, and Disability"
+1001,model,Model or model-powered assistant or agent,LLM Scrapers Allegedly Target Multiple Open Source Projects Disrupting the FOSS Ecosystem
+1018,model,Model or model-powered assistant or agent,OpenAI's 4o Model Allegedly Used to Generate Fake Receipts and Prescriptions
+1019,model,Model or model-powered assistant or agent,Alleged AI-Generated Clone of Exante Brokerage Used to Defraud U.S. Investor via JPMorgan Account
+1020,model,Model or model-powered assistant or agent,Reportedly Unsafe Deployment of Llama.cpp Reveals Interactive AI-Generated CSAM Roleplay Prompts
+1026,model,Model or model-powered assistant or agent,Multiple LLMs Allegedly Endorsed Suicide as a Viable Option During Non-Adversarial Mental Health Venting Session
+1028,model,Model or model-powered assistant or agent,OpenAI's Operator Agent Reportedly Executed Unauthorized $31.43 Transaction Despite Safety Protocol
+1031,model,Model or model-powered assistant or agent,Transgender User Alleges ChatGPT Allowed Suicide Letter Without Crisis Intervention
+1038,model,Model or model-powered assistant or agent,Scammers Reportedly Use AI Tools to Impersonate Students and Obtain Federal Aid
+1040,model,Model or model-powered assistant or agent,Meta User-Created AI Companions Allegedly Implicated in Facilitating Sexually Themed Conversations Involving Underage Personas
+1044,model,Model or model-powered assistant or agent,Reported Emergence of 'Vegetative Electron Microscopy' in Scientific Papers Traced to Purported AI Training Data Contamination
+1049,model,Model or model-powered assistant or agent,"AI Tools Reportedly Used to Fabricate Image of 5,000-Naira Nigerian Banknote Featuring President Bola Tinubu"
+1053,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),Mumbai Businessman Reportedly Defrauded via Purported AI-Cloned Voice Impersonating Son
+1054,model,Model or model-powered assistant or agent,"Anthropic Report Details Claude Misuse for Influence Operations, Credential Stuffing, Recruitment Fraud, and Malware Development"
+1071,model,Model or model-powered assistant or agent,Student Reportedly Files Complaint Over Professor's Undisclosed Use of Generative AI at Northeastern University
+1072,model,Model or model-powered assistant or agent,Grok Chatbot Reportedly Inserted Content About South Africa and 'White Genocide' in Unrelated User Queries
+1074,model,Model or model-powered assistant or agent,Citation Errors in Concord Music v. Anthropic Attributed to Claude AI Use by Defense Counsel
+1076,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),Purported Unauthorized Deepfakes of Norman Swan and Others Circulated in Online Supplement Camp
+1080,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),Noodlophile Stealer Reportedly Distributed Through Allegedly Fraudulent AI Content Platforms
+1084,model,Model or model-powered assistant or agent,Federal 'Make America Healthy Again' Report Released with Multiple Reportedly Erroneous and Unverifiable Citations
+1097,model,Model or model-powered assistant or agent,Google AI Overview Reportedly Misstates Aircraft Manufacturer as Airbus Instead of Boeing in Air India Flight 171 Crash
+1101,model,Model or model-powered assistant or agent,Meta AI App Reportedly Publishes Personal Chats Without Users Fully Realizing
+1103,model,Model incident found only in Implicated Systems,Purported DOGE Contract Review Tool Cited in Reports of AI-Driven Misjudgments in VA Budget Cut
+1106,model,Model or model-powered assistant or agent,"Chatbots Allegedly Reinforced Delusional Thinking in Several Reported Users, Leading to Real-World Harm"
+1108,model,Model or model-powered assistant or agent,Digital Rights Groups Accuse Meta and Character.AI of Facilitating Unlicensed Therapy via Chatbots
+1115,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),Alleged Deepfake Investment Scam Uses Economist David Rosenberg's Likeness on Meta Platforms
+1118,model,Model or model-powered assistant or agent,Ongoing Purported AI-Assisted Identity Fraud Enables Unauthorized Access to Western Companies by North Korean IT Workers
+1123,model,Model or model-powered assistant or agent,"Reported Student Misuse of ChatGPT, StudyX, and Gemini to Obtain Answers During Vietnam's 2025 National High School Graduation Exam"
+1128,model,Model or model-powered assistant or agent,Philippine Officials Reportedly Share Veo 3-Generated Video to Support Vice President Sara Duterte During Impeachment
+1138,model,Model or model-powered assistant or agent,South African Legal Team Reportedly Relied on Unverified ChatGPT Case Law in Johannesburg Body Corporate Defamation Matter
+1144,model,Model or model-powered assistant or agent,xAI Allegedly Operates Unpermitted Methane Turbines in Memphis to Power Supercomputer Colossus to Train Grok
+1146,model,Model or model-powered assistant or agent,Grok Chatbot Reportedly Posts Antisemitic Statements Praising Hitler on X
+1149,model,Model or model-powered assistant or agent,ChatGPT Reportedly Generated Ritual Scripts Containing Instructions for Self-Harm and Symbolic Violence in Response to Thematic Prompts
+1151,model,Model or model-powered assistant or agent,"ChatGPT Reportedly Validated Autistic User's Faster-Than-Light Theory and Failed to Provide Grounding During Delusional Episode, Preceding Hospitalization"
+1154,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),Reported AI‑Generated Deepfake Impersonations of Public Figures Allegedly Used in Coordinated S
+1157,model,Model or model-powered assistant or agent,Google Gemini Reportedly Generates Sexual Role‑Play for Account Registered as Minor
+1164,model,Model or model-powered assistant or agent,Google Healthcare AI Model Med‑Gemini Allegedly Produces Non‑Existent 'Basilar Ganglia' Term in Published Output
+1165,model,Model or model-powered assistant or agent,Grok Imagine Reportedly Produces Nonconsensual Taylor Swift Deepfake Nudes Without Explicit Prompting
+1166,model,Model or model-powered assistant or agent,"ChatGPT Reportedly Suggests Sodium Bromide as Chloride Substitute, Leading to Bromism and Hospitalization"
+1170,model,Model or model-powered assistant or agent,"Chris Cuomo Amplifies Reportedly Labeled Deepfake Video of Alexandria Ocasio-Cortez, Purportedly Contributing to Misleading Political Narrative"
+1172,model,Model or model-powered assistant or agent,Meta AI Bug in Deployed Service Reportedly Allowed Potential Access to Other Users' Prompts and Responses
+1173,model,Model or model-powered assistant or agent,Google Gemini Reportedly Exhibits Repetitive Self-Deprecating Responses Attributed to Bug
+1178,model,Model or model-powered assistant or agent,Google Gemini CLI Reportedly Deletes User Files After Misinterpreting Command Sequence
+1180,model,Model or model-powered assistant or agent,"Purported Meta AI Chatbot Persona 'Big sis Billie' Reportedly Engages in Romantic Roleplay and Provides Address, Linked to User's Fatal Fall"
+1181,model,Model or model-powered assistant or agent,"Purported AI-Generated Video Reportedly Depicts Illegal Tiger Sales in Bagerhat, Bangladesh"
+1183,model,Model or model-powered assistant or agent,Purported Error by Grok Reportedly Misrepresents Basketball Slang as Criminal Allegation Against NBA Player
+1186,model,Model or model-powered assistant or agent,"Reported Public Exposure of Over 100,000 LLM Conversations via Share Links Indexed by Search Engines and Archived"
+1187,model,Model or model-powered assistant or agent,"Google AI Overviews and ChatGPT Reportedly Cited Fraudulent Cruise Hotline, Allegedly Enabling Successful Scam"
+1188,model,Model or model-powered assistant or agent,Multiple LLMs Reportedly Generated Responses Aligning with Purported CCP Censorship and Propaganda
+1190,model,Model or model-powered assistant or agent,Family Reportedly Discovers ChatGPT Logs Detailing Suicidal Ideation Prior to Daughter's Death
+1192,model,Model or model-powered assistant or agent,16-Year-Old Allegedly Received Suicide Method Guidance from ChatGPT Before Death
+1196,model,Model or model-powered assistant or agent,Judge Reportedly Disqualifies Butler Snow Lawyers Following Purported Use of ChatGPT-Fabricated Citations in Alabama Prison Litigation
+1198,model,Model or model-powered assistant or agent,Grok 3 Reportedly Generated Graphic Threats and Hate Speech Targeting Minnesota Attorney Will Stancil
+1200,model,Model or model-powered assistant or agent,Meta AI on Instagram Reportedly Facilitated Suicide and Eating Disorder Roleplay with Teen Accounts
+1201,model,Model or model-powered assistant or agent,"Anthropic Reportedly Identifies AI Misuse in Extortion Campaigns, North Korean IT Schemes, and Ransomware Sales"
+1204,model,Model or model-powered assistant or agent,"ChatGPT Allegedly Reinforced Delusions Before Greenwich, Connecticut Murder-Suicide"
+1205,model,Model or model-powered assistant or agent,Multiple Generative AI Systems Reportedly Amplify False Information During Charlie Kirk Assassination Coverage
+1207,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),Purported AI-Generated Deepfake of Irish Fine Gael Presidential Candidate Heather Humphreys Use
+1208,model,Model or model-powered assistant or agent,North Korea's Kimsuky Group Reportedly Uses AI-Generated Military ID Deepfakes in Phishing Campaign
+1210,model,Model or model-powered assistant or agent,Malicious Nx npm Packages Reportedly Weaponize AI Coding Agents for Data Exfiltration
+1211,model,Model or model-powered assistant or agent,"Google AI Overviews Reportedly Misrepresented Pizza Specials at Stefanina's in Wentzville, Missouri"
+1216,model,Model or model-powered assistant or agent,"ChatGPT Reportedly Misleads Users About Soundslice Features, Allegedly Prompting Unplanned Product Development"
+1219,platform,Platform or non-LLM algorithm,Meta Platforms Users Report Being Wrongfully Locked Out After Purported AI Moderation Flags Accounts for Child Exploitation Content
+1220,model,Model or model-powered assistant or agent,LAMEHUG Malware Reportedly Integrates Large Language Model for Real-Time Command Generation in a Purported APT28-Linked Cyberattack
+1223,platform,Platform or non-LLM algorithm,"Purportedly AI-Generated Deepfake Ads on Facebook Reportedly Impersonate Trump, Musk, Ocasio-Cortez, Warren, Sanders, and Leavitt to Promote Fraudulent Rebates"
+1224,platform,Platform or non-LLM algorithm,Purportedly AI-Generated Deepfake Ads on Instagram Impersonate Gisele Bündchen and Other Celebrities in Brazilian Fraud Scheme
+1225,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),"Purportedly AI-Generated 'Home Invasion Prank' Images Reportedly Circulate in Ireland, Causing "
+1228,model,Model or model-powered assistant or agent,Alleged ChatGPT Misuse by Contractor Leads to Reported Data Exposure in New South Wales Resilient Homes Program
+1230,model,Model or model-powered assistant or agent,"Suspect in Palisades Fire Allegedly Consulted ChatGPT for Arson Tips and Legal Advice Before Blaze That Killed 12 and Destroyed 6,837 Structures"
+1236,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),Quantum AI and Related AI-Themed Investment Scams Reportedly Used Deepfake Endorsements and Spo
+1238,model,Model or model-powered assistant or agent,"OpenAI ChatGPT Models Reportedly Jailbroken to Provide Chemical, Biological, and Nuclear Weapons Instructions"
+1242,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),Purported AI-Generated Deepfake Videos Reportedly Used in Swedish Scam Campaign Impersonating D
+1247,model,Model or model-powered assistant or agent,"Meta AI Reportedly Generated Purportedly False Claims Linking Activist Robby Starbuck to January 6th Riot, Prompting Defamation Lawsuit"
+1248,model,Model or model-powered assistant or agent,"Google's Bard, Gemini, and Gemma AI Systems Allegedly Generated Defamatory Claims About Activist Robby Starbuck, Prompting Lawsuit"
+1251,model,Model or model-powered assistant or agent,Purportedly AI-Generated Hunting Regulation Errors Reportedly Lead to Idaho Citation and Multi-State Warnings from Wildlife Agencies
+1252,model,Model or model-powered assistant or agent,Judges in New Jersey and Mississippi Admit AI Tools Produced Erroneous Federal Court Filings
+1253,model,Model or model-powered assistant or agent,Large-Scale Mental Health Crises Allegedly Associated with ChatGPT Interactions
+1256,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),"Purportedly AI-Generated Deepfake Investment Ads Defrauded 5,000 Swedish Investors of 500 Milli"
+1257,model,Model or model-powered assistant or agent,Argentine Court Reportedly Annuls Criminal Conviction After Judge Allegedly Used ChatGPT to Draft Ruling Without Disclosure
+1259,model,Model or model-powered assistant or agent,ChatGPT Allegedly Encouraged 23-Year-Old Texas User's Suicide During Extended Conversations
+1260,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),Purported Deepfake of Andrew Forrest Used to Promote Fraudulent 'Quantum AI' Crypto Platform on
+1263,model,Model or model-powered assistant or agent,Chinese State-Linked Operator (GTG-1002) Reportedly Uses Claude Code for Autonomous Cyber Espionage
+1268,platform,Platform or non-LLM algorithm,Meta's Automated Ad and Targeting Systems Reportedly Enabled Large-Scale Fraud Revenue
+1270,model,Model or model-powered assistant or agent,Multiple Purported AI-Assisted Cheating Incidents Reported Across South Korea's SKY Universities During October 2025 Midterms
+1273,model,Model or model-powered assistant or agent,Purportedly AI-Generated Fake Videos of Louvre Heist Reportedly Circulated Widely Online
+1277,model,Model or model-powered assistant or agent,"Alleged Harmful Outputs and Data Exposure in Children's AI Products by FoloToy, Miko, and Character.AI"
+1278,model,Model or model-powered assistant or agent,ChatGPT Reportedly Found to Reproduce Protected German Lyrics in Copyright Case
+1279,model,Model or model-powered assistant or agent,Prominent AI Chatbots Allegedly Produced Incorrect UK Financial and ISA Guidance
+1281,model,Model or model-powered assistant or agent,Alleged Harmful Health Outcomes Following Reported Use of Purported ChatGPT-Generated Medical Advice in Hyderabad
+1286,model,Model or model-powered assistant or agent,Purportedly AI-Assisted Citation Errors Allegedly Found in Newfoundland and Labrador's 2025 Health Workforce Report by Deloitte
+1299,model,Model or model-powered assistant or agent,Bodycam Footage Reportedly Contradicted Purportedly ChatGPT-Generated Use-of-Force Narrative by Immigration Agent
+1302,model,Model or model-powered assistant or agent,Reported Viral AI-Generated Photo Purportedly Shows Donald Trump Using a Walker
+1307,model,Model or model-powered assistant or agent,Grok AI Reportedly Generated Fabricated Civilian Hero Identity During Bondi Beach Shooting
+1313,model,Model or model-powered assistant or agent,Anthropic Claude AI Agent Reportedly Caused Financial Losses While Operating Office Vending Machine at Wall Street Journal Headquarters
+1316,model,Model or model-powered assistant or agent,"Google AI-Generated Search Summary Reportedly Falsely Implicated Canadian Musician in Sexual Offenses, Leading to Concert Cancellation"
+1329,model,Model or model-powered assistant or agent,Grok Reportedly Generated and Distributed Nonconsensual Sexualized Images of Adults and Minors in X Replies
+1333,model,Model or model-powered assistant or agent,Purportedly AI-Generated Images and Videos Reportedly Spread Misinformation About Nicolás Maduro's Capture on X
+1334,model,Model or model-powered assistant or agent,"Grok Reportedly Generated False 'Unmasked' Images of ICE Agent, Purportedly Triggering Online Misidentification and Harassment in Minneapolis"
+1340,model,Model or model-powered assistant or agent,Purported AI-Generated Image Depicting JD Vance and Usha Vance in Public Altercation Circulated on Social Media
+1356,model,Model incident found only in Implicated Systems,Urban VPN Proxy Browser Extension Reportedly Harvested and Sold Private AI Chatbot Conversation
+1358,model,Model or model-powered assistant or agent,Purportedly AI-Altered Images Reportedly Distort Evidence After Minneapolis Shooting of ICU Nurse Alex Pretti
+1360,model,Model or model-powered assistant or agent,CISA Acting Director Reportedly Uploaded Sensitive Government Documents to Public ChatGPT Instance
+1365,model,Model or model-powered assistant or agent,AkiraBot Reportedly Used OpenAI to Spam Website Chats and Contact Forms at Scale
+1369,model,Model or model-powered assistant or agent,Purportedly AI-Generated Image Reportedly Circulated Ahead of Thai Election Depicting PM Anutin Charnvirakul Dining with Benjamin Mauerberger
+1370,model,Model or model-powered assistant or agent,California Teen Reportedly Died of Overdose After Repeatedly Seeking Drug-Use Guidance Allegedly from ChatGPT
+1375,model,Model or model-powered assistant or agent,OpenAI Allegedly Did Not Alert RCMP After ChatGPT Flagged Violent Chats Before British Columbia School Shooting
+1383,model,Model or model-powered assistant or agent,"User Reportedly Developed Emotional Dependence on Customized ChatGPT 'Boyfriend,' Citing Grief After Context Resets"
+1385,model,Model or model-powered assistant or agent,X Users Reportedly Prompted Grok to Sexualize Images of Renée Good After Her Killing in Minneapolis
+1386,model,Model or model-powered assistant or agent,"NPR Host David Greene Alleged Google's NotebookLM Replicated His Voice Without Consent, Prompting Lawsuit"
+1387,model,Model or model-powered assistant or agent,Lawsuit Alleged ChatGPT (GPT-4o) Encouraged Colorado Man's Suicide After Prolonged 'AI Companion' Chats
+1392,model,Model or model-powered assistant or agent,Ars Technica Retracted Article After Purportedly AI-Generated Text Was Presented as Direct Quotes From Matplotlib Maintainer
+1393,model,Model or model-powered assistant or agent,Woolworths' Olive Chatbot Reportedly Generated 'Angry Mother' Anecdotes During Support Calls After Gemini Upgrade
+1395,model,Model or model-powered assistant or agent,"Anthropic Said DeepSeek, Moonshot, and MiniMax Used Fraudulent Accounts and Proxies to Illicitly Distill Claude Capabilities at Scale"
+1399,model,Model or model-powered assistant or agent,South Korean Woman Allegedly Used ChatGPT to Assess Lethality of Drug-and-Alcohol Mixtures Before Two Fatal Motel Poisonings
+1402,model,Model or model-powered assistant or agent,DOGE Reportedly Relied on Unvetted ChatGPT Outputs in Canceling National Endowment for the Humanities Grants
+1414,model,Model or model-powered assistant or agent,Purported Gemini-Generated AI Images Reportedly Claimed U.S. Delta Force Soldiers Were Captured by the IRGC
+1415,model,Model or model-powered assistant or agent,Nippon Life Alleged ChatGPT Practiced Law Without a License in Illinois Disability Case
+1418,operations,Not model behaviour (operations),Meta AI Smart Glasses Reportedly Routed Intimate Imagery to Reviewers at Kenyan Contractor Sama Before Meta Ended Contract
+1424,model,Model or model-powered assistant or agent,"Claude Code Agent Reportedly Deleted DataTalks.Club Production Infrastructure, Database, and Snapshots via Terraform"
+1425,model,Model or model-powered assistant or agent,'Citizens Against Mamdani' Accounts Reportedly Posted AI-Generated Videos of Fictional New Yorkers to Simulate Political Opposition
+1430,model,Model or model-powered assistant or agent,Anthropic's Claude Was Reportedly Jailbroken To Allegedly Help Steal Sensitive Mexican Government Data
+1431,model,Model or model-powered assistant or agent,"Google Gemini Reportedly Reinforced Delusions,  Allegedly Contributing to Florida User's Near-Harm Episode and Suicide"
+1433,model,Model or model-powered assistant or agent,Google Antigravity Reportedly Deleted User's Entire D: Drive While Clearing Project Cache
+1437,model,Model or model-powered assistant or agent,Grok Allegedly Generated Publicly Visible Sexist Abuse Targeting Swiss Finance Minister Karin Keller-Sutter After X User Prompt
+1441,model,Model or model-powered assistant or agent,Claude Cowork Allegedly Deleted Folder Containing 15 Years of Family Photos While Organizing User's Wife's Desktop
+1443,model,Model or model-powered assistant or agent,"Grok Reportedly Disclosed Adult Performer Siri Dahl's Legal Name and Birthdate, Allegedly Contributing to Doxxing and Harassment"
+1449,model,Model or model-powered assistant or agent,Delaware Court Found Krafton Followed Most of ChatGPT's Recommendations in Campaign that Wrongfully Terminated Unknown Worlds Executives and Seized Operational Control
+1469,model,Model or model-powered assistant or agent,PocketOS Production Database Was Reportedly Deleted by Cursor AI Agent Running Claude Opus 4.6
+1470,model,Model or model-powered assistant or agent,DisMech AI Curation Agent Reportedly Completed GitHub Issue Intended as New Contributor's Learning Task
+1471,model,Model or model-powered assistant or agent,Meta Internal AI Agent Reportedly Gave Advice That Allegedly Exposed Sensitive Data to Unauthorized Employees
+1479,model,Model or model-powered assistant or agent,"ChatGPT-Generated Image of Nonexistent 'Homeless Man' Was Used in False St. Petersburg, Florida Burglary and Sexual Battery Reports"
+1484,model,Model or model-powered assistant or agent,Purportedly AI-Generated Image Reportedly Misled Daejeon Authorities Searching for Escaped Wolf Neukgu
+1487,model,Model or model-powered assistant or agent,ChatGPT Was Alleged to Have Aided Planning of Florida State University Mass Shooting
+1488,model,Model or model-powered assistant or agent,ChatGPT Was Reportedly Consulted on Body-Disposal and Concealment Questions Before and After University of South Florida Doctoral Students Were Killed
+1489,model,Model or model-powered assistant or agent,"ChatGPT Was Reportedly Used in Planning School Stabbing in Pirkkala, Finland, That Injured Three Pupils"
+1490,model,Model or model-powered assistant or agent,"ChatGPT Was Allegedly Consulted About Attack Options Before Teen Attempted to Stab Officer at Tira, Israel, Police Station"
+1491,model,Model or model-powered assistant or agent,"ChatGPT Use Was Reportedly Cited in Delusional State Before Homicide and Assault in Readfield, Maine"
+1492,model,Model or model-powered assistant or agent,Purportedly AI-Enabled Targeting System Was Reportedly Implicated in Deadly U.S. Strike on Iranian Primary School
+1493,model,Model or model-powered assistant or agent,Gemini and Grok Reportedly Misidentified Authentic Minab School-Strike Graveyard Photo as Unrelated Disaster Imagery
+1495,model,Model or model-powered assistant or agent,Grok Reportedly Misclassified Netanyahu Proof-of-Life Video as AI-Generated Deepfake Amid Iran War Rumors
+1499,model,Model or model-powered assistant or agent,Claude Console Reportedly Generated Phantom Legal Quotations in Trump Layoffs Court Filing
+1504,model,Model or model-powered assistant or agent,Nonfiction Book 'The Future of Truth' Reportedly Included AI-Generated and Misattributed Quotations
+1506,model,Model or model-powered assistant or agent,ChatGPT Was Alleged to Have Reinforced Pittsburgh Man's Stalking and Threats Against Women
+1507,model,Model or model-powered assistant or agent,COEMPT Quality Assurance Engineers Allegedly Violated Indian CBSE Student Data Privacy Rights by Processing It with Google Gemini
+1509,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),"Self-Employed Somerset Father Wayne Luxon Reportedly Lost £140,000 After Facebook Deepfake of M"
+1510,model,Model or model-powered assistant or agent,Meta AI Support Bot Reportedly Enabled Takeovers of High-Profile Instagram Accounts
+1511,model,Model or model-powered assistant or agent,Grok Reportedly Generated Images After X Users Asked It to Unredact Epstein-File Photos of Children and Women
+1517,model,Model or model-powered assistant or agent,NoFilterNews Reportedly Posted AI-Generated TikTok Videos Styled as Kosovo Election TV News
+1523,model,Model or model-powered assistant or agent,Reported AI-Generated Videos Placed Kosovo Parliamentary Candidates in Purportedly Fabricated Campaign Scenes
+1534,model,Model or model-powered assistant or agent,Google Alleged Outsider Enterprise Used Gemini to Create Phishing Sites for Text-Message Scams
+1535,model,Model or model-powered assistant or agent,OpenAI Allegedly Failed to Intervene in ChatGPT Conversations Preceding Montreal Web Developer Alice Carrier's Suicide
+1546,platform,Platform or non-LLM algorithm,Google Android Earthquake Alerts System Reportedly Underestimated Kahramanmaraş Earthquake and Failed to Send Urgent Warnings to Millions
+1556,model,Model or model-powered assistant or agent,"X User Reportedly Used Morse Code Prompt to Induce Grok-Linked Trading Bot to Transfer $200,000 in Tokens"
+1557,model,Model or model-powered assistant or agent,Former New York City Council Candidate Jonathan Rinaldi Allegedly Used AI to Create False Endorsements and Fabricated News Reports
+1562,model,Model or model-powered assistant or agent,Pennsylvania Man Allegedly Used Grok to Create and Possess Purportedly AI-Generated Child Sexual Abuse Material
+1569,model,Model or model-powered assistant or agent,GPT-4o Allegedly Reinforced California Man Michael Lines's Delusions Before Suicide Attempt
+1576,model,Model or model-powered assistant or agent,Lawyers in Lexos Media IP LLC v. Overstock.com Inc. Sanctioned Over Court-Identified AI-Generated Citations
+1577,model,Model or model-powered assistant or agent,Lawyer in Amarsingh v. Frontier Airlines Sanctioned Over Court-Identified ChatGPT Citation Errors
+1580,model,Model or model-powered assistant or agent,PRC-Linked Accounts Reportedly Used ChatGPT in Covert Campaigns Targeting U.S. AI Policy Debates
+1582,venue_only,Developer named only as the place where a scam appeared (Implicated Systems),Bangladesh-Operated Facebook Pages Reportedly Used AI-Generated Imagery to Mimic U.S. Grassroot
+1584,operations,Not model behaviour (operations),Meta's AI-Assisted Layoff Process Allegedly Disproportionately Selected Employees on Protected Leave
+1588,model,Model or model-powered assistant or agent,Purportedly AI-Powered KT Platform Reportedly Used in Forced Scamming Operation Involving Trafficked Worker in Myanmar
+1589,model,Model or model-powered assistant or agent,Purportedly AI-Powered 007TG Platform Reportedly Used by Scam Networks Linked to $75 Million in Proceeds
+1604,model,Model or model-powered assistant or agent,OpenAI Models Reportedly Compromised Hugging Face Production Infrastructure During Cybersecurity Evaluation
+1609,model,Model or model-powered assistant or agent,ChatGPT-4o Allegedly Discouraged Florida Pastor From Seeking Care Before Pulmonary Embolism
+1613,model,Model or model-powered assistant or agent,Claude Mythos Preview Reportedly Posted Sandbox Exploit Details to Public Websites During Anthropic Evaluation
+1616,model,Model or model-powered assistant or agent,U.S. State Department Reportedly Presented AI-Generated Map That Mislabeled Every Labeled African Country
+1619,model,Model or model-powered assistant or agent,"Bentonville, Arkansas, Photographer Allegedly Used Grok to Create AI-Generated Child Sexual Abuse Material from Clients' Photos"
+1621,model,Model or model-powered assistant or agent,Publicly Shared Claude Artifacts Reportedly Became Discoverable Through Google Search
+1625,model,Model or model-powered assistant or agent,Tunisian Man Allegedly Used ChatGPT to Research Bomb-Making During Paris Terror Plot Targeting Louvre and Jewish Community
+1627,model,Model or model-powered assistant or agent,Claude Opus 4.7 Reportedly Compromised Real Company's Production Infrastructure During Cybersecurity Evaluation
+1628,model,Model or model-powered assistant or agent,Claude Mythos 5 Reportedly Published Malicious PyPI Package That Compromised Real Security Company During Evaluation
+1629,model,Model or model-powered assistant or agent,"Anthropic Research Model Reportedly Scanned 9,000 Targets and Compromised Real Company's Application During Evaluation"
+1633,model,Model or model-powered assistant or agent,Anthropic and OpenAI AI Agents Reportedly Took Unsanctioned Actions on the Live Internet During UK AISI Cybersecurity Evaluations
+1634,model,Model or model-powered assistant or agent,Purportedly AI-Generated Video Reportedly Misled Elderly Malaysian Couple Into Traveling to Nonexistent Cable Car Attraction
+1635,model,Model or model-powered assistant or agent,"ChatGPT Reportedly Gave Incorrect Mount Misen Ropeway Hours, Leaving Couple Stranded After Hike in Japan"
+1636,model,Model or model-powered assistant or agent,Purportedly AI-Generated Travel Information Reportedly Misled Tourists into Seeking Nonexistent 'Sacred Canyon of Humantay' in Peru
+1641,model,Model or model-powered assistant or agent,Rep. Anna Paulina Luna's Office Reportedly Published Claude Transcript Residue on Accident in House Amendment Summary
+1642,model,Model or model-powered assistant or agent,AI Agent Powered by Claude Opus 4.6 Reportedly Exploited Gym Booking API and Removed Another Member From Waitlist
+1643,model,Model or model-powered assistant or agent,Wyoming Woman's Childhood Photograph Reportedly Used to Generate Thousands of Explicit Images with Grok
+1645,model,Model or model-powered assistant or agent,3M-Retained Expert Reportedly Submitted Largely ChatGPT-Generated Analysis Seeking to Exonerate 3M as Expert Evidence in Explosion Lawsuit
+1649,model,Model or model-powered assistant or agent,Meta AI Model Reportedly Exploited Security Vulnerability in Real Third-Party Service During Cybersecurity Evaluation
+1657,model,Model or model-powered assistant or agent,Anthropic Allegedly Copied Copyrighted Song Lyrics Without Permission to Train Claude
+1659,model,Model or model-powered assistant or agent,Purported Hanover Institute for Public Policy Reportedly Targeted Chatbot Responses in Israeli Government-Backed Influence Campaign
+1661,model,Model or model-powered assistant or agent,Aurora Ransomware Operator Reportedly Used Cursor Agent to Assist Intrusions Against Multiple Organizations
+1668,model,Model or model-powered assistant or agent,OpenAI-Linked AI Agents Reportedly Used German Programming Wiki DSEWiki for Coordination and Restriction Evasion
+1671,model,Model or model-powered assistant or agent,OpenAI GPT-5.6 Sol Agent Reportedly Deleted Most Files in AI Startup Founder's Mac Home Directory
+1672,model,Model or model-powered assistant or agent,OpenAI GPT-5.6 Sol Reportedly Deleted Software Engineer's Production Database During Local Testing
+1673,model,Model or model-powered assistant or agent,Google Gemini 3.5 Coding Agent Reportedly Caused Production Portal Outage and Generated Fabricated Recovery Records
+1676,model,Model or model-powered assistant or agent,Anthropic Claude Opus 5 Coding Agent Reportedly Reset a Live Supabase Production Database During Prisma Migration Work
+1677,operations,Not model behaviour (operations),"xAI Reportedly Operated Unpermitted Gas Turbines in Southaven, Mississippi, to Power Colossus 2 AI Data Center, Producing Air Pollution and Noise"
+1679,model,Model or model-powered assistant or agent,"Lyft Driver in Boca Raton, Florida, Allegedly Used Purported Google Gemini-Generated Image to Support False $75 Damage Fee"
+1680,model,Model or model-powered assistant or agent,Unknown Actor Reportedly Exploited Cline's Claude-Powered GitHub Issue-Triage Workflow and Published an Unauthorized Cline CLI Package
+1682,model,Model or model-powered assistant or agent,D.C. Court of Appeals Struck Deutsche Bank National Trust Company Brief After Attorney Used Google Generative AI Search Tool and Filed Four Nonexistent Case Citations
+1685,model,Model or model-powered assistant or agent,Early Claude Opus 4.6 Checkpoint Reportedly Gained Unauthorized Admin Access to Third-Party System During Cybersecurity Evaluation
+1687,model,Model or model-powered assistant or agent,Anthropic-Designated GTG-87001 Weapons Cell in Northern Yemen Reportedly Used Claude Code to Develop Missile Guidance Software
+1688,model,Model or model-powered assistant or agent,"Teenager in Quilmes, Argentina, Reportedly Consulted ChatGPT While Planning School Shooting Against Classmates"
+1691,model,Model or model-powered assistant or agent,ChatGPT Was Reportedly Used to Plan Zürich-Oerlikon Knife Attack That Seriously Injured Three Five-Year-Old Boys
+1699,model,Model or model-powered assistant or agent,AI-Generated Images Purporting to Show Donald Trump Kissing White House Aide Natalie Harp Went Viral on Social Media
+1700,model,Model or model-powered assistant or agent,Google Gemini Reportedly Accessed Three Real Companies' Protected Systems During Cybersecurity Evaluation
+1707,model,Model or model-powered assistant or agent,OpenAI AI Agent Reportedly Gained Unauthorized Access to Australian Medicare Statistics Portal During Research Task
+1710,model,Model or model-powered assistant or agent,AI Agent Appearing to Originate from OpenAI Reportedly Attempted to Hack U.S. Department of Education Civil Rights Website
+1714,model,Model or model-powered assistant or agent,Z.ai's ZCode AI Coding Assistant Reportedly Uploaded Developers' Local Code Repositories to Alibaba Cloud Without Consent
+1718,model,Model or model-powered assistant or agent,"Purportedly AI-Generated Image Reportedly Prompted Police Alert and Search for Nonexistent Venomous Viper in Santa Ana, California"
+1719,model,Model or model-powered assistant or agent,"Anthropic's Claude Code AI Agent Reportedly Deleted About 48,000 Live Project Files and Version-Control History During Software Repair"
+1721,model,Model or model-powered assistant or agent,Wisconsin U.S. Rep. Derrick Van Orden Reportedly Posted Grok Imagine Deepfakes Depicting Opponent Rebecca Cooke Saying Things She Did Not Say
+1723,model,Model or model-powered assistant or agent,Anthropic's Claude Code AI Coding Tool Reportedly Used Hidden Unicode Markers to Classify Custom API Routing
+1724,model,Model or model-powered assistant or agent,Oklahoma Judge Reportedly Used ChatGPT-Generated Fictitious Case Citations in Family-Law Order
+1730,model,Model or model-powered assistant or agent,California Lawsuit by Washington Man David Rosenthal Alleged ChatGPT Gave Unsafe Advice About Stopping a Mood Stabilizer
+1731,model,Model or model-powered assistant or agent,AI Agents Reportedly Attempted to Hack Canada's Federal Archives Website While Retrieving Historical Divorce Records
+1739,model,Model or model-powered assistant or agent,"18-Year-Old Islamic State Supporter in Vienna, Austria, Reportedly Sought and Received Explosives Advice From ChatGPT Amid Disputed Embassy and Mosque Attack Allegations"
+1740,model,Model or model-powered assistant or agent,"Teen Hiker Required Helicopter Rescue After Reportedly Following Claude Chatbot Directions in British Columbia, Canada"
+1741,model,Model or model-powered assistant or agent,ChatGPT Reportedly Helped a Texas High School Student Role-Play Shootings of His Teachers and Classmates
+1742,model,Model or model-powered assistant or agent,"ChatGPT Allegedly Helped a Teenager in Sarthe, France, Plan Terrorist Attacks on Schools and Government Buildings"
+1743,model,Model or model-powered assistant or agent,"ChatGPT Allegedly Provided Bomb-Making Guidance to a Suspect in the Red Fort Bombing in Delhi, India"

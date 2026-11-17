@@ -1,0 +1,83 @@
+incident_id,date,title,developer,label,label_detail
+372,2022-07-22,Users Reported Security Issues with Google Pixel 6a's Fingerprint Unlocking,Google,operations,Not model behaviour (operations)
+450,2021-11-01,Kenyan Data Annotators Reported Psychological Trauma from Labeling Graphic Text for ChatGPT Safety Systems,OpenAI,operations,Not model behaviour (operations)
+1418,2026-02-27,Meta AI Smart Glasses Reportedly Routed Intimate Imagery to Reviewers at Kenyan Contractor Sama Before Meta Ended Contract,Meta,operations,Not model behaviour (operations)
+1584,2026-05-20,Meta's AI-Assisted Layoff Process Allegedly Disproportionately Selected Employees on Protected Leave,Meta,operations,Not model behaviour (operations)
+1677,2025-08-01,"xAI Reportedly Operated Unpermitted Gas Turbines in Southaven, Mississippi, to Power Colossus 2 AI Data Center, Producing Air Pollution and Noise",xAI,operations,Not model behaviour (operations)
+81,2020-10-21,"Researchers find evidence of racial, gender, and socioeconomic bias in chest X-ray classifiers",Google,platform,Platform or non-LLM algorithm
+82,2020-10-21,#LekkiMassacre: Why Facebook labelled content from October 20 incident ‘false’,Meta,platform,Platform algorithm (Facebook only)
+83,2020-10-22,AI Spam Filters Allegedly Block Legitimate Emails Based on Biased Keyword Detection,Google,platform,Platform or non-LLM algorithm
+84,2020-10-09,"Tiny Changes Let False Claims About COVID-19, Voting Evade Facebook Fact Checks",Meta,platform,Platform algorithm (Facebook only)
+113,2020-06-27,"Facebook's AI Put ""Primates"" Label on Video Featuring Black Men",Meta,platform,Platform algorithm (Facebook only)
+129,2021-03-01,"Facebook's Automated Tools Failed to Adequately Remove Hate Speech, Violence, and Incitement",Meta,platform,Platform algorithm (Facebook only)
+142,2021-02-11,Facebook's Advertisement Moderation System Allegedly Routinely Misidentified Adaptive Fashion Products as Medical Equipment and Blocked Their Sellers,Meta,platform,Platform or non-LLM algorithm
+143,2021-02-16,Facebook’s and Twitter's Automated Content Moderation Reportedly Failed to Effectively Enforce Violation Rules for Small Language Groups,Meta,platform,Platform algorithm (Facebook only)
+155,2021-12-27,Google Maps Allegedly Directed Sierra Nevada Travelers to Dangerous Roads amid Winter Storm,Google,platform,Platform or non-LLM algorithm
+163,2021-11-21,Facebook’s Hate Speech Detection Algorithms Allegedly Disproportionately Failed to Remove Racist Content towards Minority Groups,Meta,platform,Platform algorithm (Facebook only)
+168,2022-03-01,"Collaborative Filtering Prone to Popularity Bias, Resulting in Overrepresentation of Popular Items in the Recommendation Outputs",Meta,platform,Platform algorithm (Facebook only)
+197,2021-10-01,"Facebook Internally Reported Failure of Ranking Algorithm, Exposing Harmful Content to Viewers over Months",Meta,platform,Platform algorithm (Facebook only)
+213,2020-07-01,Facebook’s Political Ad Detection Reportedly Showed High and Geographically Uneven Error Rates,Meta,platform,Platform algorithm (Facebook only)
+215,2020-04-01,Facebook Content Moderators Demand Better Working Conditions Due to Allegedly Inadequate AI Content Moderation,Meta,platform,Platform algorithm (Facebook only)
+220,2020-11-11,Facebook Mistakenly Blocked Small Business Ads,Meta,platform,Platform algorithm (Facebook only)
+268,2020-03-16,Permanent Removal of Social Media Content via Automated Tools Allegedly Prevented Investigative Efforts,Meta,platform,Platform algorithm (Facebook only)
+275,2020-06-11,Facebook’s Moderation Algorithm Banned Users for Historical Evidence of Slavery,Meta,platform,Platform algorithm (Facebook only)
+282,2020-10-03,Facebook’s Algorithm Mistook an Advertisement of Onions as Sexual Suggestive Content,Meta,platform,Platform algorithm (Facebook only)
+285,2022-07-18,Google Lens’s Camera-Based Translation Feature Provided an Offensive Mistranslation of a Book Title in Korean,Google,platform,Platform or non-LLM algorithm
+303,2022-08-21,Google’s Automated Child Abuse Detection Wrongfully Flagged a Parent’s Naked Photo of His Child,Google,platform,Platform or non-LLM algorithm
+317,2020-03-17,Bug in Facebook’s Anti-Spam Filter Allegedly Blocked Legitimate Posts about COVID-19,Meta,platform,Platform algorithm (Facebook only)
+318,2021-01-13,Facebook Recommended Military Gear Ads Despite Pause on Weapons Accessories Ads,Meta,platform,Platform algorithm (Facebook only)
+343,2021-07-11,"Facebook, Instagram, and Twitter Failed to Proactively Remove Targeted Racist Remarks via Automated Systems",Meta,platform,Platform algorithm (Facebook only)
+359,2021-05-23,"Facebook, Instagram, and Twitter Cited Errors in Automated Systems as Cause for Blocking pro-Palestinian Content on Israeli-Palestinian Conflict",Meta,platform,Platform algorithm (Facebook only)
+362,2021-07-20,Facebook's Automated Moderation Flagged Gardening Group's Language Use by Mistake,Meta,platform,Platform algorithm (Facebook only)
+363,2021-01-15,Facebook's Automated Moderation Mistakenly Flagged Landmark's Name as Offensive,Meta,platform,Platform algorithm (Facebook only)
+383,2022-10-04,Google Home Mini Speaker Reportedly Read N-Word in Song Title Aloud,Google,platform,Platform or non-LLM algorithm
+393,2021-12-08,Facebook AI-Supported Moderation for Ads Failed to Detect Violating Content,Meta,platform,Platform algorithm (Facebook only)
+400,2022-02-23,Google Search Reportedly Returned Fewer Results for Abortion Services in Rural Areas,Google,platform,Platform or non-LLM algorithm
+401,2021-06-03,"Kannada Insulted by Google's Featured Answer as ""Ugliest Language in India""",Google,platform,Platform or non-LLM algorithm
+414,2020-01-18,Facebook Gave Vulgar English Translation of Chinese President's Name,Meta,platform,Platform algorithm (Facebook only)
+415,2020-07-28,Facebook Provided Offensive Translation for King of Thailand's Birthday Ceremony,Meta,platform,Platform algorithm (Facebook only)
+416,2022-12-01,Facebook's Job Ad Algorithm Allegedly Biased against Older and Female Workers,Meta,platform,Platform or non-LLM algorithm
+419,2022-12-01,Facebook's Automated Moderation Allowed Ads Threatening Election Workers to be Posted,Meta,platform,Platform algorithm (Facebook only)
+534,2021-04-29,Facebook Alleged in Lawsuit Misleading Public about Effects of Algorithms on Children,Meta,platform,Platform or non-LLM algorithm
+580,2023-06-12,Alleged Gender Discrimination in Facebook Job Ads Algorithm,Meta,platform,Platform or non-LLM algorithm
+581,2023-06-24,Google Ads Allegedly Serving Content on AI-Generated Misinformation Sites,Google,platform,Platform or non-LLM algorithm
+583,2023-06-07,Instagram Algorithms Allegedly Promote Accounts Facilitating Child Sex Abuse Content,Meta,platform,Platform or non-LLM algorithm
+587,2023-05-22,Apparent Failure to Accurately Label Primates in Image Recognition Software Due to Alleged Fear of Racial Bias,Google,platform,Platform or non-LLM algorithm
+640,2023-12-11,Waymo Software Flaw Reportedly Leads to Double Collision with Tow Truck,Google,platform,Platform or non-LLM algorithm
+655,2024-01-11,Scams Reportedly Impersonating Wealthy Investors Proliferating on Facebook,Meta,platform,Platform or non-LLM algorithm
+659,2023-10-07,Purported Mass Facial Recognition Program in Gaza Reportedly Used by Israeli Forces to Identify Palestinians,Google,platform,Platform or non-LLM algorithm
+696,2024-02-14,Meta's AI Ad Platform Reportedly Causes Overspending and Poor Performance,Meta,platform,Platform or non-LLM algorithm
+710,2024-04-15,Facebook AI Reportedly Mislabels Auschwitz Photos as 'Bullying' and 'Nudity',Meta,platform,Platform or non-LLM algorithm
+723,2024-05-13,Instagram Algorithms Reportedly Directed Children's Merchandise Ad Campaign to Adult Men and Sex Offenders,Meta,platform,Platform or non-LLM algorithm
+758,2023-09-11,Teen's Overdose Reportedly Linked to Meta's AI Systems Failing to Block Ads for Illegal Drugs,Meta,platform,Platform or non-LLM algorithm
+788,2024-06-20,Instagram's Algorithm Reportedly Recommended Sexual Content to Teenagers' Accounts,Meta,platform,Platform or non-LLM algorithm
+789,2024-06-12,Independent News Sites Flagged as Spam by Facebook's AI Moderation System,Meta,platform,Platform or non-LLM algorithm
+796,2024-06-01,Facebook's Content Moderation System Flagged and Removed Emergency Updates as Spam During Wildfires,Meta,platform,Platform or non-LLM algorithm
+803,2024-05-14,"Facebook's Algorithm Reportedly Amplifies AI-Generated Content, Fueling Misleading Posts",Meta,platform,Platform or non-LLM algorithm
+846,2021-10-06,Social Media Algorithms Amplified Disinformation Campaign in Honduras Election,Meta,platform,Platform or non-LLM algorithm
+857,2024-11-25,"Navigation App Allegedly Directs Car Over Damaged Bridge in Uttar Pradesh, Resulting in Three Deaths",Google,platform,Platform or non-LLM algorithm
+873,2024-12-10,YouTube Algorithms Allegedly Amplify Eating Disorder Content to Adolescent Girls,Google,platform,Platform or non-LLM algorithm
+934,2025-02-10,NHK Terminates AI Translation Service After Geopolitical Naming Error,Google,platform,Platform or non-LLM algorithm
+957,2025-02-28,Alleged Instagram Algorithm Malfunction Floods Users' Reels Feeds with Violent and Graphic Content,Meta,platform,Platform or non-LLM algorithm
+967,2025-03-06,Amazon and Google AI Allegedly Promote Mein Kampf as 'a True Work of Art' in Search Results,Google,platform,Platform or non-LLM algorithm
+1219,2025-07-02,Meta Platforms Users Report Being Wrongfully Locked Out After Purported AI Moderation Flags Accounts for Child Exploitation Content,Meta,platform,Platform or non-LLM algorithm
+1223,2025-10-01,"Purportedly AI-Generated Deepfake Ads on Facebook Reportedly Impersonate Trump, Musk, Ocasio-Cortez, Warren, Sanders, and Leavitt to Promote Fraudulent Rebates",Meta,platform,Platform or non-LLM algorithm
+1224,2025-10-01,Purportedly AI-Generated Deepfake Ads on Instagram Impersonate Gisele Bündchen and Other Celebrities in Brazilian Fraud Scheme,Meta,platform,Platform or non-LLM algorithm
+1268,2025-11-06,Meta's Automated Ad and Targeting Systems Reportedly Enabled Large-Scale Fraud Revenue,Meta,platform,Platform or non-LLM algorithm
+1546,2023-02-03,Google Android Earthquake Alerts System Reportedly Underestimated Kahramanmaraş Earthquake and Failed to Send Urgent Warnings to Millions,Google,platform,Platform or non-LLM algorithm
+839,2024-10-07,Purportedly AI-Driven Phishing Scam Uses Spoofed Google Call to Attempt Gmail Breach of Security Expert,Google,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+941,2025-02-17,AI-Driven Phishing Scam Uses Deepfake Robocalls to Target Gmail Users in Credential Theft Campaign,Google,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+942,2025-02-20,Cybercriminals Reportedly Exploited Google’s G.Co Subdomain and Spoofed Caller ID in AI-Driven Phishing Attack on Hack Club Founder,Google,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+1053,2024-03-30,Mumbai Businessman Reportedly Defrauded via Purported AI-Cloned Voice Impersonating Son,Google,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+1076,2025-05-21,Purported Unauthorized Deepfakes of Norman Swan and Others Circulated in Online Supplement Campaigns,Meta,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+1080,2025-05-08,Noodlophile Stealer Reportedly Distributed Through Allegedly Fraudulent AI Content Platforms,Google,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+1115,2025-04-15,Alleged Deepfake Investment Scam Uses Economist David Rosenberg's Likeness on Meta Platforms,Meta,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+1154,2025-04-01,Reported AI‑Generated Deepfake Impersonations of Public Figures Allegedly Used in Coordinated Stock Pump‑and‑Dump Scheme Targeting Israeli Investors,Meta,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+1207,2025-09-11,Purported AI-Generated Deepfake of Irish Fine Gael Presidential Candidate Heather Humphreys Used in Fake Investment Videos on Meta Platforms,Meta,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+1225,2025-10-03,"Purportedly AI-Generated 'Home Invasion Prank' Images Reportedly Circulate in Ireland, Causing Panic and False Emergency Calls",Meta,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+1236,2020-01-01,Quantum AI and Related AI-Themed Investment Scams Reportedly Used Deepfake Endorsements and Spoofed Media Sites to Solicit Investments,Meta,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+1242,2025-06-09,Purported AI-Generated Deepfake Videos Reportedly Used in Swedish Scam Campaign Impersonating Doctors Agnes Wold and Anders Tegnell,Meta,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+1256,2025-10-24,"Purportedly AI-Generated Deepfake Investment Ads Defrauded 5,000 Swedish Investors of 500 Million SEK",Meta,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+1260,2024-01-27,Purported Deepfake of Andrew Forrest Used to Promote Fraudulent 'Quantum AI' Crypto Platform on Facebook,Meta,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+1509,2020-01-01,"Self-Employed Somerset Father Wayne Luxon Reportedly Lost £140,000 After Facebook Deepfake of Martin Lewis Promoted Crypto Scam",Meta,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)
+1582,2026-05-24,Bangladesh-Operated Facebook Pages Reportedly Used AI-Generated Imagery to Mimic U.S. Grassroots Opposition to Data Centers,Meta,venue_only,Developer named only as the place where a scam appeared (Implicated Systems)

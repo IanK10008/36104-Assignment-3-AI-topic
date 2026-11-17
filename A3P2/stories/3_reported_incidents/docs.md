@@ -1,8 +1,8 @@
-# Story 3: developers in reported AI incidents (View 5)
+# Story 3: developers, what they disclose and what is reported (Views 5a and 5b)
 
-**Owner:** Yash  **Data snapshot:** AI Incident Database export of 12 Oct 2026 (latest incident 3 Oct 2026). Epoch file retrieved 17 Oct 2026 22:27 UTC.
+**Built by:** Ian, with Claude's help.  **Data snapshots:** AI Incident Database export of 12 Oct 2026 (latest incident 3 Oct 2026), Stanford FMTI December 2025 edition, Epoch Capabilities Index file retrieved 17 Oct 2026 22:27 UTC.
 
-**Status:** page built and checked against the A3P1 app. Only the incident half of the story is covered. The openness half (V5) is not built. Open data problems are listed below under "Open issues for the team". Please read them before anyone changes the chart.
+**Status:** Views 5a and 5b are built and read only this folder's own data. Open items are listed under "Limitations" and "Checks". The Story 3 notebooks and the app files were last changed on 14 to 16 Nov 2026.
 
 ## Persona, scenario, task and constraints
 
@@ -25,119 +25,118 @@ Source: [Alternative Proposal (No Search ABC), section "Primary persona, scenari
 
 **Story 3:** As a group enterprise architect, I want to see how openly each developer builds its models and how often it appears in reported incidents, so that I can tell the committee what is known and unknown about the developers we would rely on.
 
-**Not covered yet:** The clause "how openly each developer builds its models" (chart V5). The page shows it in grey and says so under "What these charts cannot show".
+**Questions answered:**
 
-**Question answered:** Which developers appear in reported AI incidents, and how often?
+- **View 5a:** How much does each developer disclose about how it builds its models?
+- **View 5b:** How often does each developer appear in reported model incidents, and what went wrong?
 
-## Chart used
+**Framing:** Story 3 shows what public evidence exists about each developer and shows the gaps as gaps. It contains no benchmark data. The FMTI score is read as an indicator of disclosure practice and not as a score of the models in View 1 and View 2.
 
-| Proposal chart | App view | Chart type | What it shows |
-|---|---|---|---|
-| V8 | View 5 | Stacked columns by year, above a sorted bar chart by developer | Incidents per year, and incidents naming each developer in the chosen period, each split into generative AI and other AI |
+## The 11 developers
 
-**Visual Vocabulary families:** change over time (top chart) and ranking (lower chart), as recorded in MEMORY.md section 8p.
+The page covers the 11 developers in scope: OpenAI, Anthropic, Google, Meta, xAI, Mistral AI, DeepSeek, Alibaba, Z.ai, Moonshot and MiniMax.
 
-## Years shown
+| Group | Developers | Count |
+|---|---|---|
+| Scored by FMTI | OpenAI, Anthropic, Google, Meta, xAI, Mistral AI, DeepSeek, Alibaba | 8 |
+| Not scored by FMTI | Z.ai, Moonshot, MiniMax | 3 |
+| Scored by FMTI, not one of the 11 | AI21 Labs, Amazon, IBM, Midjourney, Writer | 5 |
 
-This page starts in **2020**. A3P1 starts the slider in 2015 and the top chart in 2012. The reason is the counts in the AI Incident Database export of 12 Oct 2026:
+FMTI scores 13 companies in total (8 of the 11 and 5 others). View 5a shows light grey names for the five others and grey rows for the three unscored developers.
 
-| Years | Incidents a year | Generative AI by the notebook rule | Incidents naming a company, whole period |
-|---|---|---|---|
-| 2015 to 2019 | 24 to 50 | 0 to 3 | 89 in five years |
-| 2020 to 2022 | 80 to 109 | 5 to 16 | |
-| 2023 | 179 | 79 | |
-| 2024 | 308 | 177 | |
-| 2025 | 457 | 359 | |
-| 2026 (to 3 Oct) | 257 | 195 | 459 for 2020 to 2026 |
+## Charts used
 
-Before 2020 there are too few incidents, and too few that name a company, to compare developers. 2020 to 2022 are kept as the years before ChatGPT (November 2022), so the jump from 2023 is visible against a baseline. The default start year of the lower chart stays at 2022, as in A3P1. To change the range, edit `SLIDER_FIRST_YEAR` and `CHART_FIRST_YEAR` at the top of `page.py`. The start year is a team decision.
+| View | Chart type | What it shows |
+|---|---|---|
+| 5a | Heatmap, 16 rows by 19 subdomains | Indicators disclosed by each company in each FMTI subdomain, with rows grouped by headquarters region and columns grouped by domain |
+| 5b | Event timeline (dot strip plot) with an aligned monthly stacked bar on a shared time axis | Model incidents by developer and incident type, with Epoch model releases as triangles |
 
-One point for the team to weigh: Epoch lists only models released from 24 Feb 2023, so the column "Models in the Epoch list" does not cover the earlier years of the incident counts.
+**Filters:** 5a has headquarters region, domain, companies and subdomains. 5b has a period slider (default 2020 to 2026), incident type, headquarters region, developers and a toggle for Epoch model releases.
 
 ## Data sources and dates
 
 | Source | Used for | Date |
 |---|---|---|
-| AI Incident Database, weekly Excel export, sheet `Incidents` (Responsible AI Collaborative) | Incident date, title, alleged developer text | Export of 12 Oct 2026, 1,734 incidents, latest incident 3 Oct 2026 |
-| Epoch Capabilities Index, file `eci_scores.csv` | Number of models and best capability score for each developer | Retrieved 17 Oct 2026 22:27 UTC, models released 24 Feb 2023 to 7 Oct 2026 (277 models) |
+| Stanford Foundation Model Transparency Index, December 2025 edition | 100 yes-or-no indicators for 13 companies, flagship models assessed in May 2025 | Retrieved 17 Oct 2026 22:51 UTC from the repository `stanford-crfm/fmti` |
+| AI Incident Database, weekly Excel export, sheet `Incidents` (Responsible AI Collaborative) | Incident date, title, alleged developer, MIT risk domain | Export of 12 Oct 2026, retrieved 17 Oct 2026 23:10 UTC. Incidents from 23 Mar 2020 to 3 Oct 2026 are kept |
+| MIT AI Risk Repository risk domains | Incident type for 252 of the 318 counted incidents | Labels as carried in the AI Incident Database export |
+| Epoch Capabilities Index, file `eci_scores.csv` | Model release dates, capability index and the number of models of each developer | Retrieved 17 Oct 2026 22:27 UTC, 277 models released 24 Feb 2023 to 7 Oct 2026 |
 
-**Data flow.** There are two notebooks and three files in `data/`. They are kept apart and are not combined in any notebook.
+**Files written by the group:**
+
+- **Labels of 400 incidents:** `manual/aiid_incident_labels_400.csv`. Each of the 400 incidents that name one of the 11 developers is labelled as model incident or not.
+- **Incident type of 66 incidents:** `manual/aiid_66_assigned_mit_domain.csv`. The group's reading for the incidents that MIT had not classified.
+- **Company table:** `manual/fmti_companies.csv`. Headquarters, region, whether the company submitted its own report, the flagship model assessed and whether the company is one of the 11 developers.
+
+**Data flow.** Three notebooks write to `processed/`, and four files are copied by hand into `data/`. Nothing is joined in a notebook.
 
 | Notebook | Writes to `processed/` | Copied by hand into `data/` |
 |---|---|---|
-| `notebooks/aiid_incidents/aiid_incidents.ipynb` (copy of notebook 10) | `incidents.csv`, `incident_developers.csv` (and two summary tables and `data_currency.csv`, not used by the page) | `incidents.csv`, `incident_developers.csv` |
-| `notebooks/eci_scores/eci_scores.ipynb` (copy of notebook 01) | `model_capability.csv`, `data_currency.csv` | `model_capability.csv` |
+| `notebooks/fmti_scores/fmti_scores.ipynb` | `fmti_dec2025_scores_tidy.csv`, `fmti_companies.csv`, `data_currency.csv` | `fmti_dec2025_scores_tidy.csv`, `fmti_companies.csv` |
+| `notebooks/aiid_model_incidents/aiid_model_incidents.ipynb` | `aiid_model_incidents_by_developer.csv`, `aiid_not_counted_incidents.csv`, `data_currency.csv` | `aiid_model_incidents_by_developer.csv` |
+| `notebooks/eci_scores/eci_scores.ipynb` | `model_capability.csv`, `data_currency.csv` | `model_capability.csv` |
 
-The combining is done when the page loads (`src/aiid.py` and `src/context.py`):
+The files `incidents.csv` and `incident_developers.csv` in `data/` and the notebook `notebooks/aiid_incidents/` come from the earlier version of this page. Views 5a and 5b do not read them.
 
-1. `incident_developers.csv` is cut to the rows marked `named_company`, repeated rows for the same incident and company are removed, and five columns are kept. This gives the same table that A3P1 reads from `aiid_incident_developers.csv`.
-2. The table is joined to `incidents.csv` by incident number (date, title and the generative flag are added).
-3. The developer names are matched to Epoch's `organization` with the dictionary `EPOCH_NAMES` in `src/context.py`. This gives each company's number of Epoch models and best capability score.
+## What the page shows
 
-## Open issues for the team
+**View 5a. FMTI heatmap.**
 
-These were found while building A3P1 and A3P2 and are not fixed. None is decided. They are written here so the team can decide.
+- **Cell:** the indicators a company discloses in a subdomain, over the indicators in that subdomain.
+- **Rows:** one row per company, grouped by headquarters region and sorted A to Z inside each group, so the order is not a ranking. The China group comes last.
+- **Grey rows:** Z.ai, Moonshot and MiniMax close the China group. FMTI did not score them, so a grey row is a gap in the evidence.
+- **Total score:** the official total out of 100 is not drawn in the chart. It is in the table under "Values behind the chart".
 
-### 1. Epoch and AIID company names do not all match
+**View 5b. Incident timeline.**
 
-- AIID names 16 companies. 11 have models in Epoch's `organization` field. **Tesla, ByteDance, Apple, Baidu and Tencent have no models in the Epoch list**, so the table shows 0 models (and a blank score) for them. 0 reads as "has no models", which is wrong. A label such as "not in the Epoch list" would be clearer.
-- Names are matched through a short dictionary (`EPOCH_NAMES`): Google with Google DeepMind, Meta with Meta AI, Microsoft with Microsoft Research, Mistral with Mistral AI, Z.ai with Z.ai (Zhipu AI). Any other spelling is matched only when it is identical.
-- **17 Epoch models have a blank organization.** They count for no developer. Nobody has checked whether some of them belong to a company in the list.
-- AIID names deployers and developers of any AI system, while Epoch counts language models. A count of incidents and a count of models are not the same kind of thing. Companies with no incident are not shown.
+- **Counted:** 1,481 incidents since 2020, of which 400 name one of the 11 developers and 318 are model incidents. The other 82 are platform products (61), operations cases (5) and cases that name a developer only as the place of a scam (16).
+- **Dots:** one dot per incident and named developer, which gives 377 dots for 318 incidents.
+- **Incident type:** four types made from the MIT risk domains. By type: 137 wrong output or failure, 38 data and security, 78 misuse by others and 65 harm to users or society.
+- **Triangles:** the release dates of Epoch models. The chart does not test whether releases cause incidents.
 
-### 2. The generative-AI flag has known errors
+## Changes after A3P1
 
-- Notebook 10 sets `is_generative_related` from the developer text only, with a keyword list and a named list (OpenAI, Anthropic, xAI, Mistral, DeepSeek, Moonshot, MiniMax, Z.ai). **Every OpenAI incident is flagged generative (190 of 190 rows), for example a video-game reinforcement-learning incident.** At the default settings OpenAI shows 176 incidents, all generative, Anthropic 39 of 39 and xAI 34 of 34.
-- A second flag built from the export's `Implicated Systems` keywords (list written by Claude, not validated) disagrees on 180 incidents: 736 flagged by both, 118 only by the current rule, 62 only by the second rule and 818 by neither. The 62 include a Stable Diffusion bias case, an Air Canada chatbot and state deepfake campaigns, where the developer field names a government or an airline.
-- Proposal, not decided: flag an incident if either signal fires, review a sample of 30 to 50 of the 180 disagreements to estimate the error rate, state that rate in the limitations and drop the rule that treats every OpenAI incident as generative. No perfect truth exists because AIID entries are alleged and editor written.
-- The 2020 bar shows 16 generative incidents against 5 in 2021. The 16 are mostly GPT-3 and deepfake cases (and one chatbot in Korea), so the jump looks real and is not a flag error. This was read from the titles by Claude, not sampled by the team.
+- **Replaced:** the A3P1 tab on developers in reported incidents (a stacked column chart by year above a ranking by developer) is replaced by Views 5a and 5b.
+- **Added:** the openness half of the story is now covered by View 5a, and the incident half by View 5b with MIT risk domains and Epoch release dates.
+- **Settled during the build:** Z.ai, Moonshot and MiniMax are kept as grey rows. The metric "Mean of the 13" and the total score column are removed from 5a. The incident type filter is the only control for type in 5b. Help icons sit next to their labels in the whole app.
 
-### 3. Most incidents name no company
+## Refreshing the data
 
-- Only 557 of the 1,734 incidents name a company the notebook recognises. At the default settings (2022 to 2026) 394 of 1,310 incidents name a selected developer, which is 30%.
-- The export has an `Implicated Systems` column that names the system (for example ChatGPT 103, Claude 25, Grok 24, Gemini 22, Meta AI 19). It is filled for 1,185 of 1,734 incidents (the data dictionary says all of them). It also holds generic terms (Deepfake Technology 418, Large Language Models 155, Social Media Platforms 139). The names are mostly products and not versions, so they match Epoch models only at the model-family level.
-- A page based on specific systems instead of companies may answer the committee's question better. This is a design choice for the team.
+- **FMTI:** run `fmti_scores.ipynb` and copy the two files into `data/`. FMTI scores are fixed for one edition, so a new download changes nothing until a new edition is published.
+- **AIID:** download a newer weekly export into `raw/`, update `retrieval_log.json`, run `aiid_model_incidents.ipynb` and copy the file into `data/`. The two manual label files must be extended for new incidents.
+- **Epoch:** with `REFRESH = False` the notebook reuses the file retrieved on 17 Oct 2026, so the data is as old as that date.
 
-### 4. Other limits that are already in the app
+## Limitations
 
-- Counts show exposure (how widely a product is used and how much English-language media covers it) and not risk. Companies based in China are under-counted, so they cannot be compared with US companies.
-- 2026 is a partial year. Severity and harm are not compared. Developer is as alleged.
-- The values table gives Streamlit a column that mixes numbers and blanks. Streamlit converts it with a warning in the log and the table shows correctly. A3P1 does the same.
-
-## Please look for other data sources
-
-The team is free to use other sources to answer the Story 3 question, with the same chart or a different one. The AI Incident Database is not required. A source is acceptable if it meets these conditions:
-
-- **Public:** anyone can open or download it without a paid account.
-- **Licensed for our use:** the licence allows reuse for a university project, and the licence text and version are written in the notebook with the date it was read.
-- **Dated:** the notebook records when it was downloaded and what period it covers.
-- **Complexity:** say in the notebook how much work it takes to clean (a download and a join, or hand classification of text).
-
-Starting points, none of them checked for licence or coverage by Claude yet:
-
-- AIAAIC repository and OECD AI Incidents Monitor (AIM). Both are blocked from the cloud environment and need a run on a local computer, as recorded in the A3P1 documentation.
-- The AI Incident Database itself has other fields that A3P2 does not use: the MIT risk-domain labels (about 84% of recent incidents with a named developer, assigned by an AI model, so they need a caveat) and the `Implicated Systems` column described above.
-- For the openness half (V5): the Foundation Model Transparency Index covers 13 developers (December 2025 edition), the FLI AI Safety Index grades 8 companies (December 2025), and Epoch publishes per-developer disclosure of parameters, compute and dataset size. Known is not the same as disclosed, so wording matters.
-- Any other public list of AI incidents, AI safety reports or model cards with a licence that allows reuse. Say what each one measures. A count of reports follows media attention, and a transparency score follows what a developer chooses to publish.
-
-For each new source, please write down: the link, the licence and the date it was read, the period covered, what one row means, and how developers or models would be matched to Epoch.
+- **Disclosure, not practice (5a):** an indicator counts when the company publishes the item. How well the company does it is not measured.
+- **One flagship model per company (5a):** the assessed models are those of May 2025. Newer models are not covered.
+- **Different evidence (5a):** seven companies submitted their own reports and six did not. A zero for the six can mean that the item was not found.
+- **Eight of 11 (5a):** nothing in the page says how Z.ai, Moonshot or MiniMax compare, because FMTI does not score them.
+- **Reports, not failures (5b):** a count shows what was reported and not how often a model fails. Counts follow use and press attention as well as risk.
+- **Language (5b):** the database draws on English-language media, so the five developers based in China cannot be compared with those based in the United States.
+- **Types set by the group (5b):** 66 incidents had no MIT risk domain, mostly from 2025 and 2026. The group assigned the closest domain, with AI assistance in the reading. A second group member has not yet checked these types or the 400 labels.
+- **Export age (5b):** a newer weekly export exists and has not been used.
+- **Developer as recorded (5b):** naming a developer is not proof of fault.
 
 ## Restrictions
 
-- **AI Incident Database licence:** not re-read by Claude for this page. A3P1 lists the source in the app footer with the publisher and link. The licence of the export is to be confirmed on the snapshots page ([incidentdatabase.ai/research/snapshots](https://incidentdatabase.ai/research/snapshots/)) before the final submission.
+- **Stanford FMTI licence:** CC BY, as stated in the repository README. Credit and a note of changes are given in the app. The licence text is to be read again on the repository before the final submission.
+- **AI Incident Database licence:** the group's notes record CC BY-SA 4.0. The licence is to be confirmed on the snapshots page ([incidentdatabase.ai/research/snapshots](https://incidentdatabase.ai/research/snapshots/)) before the final submission. The share-alike condition for the group's labelled CSV files in a public repository is still open.
 - **Epoch data licence:** Creative Commons Attribution. The page read does not state a version, so the version is to be confirmed on the dataset page ([epoch.ai/data](https://epoch.ai/data)).
-- **Credit:** The columns `is_generative_related` and `is_china_based` are the group's own rules and must not be credited to the AI Incident Database or to Epoch.
+- **MIT AI Risk Repository:** the licence was not read for this page. The labels are used as carried in the AI Incident Database export.
+- **Credit:** The group's reading of 66 incident types, the 400 model incident labels and the grouping of incident types are the group's own work and must not be credited to the AI Incident Database, MIT or Epoch.
 - **Not legal advice.** The page is descriptive only.
 
 ## Checks
 
 | Check | Result |
 |---|---|
-| The notebook's two tables, cut and cleaned by `src/aiid.py`, against the A3P1 files `aiid_incidents.csv` and `aiid_incident_developers.csv` (after the same bool conversion and join) | Identical (1,734 incidents, 639 incident and company rows) |
-| Page with the A3P1 year settings (slider from 2015, chart from 2012), text from "User story" down, against the A3P1 tab 4 | No difference |
-| Page with this story's settings (from 2020), against the A3P1 tab 4 | Differences only in the slider's first year and the year labels of the top chart (2012 to 2019 are gone) |
-| Notebook `aiid_incidents` run in a cloud copy on the export of 12 Oct 2026 (`REFRESH = False`) | No error. The output tables are the ones above |
-| Whole build from zero in a fresh virtual environment (Python 3.13, both requirements files): both notebooks run, three files copied by hand into `data/` | Same content as the earlier files. Run on 9 Nov 2026 |
-| Page run inside `app.py` and on its own, text from "User story" down | Same text in both |
+| FMTI scores file, 100 indicators per company, summed against the published totals | All 13 match. Direct evidence for 7 companies (IBM, DeepSeek, Alibaba, xAI, Midjourney, Meta, Mistral). The other 6 rest on a news article and the paper's averages |
+| FMTI domains, indicator order against the indicator file | 100 of 100 matched, Upstream 34, Model 30 and Downstream 36 in 19 subdomains |
+| 5a unit tests (pytest, cloud copy) | 4 passed. Row order, grey rows without values, 13 scored rows equal to the tidy file, no click order that breaks the page |
+| Help icon gap in the browser, Stories 1a, 1b, 2 and 3 | 6 px between label and icon. Before the change it was 270 to 1426 px on sliders and multiselects |
+| 5b controls look | Developers and Incident type start within 1 to 2 px at three window widths |
+
+**Not yet checked:** the look of the grey rows, the 5a hover and the colourbar title spacing in a browser, the second group member's check of the 66 types and 400 labels, and a full run of the three notebooks on Ian's computer.
 
 These checks were run by Claude. Ian has not reviewed them yet.
