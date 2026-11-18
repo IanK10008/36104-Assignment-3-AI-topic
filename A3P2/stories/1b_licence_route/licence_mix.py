@@ -22,7 +22,7 @@ from src.views_context import (OPEN, WINDOW_ALL, ZOOM_NOTE, _layout, download_re
                                view3_data)
 
 # One hue (View 1's open-weight blue) in three steps, darkest = most permissive. Lightness alone separates the steps,
-# so they survive every colour vision deficiency; each segment also carries its count and share as text.
+# so they survive every colour vision deficiency; each segment also carries its count as text.
 MIX_CLASSES = {
     "Open weights, unrestricted": ("Commercial self-hosting allowed", OPEN, "white"),
     "Open weights, restricted use": ("Self-hosting after a legal review", "#56B4E9", INK),
@@ -35,16 +35,16 @@ LATEST_LONG = f"{LATEST_RELEASE.day} {LATEST_RELEASE:%B %Y}"
 EMPTY_TEXT = ("No open-weight models from the chosen developer countries, so there is no licence mix to show. "
               "Choose more countries above.")
 
+FIRST_YEAR = 2024  # first release year drawn
+
 HOW_TO_READ = f"""
-- **One row per release year,** from 2023 at the top to 2026 at the bottom. Each row is all the open-weight models
+- **One row per release year,** from 2024 at the top to 2026 at the bottom. Each row is all the open-weight models
   Epoch scored that were released in that year, shown as 100%. The number under the year is that total.
 - **Three shades of the open-weight blue:** darkest, the licence allows commercial self-hosting (Epoch: unrestricted);
   middle, it can be self-hosted after a legal review (restricted use); palest, it cannot be used for the bank's
-  business (non-commercial). Each segment shows the number of models and its share of the year.
+  business (non-commercial). Each segment shows the number of models.
 - **Read the dark segment down the rows:** a longer dark segment means more of that year's new open-weight models
   could go to the legal team as self-hosting candidates.
-- **The dashed line marks 50%:** a dark segment that reaches past it means most of that year's releases carry an
-  unrestricted label.
 - **{LATEST_RELEASE.year} is a part year,** releases to {LATEST_SHORT} only, so its total is smaller.
 - **The filter above changes the rows:** "Developer based in" keeps only models from those countries. The release
   window above does not apply here, because the chart needs every year to show the change.
@@ -104,11 +104,9 @@ def mix_table(frame: pd.DataFrame) -> pd.DataFrame:
     return long
 
 
-def _segment_label(n: int, share: float) -> str:
-    """Count and share inside a segment; only the count when the segment is too narrow for both."""
-    if n == 0:
-        return ""
-    return f"{n} ({share:.0f}%)" if share >= 7 else f"{n}"
+def _segment_label(n: int) -> str:
+    """Number of models inside a segment (absolute count, no percentage)."""
+    return "" if n == 0 else f"{n}"
 
 
 def chart_mix(table: pd.DataFrame, revision: str) -> go.Figure:
@@ -121,15 +119,11 @@ def chart_mix(table: pd.DataFrame, revision: str) -> go.Figure:
         fig.add_trace(go.Bar(
             y=list(range(len(years))), x=part["share"], orientation="h", name=name,
             marker={"color": fill, "line": {"color": edge, "width": 1.5}},
-            text=[_segment_label(int(n), s) for n, s in zip(part["models"], part["share"])],
+            text=[_segment_label(int(n)) for n in part["models"]],
             textposition="inside", insidetextanchor="middle", textangle=0,
             textfont={"size": 12, "color": text_colour}, customdata=part["models"],
             hovertemplate=f"<b>{name}</b><br>{meaning}<br>%{{customdata}} models, %{{x:.1f}}% of the year"
                           "<extra></extra>"))
-    fig.add_shape(type="line", x0=50, x1=50, y0=-0.55, y1=len(years) - 0.45,
-                  line={"color": MUTED, "width": 1.3, "dash": "dash"}, layer="above")
-    fig.add_annotation(x=50, y=1, yref="paper", yanchor="bottom", xanchor="left", xshift=4, showarrow=False,
-                       text="50% of the year's releases", font={"size": 11, "color": MUTED})
     ticks = []
     for y in years:
         tick = f"<b>{y}</b><br><span style='color:{MUTED}'>{int(totals[y])} models</span>"
@@ -190,10 +184,10 @@ def render_licence_mix(models: pd.DataFrame, check: pd.DataFrame) -> None:
     because a trend cut to the release window above (two years by default) would hide the change."""
     countries = st.session_state.get("v3_countries") or []
     frame = view3_data(models, check, WINDOW_ALL, countries)
-    st.subheader("2. Are the open-weight models released each year becoming easier to self-host?", anchor="view-2")
+    frame = frame.loc[frame["release_year"] >= FIRST_YEAR]  # 2023 is left out, the chart starts at 2024
     st.caption("Unit: share of the open-weight models released in each year (%), with the number of models. Licence "
                "class from Epoch AI's accessibility label. Uses the developer countries chosen above and always "
-               f"every release year (24 Feb 2023 to {LATEST_LONG}), since the trend needs all years.")
+               f"every release year from 2024 ({LATEST_LONG} is the latest release), since the trend needs all years.")
     if frame.empty:
         st.info("No models match the filters above. Choose at least one country.")
         footer(["epoch"], f"{LATEST_LONG} (latest Epoch release date)")
@@ -220,7 +214,7 @@ def render_licence_mix(models: pd.DataFrame, check: pd.DataFrame) -> None:
     st.caption(f"Selected: {int(totals.sum())} open-weight models released {first} to {last_label}, developers based "
                f"in {', '.join(countries)}. " + ZOOM_NOTE)
     legend_html([(fill, f"{name.split(', ')[1].capitalize()}: {meaning.lower()}", "square")
-                 for name, (meaning, fill, _) in MIX_CLASSES.items()] + [(MUTED, "50% of the year's releases", "line")])
+                 for name, (meaning, fill, _) in MIX_CLASSES.items()])
     revision = f"v3b|{','.join(sorted(countries))}"
     st.plotly_chart(chart_mix(table, revision), width="content", key="v3b_mix_chart", config=PLOT_CONFIG)
     st.markdown(answer_text(table))
