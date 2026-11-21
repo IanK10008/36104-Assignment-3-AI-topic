@@ -1,4 +1,4 @@
-# 36104 DVN A3P2: Model Choice Explorer, split by user story
+# 36104 DVN 2026 A3P2: Model Choice Explorer, split by user story
 
 ## Group Detail
 
