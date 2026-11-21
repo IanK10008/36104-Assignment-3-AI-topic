@@ -1,4 +1,10 @@
-# A3P2: Model Choice Explorer, split by user story
+# 36104 DVN A3P2: Model Choice Explorer, split by user story
+
+## Group Detail
+
+**Group number**: 6
+
+**Member**: Anh Quyen Hoang, Rida Mehboob, Yin Kao and Yash Vikas Patil
 
 ## Question, persona and user stories
 
