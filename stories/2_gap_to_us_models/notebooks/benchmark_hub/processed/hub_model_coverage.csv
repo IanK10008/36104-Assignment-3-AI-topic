@@ -1,0 +1,11 @@
+release_year,access_group,models_in_capability_file,models_with_hub_scores
+2023,accessible,27,21.0
+2023,excluded,10,0.0
+2023,restricted,7,1.0
+2024,accessible,30,18.0
+2024,excluded,6,0.0
+2024,restricted,23,11.0
+2025,accessible,27,14.0
+2025,restricted,39,24.0
+2026,accessible,42,36.0
+2026,restricted,46,43.0

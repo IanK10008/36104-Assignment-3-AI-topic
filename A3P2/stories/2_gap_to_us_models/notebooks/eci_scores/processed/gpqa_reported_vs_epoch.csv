@@ -1,9 +1,0 @@
-model,developer_reported_pct,epoch_independent_pct,epoch_standard_error_pp,epoch_90ci_halfwidth_pp,developer_report_type,source_page,developer_source,reference_model,notes,difference_pp,within_epoch_90ci
-GPT-5,85.7,84.5,2.2,3.62,developer_report,https://epoch.ai/data-insights/self-reported-gpqa,https://openai.com/index/introducing-gpt-5/,gpt-5-2025-08-07_high,,1.2,True
-Opus 4.1,74.9,73.2,3.2,5.26,developer_report,https://epoch.ai/data-insights/self-reported-gpqa,https://www.anthropic.com/news/claude-4,claude-opus-4-1-20250805,No extended thinking,1.7,True
-DeepSeek R1,71.5,71.7,3.2,5.26,developer_report,https://epoch.ai/data-insights/self-reported-gpqa,https://arxiv.org/pdf/2501.12948,DeepSeek-R1,,-0.2,True
-Llama 4 Maverick,69.8,67.0,2.8,4.61,developer_report,https://epoch.ai/data-insights/self-reported-gpqa,https://ai.meta.com/blog/llama-4-multimodal-intelligence/,Llama-4-Maverick-17B-128E-Instruct-FP8,,2.8,True
-Grok 4,87.5,87.0,2.0,3.29,developer_report,https://epoch.ai/data-insights/self-reported-gpqa,https://x.ai/news/grok-4,grok-4-0709,,0.5,True
-Gemini 2.5 Pro,86.4,84.8,2.6,4.28,developer_report,https://epoch.ai/data-insights/self-reported-gpqa,https://deepmind.google/models/gemini/pro/,gemini-2.5-pro-preview-06-05,,1.6,True
-Qwen 3,71.1,70.7,2.7,4.44,developer_report,https://epoch.ai/data-insights/self-reported-gpqa,https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507,qwen3-235b-a22b,,0.4,True
-Mistral Large 2407,48.6,51.3,2.7,4.44,third_party_endorsed,https://epoch.ai/data-insights/self-reported-gpqa,https://docs.mistral.ai/getting-started/models/benchmark/,mistral-large-2411,Developer did not self-report; score from endorsed third party; name/version caveat,-2.7,True

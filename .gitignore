@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv*/
+.env
+.DS_Store
+.ipynb_checkpoints/
+# Stale drafts kept on the author computer only. The matrix is AI_PROVENANCE_MATRIX.csv
+AI_PROVENANCE_MATRIX.md
+stories/2_gap_to_us_models/PROVENANCE_V3_DRAFT.md

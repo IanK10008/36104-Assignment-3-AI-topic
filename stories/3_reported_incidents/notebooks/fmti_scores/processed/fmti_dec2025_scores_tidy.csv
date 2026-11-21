@@ -1,0 +1,1301 @@
+Indicator,Domain,Subdomain,Developer,Disclosed
+Data acquisition methods,Upstream,Data Acquisition,AI21 Labs,1
+Public datasets,Upstream,Data Acquisition,AI21 Labs,1
+Crawling,Upstream,Data Acquisition,AI21 Labs,1
+Usage data used in training,Upstream,Data Acquisition,AI21 Labs,1
+Notice of usage data used in training,Upstream,Data Acquisition,AI21 Labs,1
+Licensed data sources,Upstream,Data Acquisition,AI21 Labs,0
+Licensed data compensation,Upstream,Data Acquisition,AI21 Labs,1
+New human-generated data sources,Upstream,Data Acquisition,AI21 Labs,1
+Instructions for data generation,Upstream,Data Acquisition,AI21 Labs,1
+Data laborer practices,Upstream,Data Acquisition,AI21 Labs,1
+Synthetic data sources,Upstream,Data Acquisition,AI21 Labs,1
+Synthetic data purpose,Upstream,Data Acquisition,AI21 Labs,1
+Data processing methods,Upstream,Data Processing,AI21 Labs,1
+Data processing purpose,Upstream,Data Processing,AI21 Labs,1
+Data processing techniques,Upstream,Data Processing,AI21 Labs,0
+Data size,Upstream,Data Properties,AI21 Labs,0
+Data language composition,Upstream,Data Properties,AI21 Labs,0
+Data domain composition,Upstream,Data Properties,AI21 Labs,0
+External data access,Upstream,Data Properties,AI21 Labs,0
+Data replicability,Upstream,Data Properties,AI21 Labs,0
+Compute usage for final training run,Upstream,Compute,AI21 Labs,0
+Compute usage including R&D,Upstream,Compute,AI21 Labs,0
+Development duration for final training run,Upstream,Compute,AI21 Labs,0
+Compute hardware for final training run,Upstream,Compute,AI21 Labs,1
+Compute provider,Upstream,Compute,AI21 Labs,1
+Energy usage for final training run,Upstream,Compute,AI21 Labs,0
+Carbon emissions for final training run,Upstream,Compute,AI21 Labs,0
+Water usage for final training run,Upstream,Compute,AI21 Labs,0
+Internal compute allocation,Upstream,Compute,AI21 Labs,0
+Model stages,Upstream,Methods,AI21 Labs,1
+Model objectives,Upstream,Methods,AI21 Labs,1
+Code access,Upstream,Methods,AI21 Labs,0
+Organization chart,Upstream,Other Resources,AI21 Labs,1
+Model cost,Upstream,Other Resources,AI21 Labs,0
+Basic model properties,Model,Model Information,AI21 Labs,1
+Deeper model properties,Model,Model Information,AI21 Labs,1
+Model dependencies,Model,Model Information,AI21 Labs,1
+Benchmarked inference,Model,Model Information,AI21 Labs,0
+Researcher credits,Model,Model Access,AI21 Labs,0
+Specialized access,Model,Model Access,AI21 Labs,0
+Open weights,Model,Model Access,AI21 Labs,1
+Agent Protocols,Model,Model Access,AI21 Labs,1
+Capabilities taxonomy,Model,Capabilities,AI21 Labs,1
+Capabilities evaluation,Model,Capabilities,AI21 Labs,1
+External reproducibility of capabilities evaluation,Model,Capabilities,AI21 Labs,1
+Train-test overlap,Model,Capabilities,AI21 Labs,0
+Risks taxonomy,Model,Risks,AI21 Labs,1
+Risks evaluation,Model,Risks,AI21 Labs,1
+External reproducibility of risks evaluation,Model,Risks,AI21 Labs,0
+Pre-deployment risk evaluation,Model,Risks,AI21 Labs,0
+External risk evaluation,Model,Risks,AI21 Labs,1
+Mitigations taxonomy,Model,Model Mitigations,AI21 Labs,1
+Mitigations taxonomy mapped to risk taxonomy,Model,Model Mitigations,AI21 Labs,1
+Mitigations efficacy,Model,Model Mitigations,AI21 Labs,0
+External reproducibility of mitigations evaluation,Model,Model Mitigations,AI21 Labs,0
+Model theft prevention measures,Model,Model Mitigations,AI21 Labs,1
+Release stages,Model,Release,AI21 Labs,1
+Risk thresholds,Model,Release,AI21 Labs,1
+Versioning protocol,Model,Release,AI21 Labs,1
+Change log,Model,Release,AI21 Labs,1
+Foundation model roadmap,Model,Release,AI21 Labs,1
+Top distribution channels,Model,Release,AI21 Labs,0
+Quantization,Model,Release,AI21 Labs,1
+Terms of use,Model,Release,AI21 Labs,1
+Distribution channels with usage data,Downstream,Usage Data,AI21 Labs,0
+Amount of usage,Downstream,Usage Data,AI21 Labs,0
+Classification of usage data,Downstream,Usage Data,AI21 Labs,0
+Data retention and deletion policy,Downstream,Usage Data,AI21 Labs,1
+Geographic statistics,Downstream,Usage Data,AI21 Labs,0
+Internal products and services,Downstream,Impact,AI21 Labs,1
+External products and services,Downstream,Impact,AI21 Labs,0
+Users of internal products and services,Downstream,Impact,AI21 Labs,0
+Consumer/enterprise usage,Downstream,Impact,AI21 Labs,1
+Enterprise users,Downstream,Impact,AI21 Labs,1
+Government use,Downstream,Impact,AI21 Labs,1
+Benefits Assessment,Downstream,Impact,AI21 Labs,1
+AI bug bounty,Downstream,Post-deployment Monitoring,AI21 Labs,1
+Responsible disclosure policy,Downstream,Post-deployment Monitoring,AI21 Labs,1
+Safe harbor,Downstream,Post-deployment Monitoring,AI21 Labs,1
+Security incident reporting protocol,Downstream,Post-deployment Monitoring,AI21 Labs,1
+Misuse incident reporting protocol,Downstream,Post-deployment Monitoring,AI21 Labs,1
+Post-deployment coordination with government,Downstream,Post-deployment Monitoring,AI21 Labs,0
+Feedback mechanisms,Downstream,Post-deployment Monitoring,AI21 Labs,0
+"Permitted, restricted, and prohibited model behaviors",Downstream,Model Behavior Policy,AI21 Labs,1
+Model response characteristics,Downstream,Model Behavior Policy,AI21 Labs,1
+System prompt,Downstream,Model Behavior Policy,AI21 Labs,1
+Intermediate tokens,Downstream,Model Behavior Policy,AI21 Labs,1
+Internal product and service mitigations,Downstream,Downstream Mitigations,AI21 Labs,1
+External developer mitigations,Downstream,Downstream Mitigations,AI21 Labs,1
+Enterprise mitigations,Downstream,Downstream Mitigations,AI21 Labs,1
+Detection of machine-generated content,Downstream,Downstream Mitigations,AI21 Labs,1
+Documentation for responsible use,Downstream,Downstream Mitigations,AI21 Labs,1
+Permitted and prohibited users,Downstream,Acceptable Use Policy,AI21 Labs,1
+"Permitted, restricted, and prohibited uses",Downstream,Acceptable Use Policy,AI21 Labs,1
+AUP enforcement process,Downstream,Acceptable Use Policy,AI21 Labs,1
+AUP enforcement frequency,Downstream,Acceptable Use Policy,AI21 Labs,0
+Regional policy variations,Downstream,Acceptable Use Policy,AI21 Labs,1
+Oversight mechanism,Downstream,Accountability,AI21 Labs,1
+Whistleblower protection,Downstream,Accountability,AI21 Labs,1
+Government commitments,Downstream,Accountability,AI21 Labs,1
+Data acquisition methods,Upstream,Data Acquisition,Alibaba,0
+Public datasets,Upstream,Data Acquisition,Alibaba,0
+Crawling,Upstream,Data Acquisition,Alibaba,0
+Usage data used in training,Upstream,Data Acquisition,Alibaba,0
+Notice of usage data used in training,Upstream,Data Acquisition,Alibaba,0
+Licensed data sources,Upstream,Data Acquisition,Alibaba,0
+Licensed data compensation,Upstream,Data Acquisition,Alibaba,0
+New human-generated data sources,Upstream,Data Acquisition,Alibaba,0
+Instructions for data generation,Upstream,Data Acquisition,Alibaba,0
+Data laborer practices,Upstream,Data Acquisition,Alibaba,0
+Synthetic data sources,Upstream,Data Acquisition,Alibaba,1
+Synthetic data purpose,Upstream,Data Acquisition,Alibaba,1
+Data processing methods,Upstream,Data Processing,Alibaba,0
+Data processing purpose,Upstream,Data Processing,Alibaba,0
+Data processing techniques,Upstream,Data Processing,Alibaba,0
+Data size,Upstream,Data Properties,Alibaba,1
+Data language composition,Upstream,Data Properties,Alibaba,0
+Data domain composition,Upstream,Data Properties,Alibaba,0
+External data access,Upstream,Data Properties,Alibaba,0
+Data replicability,Upstream,Data Properties,Alibaba,0
+Compute usage for final training run,Upstream,Compute,Alibaba,0
+Compute usage including R&D,Upstream,Compute,Alibaba,0
+Development duration for final training run,Upstream,Compute,Alibaba,0
+Compute hardware for final training run,Upstream,Compute,Alibaba,0
+Compute provider,Upstream,Compute,Alibaba,1
+Energy usage for final training run,Upstream,Compute,Alibaba,0
+Carbon emissions for final training run,Upstream,Compute,Alibaba,0
+Water usage for final training run,Upstream,Compute,Alibaba,0
+Internal compute allocation,Upstream,Compute,Alibaba,0
+Model stages,Upstream,Methods,Alibaba,1
+Model objectives,Upstream,Methods,Alibaba,1
+Code access,Upstream,Methods,Alibaba,0
+Organization chart,Upstream,Other Resources,Alibaba,0
+Model cost,Upstream,Other Resources,Alibaba,0
+Basic model properties,Model,Model Information,Alibaba,1
+Deeper model properties,Model,Model Information,Alibaba,1
+Model dependencies,Model,Model Information,Alibaba,1
+Benchmarked inference,Model,Model Information,Alibaba,0
+Researcher credits,Model,Model Access,Alibaba,0
+Specialized access,Model,Model Access,Alibaba,0
+Open weights,Model,Model Access,Alibaba,1
+Agent Protocols,Model,Model Access,Alibaba,1
+Capabilities taxonomy,Model,Capabilities,Alibaba,1
+Capabilities evaluation,Model,Capabilities,Alibaba,1
+External reproducibility of capabilities evaluation,Model,Capabilities,Alibaba,0
+Train-test overlap,Model,Capabilities,Alibaba,0
+Risks taxonomy,Model,Risks,Alibaba,0
+Risks evaluation,Model,Risks,Alibaba,0
+External reproducibility of risks evaluation,Model,Risks,Alibaba,0
+Pre-deployment risk evaluation,Model,Risks,Alibaba,0
+External risk evaluation,Model,Risks,Alibaba,0
+Mitigations taxonomy,Model,Model Mitigations,Alibaba,0
+Mitigations taxonomy mapped to risk taxonomy,Model,Model Mitigations,Alibaba,0
+Mitigations efficacy,Model,Model Mitigations,Alibaba,0
+External reproducibility of mitigations evaluation,Model,Model Mitigations,Alibaba,0
+Model theft prevention measures,Model,Model Mitigations,Alibaba,0
+Release stages,Model,Release,Alibaba,0
+Risk thresholds,Model,Release,Alibaba,0
+Versioning protocol,Model,Release,Alibaba,1
+Change log,Model,Release,Alibaba,1
+Foundation model roadmap,Model,Release,Alibaba,1
+Top distribution channels,Model,Release,Alibaba,1
+Quantization,Model,Release,Alibaba,0
+Terms of use,Model,Release,Alibaba,1
+Distribution channels with usage data,Downstream,Usage Data,Alibaba,0
+Amount of usage,Downstream,Usage Data,Alibaba,0
+Classification of usage data,Downstream,Usage Data,Alibaba,0
+Data retention and deletion policy,Downstream,Usage Data,Alibaba,0
+Geographic statistics,Downstream,Usage Data,Alibaba,0
+Internal products and services,Downstream,Impact,Alibaba,0
+External products and services,Downstream,Impact,Alibaba,0
+Users of internal products and services,Downstream,Impact,Alibaba,0
+Consumer/enterprise usage,Downstream,Impact,Alibaba,0
+Enterprise users,Downstream,Impact,Alibaba,0
+Government use,Downstream,Impact,Alibaba,0
+Benefits Assessment,Downstream,Impact,Alibaba,0
+AI bug bounty,Downstream,Post-deployment Monitoring,Alibaba,0
+Responsible disclosure policy,Downstream,Post-deployment Monitoring,Alibaba,0
+Safe harbor,Downstream,Post-deployment Monitoring,Alibaba,0
+Security incident reporting protocol,Downstream,Post-deployment Monitoring,Alibaba,0
+Misuse incident reporting protocol,Downstream,Post-deployment Monitoring,Alibaba,0
+Post-deployment coordination with government,Downstream,Post-deployment Monitoring,Alibaba,0
+Feedback mechanisms,Downstream,Post-deployment Monitoring,Alibaba,0
+"Permitted, restricted, and prohibited model behaviors",Downstream,Model Behavior Policy,Alibaba,0
+Model response characteristics,Downstream,Model Behavior Policy,Alibaba,1
+System prompt,Downstream,Model Behavior Policy,Alibaba,0
+Intermediate tokens,Downstream,Model Behavior Policy,Alibaba,1
+Internal product and service mitigations,Downstream,Downstream Mitigations,Alibaba,0
+External developer mitigations,Downstream,Downstream Mitigations,Alibaba,1
+Enterprise mitigations,Downstream,Downstream Mitigations,Alibaba,1
+Detection of machine-generated content,Downstream,Downstream Mitigations,Alibaba,0
+Documentation for responsible use,Downstream,Downstream Mitigations,Alibaba,0
+Permitted and prohibited users,Downstream,Acceptable Use Policy,Alibaba,1
+"Permitted, restricted, and prohibited uses",Downstream,Acceptable Use Policy,Alibaba,1
+AUP enforcement process,Downstream,Acceptable Use Policy,Alibaba,1
+AUP enforcement frequency,Downstream,Acceptable Use Policy,Alibaba,0
+Regional policy variations,Downstream,Acceptable Use Policy,Alibaba,0
+Oversight mechanism,Downstream,Accountability,Alibaba,0
+Whistleblower protection,Downstream,Accountability,Alibaba,0
+Government commitments,Downstream,Accountability,Alibaba,1
+Data acquisition methods,Upstream,Data Acquisition,Amazon,1
+Public datasets,Upstream,Data Acquisition,Amazon,0
+Crawling,Upstream,Data Acquisition,Amazon,0
+Usage data used in training,Upstream,Data Acquisition,Amazon,0
+Notice of usage data used in training,Upstream,Data Acquisition,Amazon,0
+Licensed data sources,Upstream,Data Acquisition,Amazon,0
+Licensed data compensation,Upstream,Data Acquisition,Amazon,0
+New human-generated data sources,Upstream,Data Acquisition,Amazon,0
+Instructions for data generation,Upstream,Data Acquisition,Amazon,0
+Data laborer practices,Upstream,Data Acquisition,Amazon,0
+Synthetic data sources,Upstream,Data Acquisition,Amazon,0
+Synthetic data purpose,Upstream,Data Acquisition,Amazon,1
+Data processing methods,Upstream,Data Processing,Amazon,1
+Data processing purpose,Upstream,Data Processing,Amazon,0
+Data processing techniques,Upstream,Data Processing,Amazon,0
+Data size,Upstream,Data Properties,Amazon,0
+Data language composition,Upstream,Data Properties,Amazon,0
+Data domain composition,Upstream,Data Properties,Amazon,0
+External data access,Upstream,Data Properties,Amazon,0
+Data replicability,Upstream,Data Properties,Amazon,0
+Compute usage for final training run,Upstream,Compute,Amazon,0
+Compute usage including R&D,Upstream,Compute,Amazon,0
+Development duration for final training run,Upstream,Compute,Amazon,0
+Compute hardware for final training run,Upstream,Compute,Amazon,0
+Compute provider,Upstream,Compute,Amazon,1
+Energy usage for final training run,Upstream,Compute,Amazon,0
+Carbon emissions for final training run,Upstream,Compute,Amazon,0
+Water usage for final training run,Upstream,Compute,Amazon,0
+Internal compute allocation,Upstream,Compute,Amazon,0
+Model stages,Upstream,Methods,Amazon,1
+Model objectives,Upstream,Methods,Amazon,1
+Code access,Upstream,Methods,Amazon,0
+Organization chart,Upstream,Other Resources,Amazon,0
+Model cost,Upstream,Other Resources,Amazon,0
+Basic model properties,Model,Model Information,Amazon,0
+Deeper model properties,Model,Model Information,Amazon,0
+Model dependencies,Model,Model Information,Amazon,0
+Benchmarked inference,Model,Model Information,Amazon,0
+Researcher credits,Model,Model Access,Amazon,0
+Specialized access,Model,Model Access,Amazon,1
+Open weights,Model,Model Access,Amazon,0
+Agent Protocols,Model,Model Access,Amazon,1
+Capabilities taxonomy,Model,Capabilities,Amazon,1
+Capabilities evaluation,Model,Capabilities,Amazon,1
+External reproducibility of capabilities evaluation,Model,Capabilities,Amazon,0
+Train-test overlap,Model,Capabilities,Amazon,0
+Risks taxonomy,Model,Risks,Amazon,1
+Risks evaluation,Model,Risks,Amazon,0
+External reproducibility of risks evaluation,Model,Risks,Amazon,0
+Pre-deployment risk evaluation,Model,Risks,Amazon,0
+External risk evaluation,Model,Risks,Amazon,1
+Mitigations taxonomy,Model,Model Mitigations,Amazon,1
+Mitigations taxonomy mapped to risk taxonomy,Model,Model Mitigations,Amazon,1
+Mitigations efficacy,Model,Model Mitigations,Amazon,0
+External reproducibility of mitigations evaluation,Model,Model Mitigations,Amazon,0
+Model theft prevention measures,Model,Model Mitigations,Amazon,1
+Release stages,Model,Release,Amazon,1
+Risk thresholds,Model,Release,Amazon,1
+Versioning protocol,Model,Release,Amazon,0
+Change log,Model,Release,Amazon,1
+Foundation model roadmap,Model,Release,Amazon,1
+Top distribution channels,Model,Release,Amazon,1
+Quantization,Model,Release,Amazon,0
+Terms of use,Model,Release,Amazon,1
+Distribution channels with usage data,Downstream,Usage Data,Amazon,1
+Amount of usage,Downstream,Usage Data,Amazon,0
+Classification of usage data,Downstream,Usage Data,Amazon,0
+Data retention and deletion policy,Downstream,Usage Data,Amazon,0
+Geographic statistics,Downstream,Usage Data,Amazon,0
+Internal products and services,Downstream,Impact,Amazon,0
+External products and services,Downstream,Impact,Amazon,0
+Users of internal products and services,Downstream,Impact,Amazon,0
+Consumer/enterprise usage,Downstream,Impact,Amazon,0
+Enterprise users,Downstream,Impact,Amazon,0
+Government use,Downstream,Impact,Amazon,0
+Benefits Assessment,Downstream,Impact,Amazon,0
+AI bug bounty,Downstream,Post-deployment Monitoring,Amazon,1
+Responsible disclosure policy,Downstream,Post-deployment Monitoring,Amazon,1
+Safe harbor,Downstream,Post-deployment Monitoring,Amazon,0
+Security incident reporting protocol,Downstream,Post-deployment Monitoring,Amazon,1
+Misuse incident reporting protocol,Downstream,Post-deployment Monitoring,Amazon,0
+Post-deployment coordination with government,Downstream,Post-deployment Monitoring,Amazon,1
+Feedback mechanisms,Downstream,Post-deployment Monitoring,Amazon,0
+"Permitted, restricted, and prohibited model behaviors",Downstream,Model Behavior Policy,Amazon,1
+Model response characteristics,Downstream,Model Behavior Policy,Amazon,1
+System prompt,Downstream,Model Behavior Policy,Amazon,0
+Intermediate tokens,Downstream,Model Behavior Policy,Amazon,1
+Internal product and service mitigations,Downstream,Downstream Mitigations,Amazon,1
+External developer mitigations,Downstream,Downstream Mitigations,Amazon,1
+Enterprise mitigations,Downstream,Downstream Mitigations,Amazon,1
+Detection of machine-generated content,Downstream,Downstream Mitigations,Amazon,1
+Documentation for responsible use,Downstream,Downstream Mitigations,Amazon,1
+Permitted and prohibited users,Downstream,Acceptable Use Policy,Amazon,1
+"Permitted, restricted, and prohibited uses",Downstream,Acceptable Use Policy,Amazon,1
+AUP enforcement process,Downstream,Acceptable Use Policy,Amazon,1
+AUP enforcement frequency,Downstream,Acceptable Use Policy,Amazon,0
+Regional policy variations,Downstream,Acceptable Use Policy,Amazon,1
+Oversight mechanism,Downstream,Accountability,Amazon,1
+Whistleblower protection,Downstream,Accountability,Amazon,0
+Government commitments,Downstream,Accountability,Amazon,0
+Data acquisition methods,Upstream,Data Acquisition,Anthropic,1
+Public datasets,Upstream,Data Acquisition,Anthropic,0
+Crawling,Upstream,Data Acquisition,Anthropic,1
+Usage data used in training,Upstream,Data Acquisition,Anthropic,0
+Notice of usage data used in training,Upstream,Data Acquisition,Anthropic,1
+Licensed data sources,Upstream,Data Acquisition,Anthropic,0
+Licensed data compensation,Upstream,Data Acquisition,Anthropic,0
+New human-generated data sources,Upstream,Data Acquisition,Anthropic,0
+Instructions for data generation,Upstream,Data Acquisition,Anthropic,0
+Data laborer practices,Upstream,Data Acquisition,Anthropic,0
+Synthetic data sources,Upstream,Data Acquisition,Anthropic,0
+Synthetic data purpose,Upstream,Data Acquisition,Anthropic,0
+Data processing methods,Upstream,Data Processing,Anthropic,0
+Data processing purpose,Upstream,Data Processing,Anthropic,0
+Data processing techniques,Upstream,Data Processing,Anthropic,0
+Data size,Upstream,Data Properties,Anthropic,0
+Data language composition,Upstream,Data Properties,Anthropic,0
+Data domain composition,Upstream,Data Properties,Anthropic,0
+External data access,Upstream,Data Properties,Anthropic,0
+Data replicability,Upstream,Data Properties,Anthropic,0
+Compute usage for final training run,Upstream,Compute,Anthropic,0
+Compute usage including R&D,Upstream,Compute,Anthropic,0
+Development duration for final training run,Upstream,Compute,Anthropic,0
+Compute hardware for final training run,Upstream,Compute,Anthropic,0
+Compute provider,Upstream,Compute,Anthropic,0
+Energy usage for final training run,Upstream,Compute,Anthropic,0
+Carbon emissions for final training run,Upstream,Compute,Anthropic,0
+Water usage for final training run,Upstream,Compute,Anthropic,0
+Internal compute allocation,Upstream,Compute,Anthropic,0
+Model stages,Upstream,Methods,Anthropic,0
+Model objectives,Upstream,Methods,Anthropic,0
+Code access,Upstream,Methods,Anthropic,0
+Organization chart,Upstream,Other Resources,Anthropic,0
+Model cost,Upstream,Other Resources,Anthropic,0
+Basic model properties,Model,Model Information,Anthropic,0
+Deeper model properties,Model,Model Information,Anthropic,0
+Model dependencies,Model,Model Information,Anthropic,1
+Benchmarked inference,Model,Model Information,Anthropic,0
+Researcher credits,Model,Model Access,Anthropic,1
+Specialized access,Model,Model Access,Anthropic,0
+Open weights,Model,Model Access,Anthropic,0
+Agent Protocols,Model,Model Access,Anthropic,1
+Capabilities taxonomy,Model,Capabilities,Anthropic,0
+Capabilities evaluation,Model,Capabilities,Anthropic,1
+External reproducibility of capabilities evaluation,Model,Capabilities,Anthropic,0
+Train-test overlap,Model,Capabilities,Anthropic,0
+Risks taxonomy,Model,Risks,Anthropic,1
+Risks evaluation,Model,Risks,Anthropic,1
+External reproducibility of risks evaluation,Model,Risks,Anthropic,0
+Pre-deployment risk evaluation,Model,Risks,Anthropic,0
+External risk evaluation,Model,Risks,Anthropic,1
+Mitigations taxonomy,Model,Model Mitigations,Anthropic,1
+Mitigations taxonomy mapped to risk taxonomy,Model,Model Mitigations,Anthropic,1
+Mitigations efficacy,Model,Model Mitigations,Anthropic,1
+External reproducibility of mitigations evaluation,Model,Model Mitigations,Anthropic,0
+Model theft prevention measures,Model,Model Mitigations,Anthropic,1
+Release stages,Model,Release,Anthropic,1
+Risk thresholds,Model,Release,Anthropic,1
+Versioning protocol,Model,Release,Anthropic,1
+Change log,Model,Release,Anthropic,1
+Foundation model roadmap,Model,Release,Anthropic,0
+Top distribution channels,Model,Release,Anthropic,1
+Quantization,Model,Release,Anthropic,0
+Terms of use,Model,Release,Anthropic,1
+Distribution channels with usage data,Downstream,Usage Data,Anthropic,1
+Amount of usage,Downstream,Usage Data,Anthropic,0
+Classification of usage data,Downstream,Usage Data,Anthropic,1
+Data retention and deletion policy,Downstream,Usage Data,Anthropic,0
+Geographic statistics,Downstream,Usage Data,Anthropic,1
+Internal products and services,Downstream,Impact,Anthropic,1
+External products and services,Downstream,Impact,Anthropic,0
+Users of internal products and services,Downstream,Impact,Anthropic,0
+Consumer/enterprise usage,Downstream,Impact,Anthropic,0
+Enterprise users,Downstream,Impact,Anthropic,0
+Government use,Downstream,Impact,Anthropic,0
+Benefits Assessment,Downstream,Impact,Anthropic,1
+AI bug bounty,Downstream,Post-deployment Monitoring,Anthropic,0
+Responsible disclosure policy,Downstream,Post-deployment Monitoring,Anthropic,1
+Safe harbor,Downstream,Post-deployment Monitoring,Anthropic,1
+Security incident reporting protocol,Downstream,Post-deployment Monitoring,Anthropic,1
+Misuse incident reporting protocol,Downstream,Post-deployment Monitoring,Anthropic,0
+Post-deployment coordination with government,Downstream,Post-deployment Monitoring,Anthropic,1
+Feedback mechanisms,Downstream,Post-deployment Monitoring,Anthropic,0
+"Permitted, restricted, and prohibited model behaviors",Downstream,Model Behavior Policy,Anthropic,1
+Model response characteristics,Downstream,Model Behavior Policy,Anthropic,1
+System prompt,Downstream,Model Behavior Policy,Anthropic,1
+Intermediate tokens,Downstream,Model Behavior Policy,Anthropic,1
+Internal product and service mitigations,Downstream,Downstream Mitigations,Anthropic,1
+External developer mitigations,Downstream,Downstream Mitigations,Anthropic,1
+Enterprise mitigations,Downstream,Downstream Mitigations,Anthropic,1
+Detection of machine-generated content,Downstream,Downstream Mitigations,Anthropic,1
+Documentation for responsible use,Downstream,Downstream Mitigations,Anthropic,1
+Permitted and prohibited users,Downstream,Acceptable Use Policy,Anthropic,1
+"Permitted, restricted, and prohibited uses",Downstream,Acceptable Use Policy,Anthropic,1
+AUP enforcement process,Downstream,Acceptable Use Policy,Anthropic,1
+AUP enforcement frequency,Downstream,Acceptable Use Policy,Anthropic,1
+Regional policy variations,Downstream,Acceptable Use Policy,Anthropic,1
+Oversight mechanism,Downstream,Accountability,Anthropic,1
+Whistleblower protection,Downstream,Accountability,Anthropic,1
+Government commitments,Downstream,Accountability,Anthropic,1
+Data acquisition methods,Upstream,Data Acquisition,DeepSeek,0
+Public datasets,Upstream,Data Acquisition,DeepSeek,0
+Crawling,Upstream,Data Acquisition,DeepSeek,0
+Usage data used in training,Upstream,Data Acquisition,DeepSeek,0
+Notice of usage data used in training,Upstream,Data Acquisition,DeepSeek,0
+Licensed data sources,Upstream,Data Acquisition,DeepSeek,0
+Licensed data compensation,Upstream,Data Acquisition,DeepSeek,0
+New human-generated data sources,Upstream,Data Acquisition,DeepSeek,0
+Instructions for data generation,Upstream,Data Acquisition,DeepSeek,0
+Data laborer practices,Upstream,Data Acquisition,DeepSeek,0
+Synthetic data sources,Upstream,Data Acquisition,DeepSeek,1
+Synthetic data purpose,Upstream,Data Acquisition,DeepSeek,1
+Data processing methods,Upstream,Data Processing,DeepSeek,1
+Data processing purpose,Upstream,Data Processing,DeepSeek,1
+Data processing techniques,Upstream,Data Processing,DeepSeek,0
+Data size,Upstream,Data Properties,DeepSeek,1
+Data language composition,Upstream,Data Properties,DeepSeek,0
+Data domain composition,Upstream,Data Properties,DeepSeek,0
+External data access,Upstream,Data Properties,DeepSeek,0
+Data replicability,Upstream,Data Properties,DeepSeek,0
+Compute usage for final training run,Upstream,Compute,DeepSeek,0
+Compute usage including R&D,Upstream,Compute,DeepSeek,0
+Development duration for final training run,Upstream,Compute,DeepSeek,1
+Compute hardware for final training run,Upstream,Compute,DeepSeek,1
+Compute provider,Upstream,Compute,DeepSeek,1
+Energy usage for final training run,Upstream,Compute,DeepSeek,0
+Carbon emissions for final training run,Upstream,Compute,DeepSeek,0
+Water usage for final training run,Upstream,Compute,DeepSeek,0
+Internal compute allocation,Upstream,Compute,DeepSeek,1
+Model stages,Upstream,Methods,DeepSeek,1
+Model objectives,Upstream,Methods,DeepSeek,1
+Code access,Upstream,Methods,DeepSeek,0
+Organization chart,Upstream,Other Resources,DeepSeek,0
+Model cost,Upstream,Other Resources,DeepSeek,0
+Basic model properties,Model,Model Information,DeepSeek,1
+Deeper model properties,Model,Model Information,DeepSeek,1
+Model dependencies,Model,Model Information,DeepSeek,1
+Benchmarked inference,Model,Model Information,DeepSeek,0
+Researcher credits,Model,Model Access,DeepSeek,0
+Specialized access,Model,Model Access,DeepSeek,0
+Open weights,Model,Model Access,DeepSeek,1
+Agent Protocols,Model,Model Access,DeepSeek,1
+Capabilities taxonomy,Model,Capabilities,DeepSeek,1
+Capabilities evaluation,Model,Capabilities,DeepSeek,1
+External reproducibility of capabilities evaluation,Model,Capabilities,DeepSeek,0
+Train-test overlap,Model,Capabilities,DeepSeek,0
+Risks taxonomy,Model,Risks,DeepSeek,1
+Risks evaluation,Model,Risks,DeepSeek,0
+External reproducibility of risks evaluation,Model,Risks,DeepSeek,0
+Pre-deployment risk evaluation,Model,Risks,DeepSeek,0
+External risk evaluation,Model,Risks,DeepSeek,0
+Mitigations taxonomy,Model,Model Mitigations,DeepSeek,1
+Mitigations taxonomy mapped to risk taxonomy,Model,Model Mitigations,DeepSeek,0
+Mitigations efficacy,Model,Model Mitigations,DeepSeek,0
+External reproducibility of mitigations evaluation,Model,Model Mitigations,DeepSeek,0
+Model theft prevention measures,Model,Model Mitigations,DeepSeek,0
+Release stages,Model,Release,DeepSeek,0
+Risk thresholds,Model,Release,DeepSeek,0
+Versioning protocol,Model,Release,DeepSeek,0
+Change log,Model,Release,DeepSeek,1
+Foundation model roadmap,Model,Release,DeepSeek,1
+Top distribution channels,Model,Release,DeepSeek,1
+Quantization,Model,Release,DeepSeek,1
+Terms of use,Model,Release,DeepSeek,1
+Distribution channels with usage data,Downstream,Usage Data,DeepSeek,0
+Amount of usage,Downstream,Usage Data,DeepSeek,0
+Classification of usage data,Downstream,Usage Data,DeepSeek,0
+Data retention and deletion policy,Downstream,Usage Data,DeepSeek,0
+Geographic statistics,Downstream,Usage Data,DeepSeek,0
+Internal products and services,Downstream,Impact,DeepSeek,0
+External products and services,Downstream,Impact,DeepSeek,0
+Users of internal products and services,Downstream,Impact,DeepSeek,0
+Consumer/enterprise usage,Downstream,Impact,DeepSeek,0
+Enterprise users,Downstream,Impact,DeepSeek,0
+Government use,Downstream,Impact,DeepSeek,0
+Benefits Assessment,Downstream,Impact,DeepSeek,0
+AI bug bounty,Downstream,Post-deployment Monitoring,DeepSeek,0
+Responsible disclosure policy,Downstream,Post-deployment Monitoring,DeepSeek,0
+Safe harbor,Downstream,Post-deployment Monitoring,DeepSeek,0
+Security incident reporting protocol,Downstream,Post-deployment Monitoring,DeepSeek,0
+Misuse incident reporting protocol,Downstream,Post-deployment Monitoring,DeepSeek,0
+Post-deployment coordination with government,Downstream,Post-deployment Monitoring,DeepSeek,0
+Feedback mechanisms,Downstream,Post-deployment Monitoring,DeepSeek,0
+"Permitted, restricted, and prohibited model behaviors",Downstream,Model Behavior Policy,DeepSeek,0
+Model response characteristics,Downstream,Model Behavior Policy,DeepSeek,1
+System prompt,Downstream,Model Behavior Policy,DeepSeek,1
+Intermediate tokens,Downstream,Model Behavior Policy,DeepSeek,1
+Internal product and service mitigations,Downstream,Downstream Mitigations,DeepSeek,0
+External developer mitigations,Downstream,Downstream Mitigations,DeepSeek,0
+Enterprise mitigations,Downstream,Downstream Mitigations,DeepSeek,0
+Detection of machine-generated content,Downstream,Downstream Mitigations,DeepSeek,0
+Documentation for responsible use,Downstream,Downstream Mitigations,DeepSeek,0
+Permitted and prohibited users,Downstream,Acceptable Use Policy,DeepSeek,1
+"Permitted, restricted, and prohibited uses",Downstream,Acceptable Use Policy,DeepSeek,1
+AUP enforcement process,Downstream,Acceptable Use Policy,DeepSeek,1
+AUP enforcement frequency,Downstream,Acceptable Use Policy,DeepSeek,0
+Regional policy variations,Downstream,Acceptable Use Policy,DeepSeek,0
+Oversight mechanism,Downstream,Accountability,DeepSeek,0
+Whistleblower protection,Downstream,Accountability,DeepSeek,0
+Government commitments,Downstream,Accountability,DeepSeek,1
+Data acquisition methods,Upstream,Data Acquisition,Google,0
+Public datasets,Upstream,Data Acquisition,Google,0
+Crawling,Upstream,Data Acquisition,Google,1
+Usage data used in training,Upstream,Data Acquisition,Google,0
+Notice of usage data used in training,Upstream,Data Acquisition,Google,1
+Licensed data sources,Upstream,Data Acquisition,Google,0
+Licensed data compensation,Upstream,Data Acquisition,Google,0
+New human-generated data sources,Upstream,Data Acquisition,Google,0
+Instructions for data generation,Upstream,Data Acquisition,Google,0
+Data laborer practices,Upstream,Data Acquisition,Google,0
+Synthetic data sources,Upstream,Data Acquisition,Google,1
+Synthetic data purpose,Upstream,Data Acquisition,Google,1
+Data processing methods,Upstream,Data Processing,Google,0
+Data processing purpose,Upstream,Data Processing,Google,1
+Data processing techniques,Upstream,Data Processing,Google,0
+Data size,Upstream,Data Properties,Google,0
+Data language composition,Upstream,Data Properties,Google,0
+Data domain composition,Upstream,Data Properties,Google,0
+External data access,Upstream,Data Properties,Google,0
+Data replicability,Upstream,Data Properties,Google,0
+Compute usage for final training run,Upstream,Compute,Google,0
+Compute usage including R&D,Upstream,Compute,Google,0
+Development duration for final training run,Upstream,Compute,Google,0
+Compute hardware for final training run,Upstream,Compute,Google,0
+Compute provider,Upstream,Compute,Google,1
+Energy usage for final training run,Upstream,Compute,Google,0
+Carbon emissions for final training run,Upstream,Compute,Google,0
+Water usage for final training run,Upstream,Compute,Google,0
+Internal compute allocation,Upstream,Compute,Google,0
+Model stages,Upstream,Methods,Google,1
+Model objectives,Upstream,Methods,Google,1
+Code access,Upstream,Methods,Google,0
+Organization chart,Upstream,Other Resources,Google,0
+Model cost,Upstream,Other Resources,Google,0
+Basic model properties,Model,Model Information,Google,0
+Deeper model properties,Model,Model Information,Google,0
+Model dependencies,Model,Model Information,Google,0
+Benchmarked inference,Model,Model Information,Google,0
+Researcher credits,Model,Model Access,Google,1
+Specialized access,Model,Model Access,Google,0
+Open weights,Model,Model Access,Google,0
+Agent Protocols,Model,Model Access,Google,1
+Capabilities taxonomy,Model,Capabilities,Google,0
+Capabilities evaluation,Model,Capabilities,Google,1
+External reproducibility of capabilities evaluation,Model,Capabilities,Google,0
+Train-test overlap,Model,Capabilities,Google,0
+Risks taxonomy,Model,Risks,Google,1
+Risks evaluation,Model,Risks,Google,0
+External reproducibility of risks evaluation,Model,Risks,Google,0
+Pre-deployment risk evaluation,Model,Risks,Google,0
+External risk evaluation,Model,Risks,Google,0
+Mitigations taxonomy,Model,Model Mitigations,Google,1
+Mitigations taxonomy mapped to risk taxonomy,Model,Model Mitigations,Google,0
+Mitigations efficacy,Model,Model Mitigations,Google,0
+External reproducibility of mitigations evaluation,Model,Model Mitigations,Google,0
+Model theft prevention measures,Model,Model Mitigations,Google,1
+Release stages,Model,Release,Google,1
+Risk thresholds,Model,Release,Google,1
+Versioning protocol,Model,Release,Google,1
+Change log,Model,Release,Google,1
+Foundation model roadmap,Model,Release,Google,1
+Top distribution channels,Model,Release,Google,1
+Quantization,Model,Release,Google,0
+Terms of use,Model,Release,Google,1
+Distribution channels with usage data,Downstream,Usage Data,Google,0
+Amount of usage,Downstream,Usage Data,Google,0
+Classification of usage data,Downstream,Usage Data,Google,0
+Data retention and deletion policy,Downstream,Usage Data,Google,0
+Geographic statistics,Downstream,Usage Data,Google,0
+Internal products and services,Downstream,Impact,Google,0
+External products and services,Downstream,Impact,Google,1
+Users of internal products and services,Downstream,Impact,Google,0
+Consumer/enterprise usage,Downstream,Impact,Google,0
+Enterprise users,Downstream,Impact,Google,0
+Government use,Downstream,Impact,Google,0
+Benefits Assessment,Downstream,Impact,Google,1
+AI bug bounty,Downstream,Post-deployment Monitoring,Google,1
+Responsible disclosure policy,Downstream,Post-deployment Monitoring,Google,1
+Safe harbor,Downstream,Post-deployment Monitoring,Google,0
+Security incident reporting protocol,Downstream,Post-deployment Monitoring,Google,1
+Misuse incident reporting protocol,Downstream,Post-deployment Monitoring,Google,0
+Post-deployment coordination with government,Downstream,Post-deployment Monitoring,Google,0
+Feedback mechanisms,Downstream,Post-deployment Monitoring,Google,0
+"Permitted, restricted, and prohibited model behaviors",Downstream,Model Behavior Policy,Google,1
+Model response characteristics,Downstream,Model Behavior Policy,Google,1
+System prompt,Downstream,Model Behavior Policy,Google,0
+Intermediate tokens,Downstream,Model Behavior Policy,Google,1
+Internal product and service mitigations,Downstream,Downstream Mitigations,Google,1
+External developer mitigations,Downstream,Downstream Mitigations,Google,1
+Enterprise mitigations,Downstream,Downstream Mitigations,Google,1
+Detection of machine-generated content,Downstream,Downstream Mitigations,Google,1
+Documentation for responsible use,Downstream,Downstream Mitigations,Google,1
+Permitted and prohibited users,Downstream,Acceptable Use Policy,Google,1
+"Permitted, restricted, and prohibited uses",Downstream,Acceptable Use Policy,Google,1
+AUP enforcement process,Downstream,Acceptable Use Policy,Google,1
+AUP enforcement frequency,Downstream,Acceptable Use Policy,Google,0
+Regional policy variations,Downstream,Acceptable Use Policy,Google,1
+Oversight mechanism,Downstream,Accountability,Google,1
+Whistleblower protection,Downstream,Accountability,Google,1
+Government commitments,Downstream,Accountability,Google,1
+Data acquisition methods,Upstream,Data Acquisition,IBM,1
+Public datasets,Upstream,Data Acquisition,IBM,1
+Crawling,Upstream,Data Acquisition,IBM,1
+Usage data used in training,Upstream,Data Acquisition,IBM,1
+Notice of usage data used in training,Upstream,Data Acquisition,IBM,1
+Licensed data sources,Upstream,Data Acquisition,IBM,1
+Licensed data compensation,Upstream,Data Acquisition,IBM,1
+New human-generated data sources,Upstream,Data Acquisition,IBM,1
+Instructions for data generation,Upstream,Data Acquisition,IBM,1
+Data laborer practices,Upstream,Data Acquisition,IBM,1
+Synthetic data sources,Upstream,Data Acquisition,IBM,1
+Synthetic data purpose,Upstream,Data Acquisition,IBM,1
+Data processing methods,Upstream,Data Processing,IBM,1
+Data processing purpose,Upstream,Data Processing,IBM,1
+Data processing techniques,Upstream,Data Processing,IBM,1
+Data size,Upstream,Data Properties,IBM,1
+Data language composition,Upstream,Data Properties,IBM,1
+Data domain composition,Upstream,Data Properties,IBM,1
+External data access,Upstream,Data Properties,IBM,1
+Data replicability,Upstream,Data Properties,IBM,1
+Compute usage for final training run,Upstream,Compute,IBM,1
+Compute usage including R&D,Upstream,Compute,IBM,1
+Development duration for final training run,Upstream,Compute,IBM,1
+Compute hardware for final training run,Upstream,Compute,IBM,1
+Compute provider,Upstream,Compute,IBM,1
+Energy usage for final training run,Upstream,Compute,IBM,1
+Carbon emissions for final training run,Upstream,Compute,IBM,1
+Water usage for final training run,Upstream,Compute,IBM,1
+Internal compute allocation,Upstream,Compute,IBM,1
+Model stages,Upstream,Methods,IBM,1
+Model objectives,Upstream,Methods,IBM,1
+Code access,Upstream,Methods,IBM,1
+Organization chart,Upstream,Other Resources,IBM,1
+Model cost,Upstream,Other Resources,IBM,1
+Basic model properties,Model,Model Information,IBM,1
+Deeper model properties,Model,Model Information,IBM,1
+Model dependencies,Model,Model Information,IBM,1
+Benchmarked inference,Model,Model Information,IBM,1
+Researcher credits,Model,Model Access,IBM,1
+Specialized access,Model,Model Access,IBM,1
+Open weights,Model,Model Access,IBM,1
+Agent Protocols,Model,Model Access,IBM,1
+Capabilities taxonomy,Model,Capabilities,IBM,1
+Capabilities evaluation,Model,Capabilities,IBM,1
+External reproducibility of capabilities evaluation,Model,Capabilities,IBM,1
+Train-test overlap,Model,Capabilities,IBM,0
+Risks taxonomy,Model,Risks,IBM,1
+Risks evaluation,Model,Risks,IBM,1
+External reproducibility of risks evaluation,Model,Risks,IBM,1
+Pre-deployment risk evaluation,Model,Risks,IBM,1
+External risk evaluation,Model,Risks,IBM,1
+Mitigations taxonomy,Model,Model Mitigations,IBM,1
+Mitigations taxonomy mapped to risk taxonomy,Model,Model Mitigations,IBM,1
+Mitigations efficacy,Model,Model Mitigations,IBM,1
+External reproducibility of mitigations evaluation,Model,Model Mitigations,IBM,0
+Model theft prevention measures,Model,Model Mitigations,IBM,1
+Release stages,Model,Release,IBM,1
+Risk thresholds,Model,Release,IBM,1
+Versioning protocol,Model,Release,IBM,1
+Change log,Model,Release,IBM,1
+Foundation model roadmap,Model,Release,IBM,1
+Top distribution channels,Model,Release,IBM,1
+Quantization,Model,Release,IBM,1
+Terms of use,Model,Release,IBM,1
+Distribution channels with usage data,Downstream,Usage Data,IBM,1
+Amount of usage,Downstream,Usage Data,IBM,1
+Classification of usage data,Downstream,Usage Data,IBM,1
+Data retention and deletion policy,Downstream,Usage Data,IBM,1
+Geographic statistics,Downstream,Usage Data,IBM,0
+Internal products and services,Downstream,Impact,IBM,1
+External products and services,Downstream,Impact,IBM,1
+Users of internal products and services,Downstream,Impact,IBM,1
+Consumer/enterprise usage,Downstream,Impact,IBM,1
+Enterprise users,Downstream,Impact,IBM,0
+Government use,Downstream,Impact,IBM,1
+Benefits Assessment,Downstream,Impact,IBM,1
+AI bug bounty,Downstream,Post-deployment Monitoring,IBM,1
+Responsible disclosure policy,Downstream,Post-deployment Monitoring,IBM,1
+Safe harbor,Downstream,Post-deployment Monitoring,IBM,1
+Security incident reporting protocol,Downstream,Post-deployment Monitoring,IBM,1
+Misuse incident reporting protocol,Downstream,Post-deployment Monitoring,IBM,1
+Post-deployment coordination with government,Downstream,Post-deployment Monitoring,IBM,1
+Feedback mechanisms,Downstream,Post-deployment Monitoring,IBM,1
+"Permitted, restricted, and prohibited model behaviors",Downstream,Model Behavior Policy,IBM,1
+Model response characteristics,Downstream,Model Behavior Policy,IBM,1
+System prompt,Downstream,Model Behavior Policy,IBM,1
+Intermediate tokens,Downstream,Model Behavior Policy,IBM,1
+Internal product and service mitigations,Downstream,Downstream Mitigations,IBM,1
+External developer mitigations,Downstream,Downstream Mitigations,IBM,1
+Enterprise mitigations,Downstream,Downstream Mitigations,IBM,1
+Detection of machine-generated content,Downstream,Downstream Mitigations,IBM,1
+Documentation for responsible use,Downstream,Downstream Mitigations,IBM,1
+Permitted and prohibited users,Downstream,Acceptable Use Policy,IBM,1
+"Permitted, restricted, and prohibited uses",Downstream,Acceptable Use Policy,IBM,1
+AUP enforcement process,Downstream,Acceptable Use Policy,IBM,1
+AUP enforcement frequency,Downstream,Acceptable Use Policy,IBM,0
+Regional policy variations,Downstream,Acceptable Use Policy,IBM,1
+Oversight mechanism,Downstream,Accountability,IBM,1
+Whistleblower protection,Downstream,Accountability,IBM,1
+Government commitments,Downstream,Accountability,IBM,1
+Data acquisition methods,Upstream,Data Acquisition,Meta,1
+Public datasets,Upstream,Data Acquisition,Meta,0
+Crawling,Upstream,Data Acquisition,Meta,1
+Usage data used in training,Upstream,Data Acquisition,Meta,1
+Notice of usage data used in training,Upstream,Data Acquisition,Meta,1
+Licensed data sources,Upstream,Data Acquisition,Meta,0
+Licensed data compensation,Upstream,Data Acquisition,Meta,0
+New human-generated data sources,Upstream,Data Acquisition,Meta,0
+Instructions for data generation,Upstream,Data Acquisition,Meta,0
+Data laborer practices,Upstream,Data Acquisition,Meta,0
+Synthetic data sources,Upstream,Data Acquisition,Meta,0
+Synthetic data purpose,Upstream,Data Acquisition,Meta,0
+Data processing methods,Upstream,Data Processing,Meta,0
+Data processing purpose,Upstream,Data Processing,Meta,0
+Data processing techniques,Upstream,Data Processing,Meta,0
+Data size,Upstream,Data Properties,Meta,1
+Data language composition,Upstream,Data Properties,Meta,0
+Data domain composition,Upstream,Data Properties,Meta,0
+External data access,Upstream,Data Properties,Meta,0
+Data replicability,Upstream,Data Properties,Meta,0
+Compute usage for final training run,Upstream,Compute,Meta,0
+Compute usage including R&D,Upstream,Compute,Meta,0
+Development duration for final training run,Upstream,Compute,Meta,0
+Compute hardware for final training run,Upstream,Compute,Meta,0
+Compute provider,Upstream,Compute,Meta,1
+Energy usage for final training run,Upstream,Compute,Meta,0
+Carbon emissions for final training run,Upstream,Compute,Meta,1
+Water usage for final training run,Upstream,Compute,Meta,0
+Internal compute allocation,Upstream,Compute,Meta,0
+Model stages,Upstream,Methods,Meta,0
+Model objectives,Upstream,Methods,Meta,0
+Code access,Upstream,Methods,Meta,0
+Organization chart,Upstream,Other Resources,Meta,0
+Model cost,Upstream,Other Resources,Meta,0
+Basic model properties,Model,Model Information,Meta,1
+Deeper model properties,Model,Model Information,Meta,1
+Model dependencies,Model,Model Information,Meta,1
+Benchmarked inference,Model,Model Information,Meta,0
+Researcher credits,Model,Model Access,Meta,1
+Specialized access,Model,Model Access,Meta,0
+Open weights,Model,Model Access,Meta,1
+Agent Protocols,Model,Model Access,Meta,0
+Capabilities taxonomy,Model,Capabilities,Meta,1
+Capabilities evaluation,Model,Capabilities,Meta,1
+External reproducibility of capabilities evaluation,Model,Capabilities,Meta,0
+Train-test overlap,Model,Capabilities,Meta,0
+Risks taxonomy,Model,Risks,Meta,1
+Risks evaluation,Model,Risks,Meta,0
+External reproducibility of risks evaluation,Model,Risks,Meta,0
+Pre-deployment risk evaluation,Model,Risks,Meta,0
+External risk evaluation,Model,Risks,Meta,0
+Mitigations taxonomy,Model,Model Mitigations,Meta,0
+Mitigations taxonomy mapped to risk taxonomy,Model,Model Mitigations,Meta,0
+Mitigations efficacy,Model,Model Mitigations,Meta,0
+External reproducibility of mitigations evaluation,Model,Model Mitigations,Meta,0
+Model theft prevention measures,Model,Model Mitigations,Meta,0
+Release stages,Model,Release,Meta,0
+Risk thresholds,Model,Release,Meta,1
+Versioning protocol,Model,Release,Meta,0
+Change log,Model,Release,Meta,1
+Foundation model roadmap,Model,Release,Meta,0
+Top distribution channels,Model,Release,Meta,0
+Quantization,Model,Release,Meta,1
+Terms of use,Model,Release,Meta,1
+Distribution channels with usage data,Downstream,Usage Data,Meta,0
+Amount of usage,Downstream,Usage Data,Meta,0
+Classification of usage data,Downstream,Usage Data,Meta,0
+Data retention and deletion policy,Downstream,Usage Data,Meta,0
+Geographic statistics,Downstream,Usage Data,Meta,0
+Internal products and services,Downstream,Impact,Meta,0
+External products and services,Downstream,Impact,Meta,0
+Users of internal products and services,Downstream,Impact,Meta,0
+Consumer/enterprise usage,Downstream,Impact,Meta,0
+Enterprise users,Downstream,Impact,Meta,0
+Government use,Downstream,Impact,Meta,0
+Benefits Assessment,Downstream,Impact,Meta,1
+AI bug bounty,Downstream,Post-deployment Monitoring,Meta,1
+Responsible disclosure policy,Downstream,Post-deployment Monitoring,Meta,1
+Safe harbor,Downstream,Post-deployment Monitoring,Meta,0
+Security incident reporting protocol,Downstream,Post-deployment Monitoring,Meta,0
+Misuse incident reporting protocol,Downstream,Post-deployment Monitoring,Meta,0
+Post-deployment coordination with government,Downstream,Post-deployment Monitoring,Meta,0
+Feedback mechanisms,Downstream,Post-deployment Monitoring,Meta,0
+"Permitted, restricted, and prohibited model behaviors",Downstream,Model Behavior Policy,Meta,0
+Model response characteristics,Downstream,Model Behavior Policy,Meta,1
+System prompt,Downstream,Model Behavior Policy,Meta,1
+Intermediate tokens,Downstream,Model Behavior Policy,Meta,1
+Internal product and service mitigations,Downstream,Downstream Mitigations,Meta,0
+External developer mitigations,Downstream,Downstream Mitigations,Meta,1
+Enterprise mitigations,Downstream,Downstream Mitigations,Meta,1
+Detection of machine-generated content,Downstream,Downstream Mitigations,Meta,1
+Documentation for responsible use,Downstream,Downstream Mitigations,Meta,1
+Permitted and prohibited users,Downstream,Acceptable Use Policy,Meta,1
+"Permitted, restricted, and prohibited uses",Downstream,Acceptable Use Policy,Meta,1
+AUP enforcement process,Downstream,Acceptable Use Policy,Meta,0
+AUP enforcement frequency,Downstream,Acceptable Use Policy,Meta,0
+Regional policy variations,Downstream,Acceptable Use Policy,Meta,0
+Oversight mechanism,Downstream,Accountability,Meta,0
+Whistleblower protection,Downstream,Accountability,Meta,0
+Government commitments,Downstream,Accountability,Meta,0
+Data acquisition methods,Upstream,Data Acquisition,Midjourney,0
+Public datasets,Upstream,Data Acquisition,Midjourney,0
+Crawling,Upstream,Data Acquisition,Midjourney,0
+Usage data used in training,Upstream,Data Acquisition,Midjourney,0
+Notice of usage data used in training,Upstream,Data Acquisition,Midjourney,0
+Licensed data sources,Upstream,Data Acquisition,Midjourney,0
+Licensed data compensation,Upstream,Data Acquisition,Midjourney,0
+New human-generated data sources,Upstream,Data Acquisition,Midjourney,0
+Instructions for data generation,Upstream,Data Acquisition,Midjourney,0
+Data laborer practices,Upstream,Data Acquisition,Midjourney,0
+Synthetic data sources,Upstream,Data Acquisition,Midjourney,0
+Synthetic data purpose,Upstream,Data Acquisition,Midjourney,0
+Data processing methods,Upstream,Data Processing,Midjourney,0
+Data processing purpose,Upstream,Data Processing,Midjourney,0
+Data processing techniques,Upstream,Data Processing,Midjourney,0
+Data size,Upstream,Data Properties,Midjourney,0
+Data language composition,Upstream,Data Properties,Midjourney,0
+Data domain composition,Upstream,Data Properties,Midjourney,0
+External data access,Upstream,Data Properties,Midjourney,0
+Data replicability,Upstream,Data Properties,Midjourney,0
+Compute usage for final training run,Upstream,Compute,Midjourney,0
+Compute usage including R&D,Upstream,Compute,Midjourney,0
+Development duration for final training run,Upstream,Compute,Midjourney,0
+Compute hardware for final training run,Upstream,Compute,Midjourney,0
+Compute provider,Upstream,Compute,Midjourney,0
+Energy usage for final training run,Upstream,Compute,Midjourney,0
+Carbon emissions for final training run,Upstream,Compute,Midjourney,0
+Water usage for final training run,Upstream,Compute,Midjourney,0
+Internal compute allocation,Upstream,Compute,Midjourney,0
+Model stages,Upstream,Methods,Midjourney,0
+Model objectives,Upstream,Methods,Midjourney,0
+Code access,Upstream,Methods,Midjourney,0
+Organization chart,Upstream,Other Resources,Midjourney,0
+Model cost,Upstream,Other Resources,Midjourney,0
+Basic model properties,Model,Model Information,Midjourney,0
+Deeper model properties,Model,Model Information,Midjourney,0
+Model dependencies,Model,Model Information,Midjourney,0
+Benchmarked inference,Model,Model Information,Midjourney,0
+Researcher credits,Model,Model Access,Midjourney,0
+Specialized access,Model,Model Access,Midjourney,0
+Open weights,Model,Model Access,Midjourney,0
+Agent Protocols,Model,Model Access,Midjourney,0
+Capabilities taxonomy,Model,Capabilities,Midjourney,0
+Capabilities evaluation,Model,Capabilities,Midjourney,0
+External reproducibility of capabilities evaluation,Model,Capabilities,Midjourney,0
+Train-test overlap,Model,Capabilities,Midjourney,0
+Risks taxonomy,Model,Risks,Midjourney,0
+Risks evaluation,Model,Risks,Midjourney,0
+External reproducibility of risks evaluation,Model,Risks,Midjourney,0
+Pre-deployment risk evaluation,Model,Risks,Midjourney,0
+External risk evaluation,Model,Risks,Midjourney,0
+Mitigations taxonomy,Model,Model Mitigations,Midjourney,0
+Mitigations taxonomy mapped to risk taxonomy,Model,Model Mitigations,Midjourney,0
+Mitigations efficacy,Model,Model Mitigations,Midjourney,0
+External reproducibility of mitigations evaluation,Model,Model Mitigations,Midjourney,0
+Model theft prevention measures,Model,Model Mitigations,Midjourney,0
+Release stages,Model,Release,Midjourney,0
+Risk thresholds,Model,Release,Midjourney,0
+Versioning protocol,Model,Release,Midjourney,0
+Change log,Model,Release,Midjourney,1
+Foundation model roadmap,Model,Release,Midjourney,1
+Top distribution channels,Model,Release,Midjourney,1
+Quantization,Model,Release,Midjourney,1
+Terms of use,Model,Release,Midjourney,1
+Distribution channels with usage data,Downstream,Usage Data,Midjourney,1
+Amount of usage,Downstream,Usage Data,Midjourney,0
+Classification of usage data,Downstream,Usage Data,Midjourney,0
+Data retention and deletion policy,Downstream,Usage Data,Midjourney,0
+Geographic statistics,Downstream,Usage Data,Midjourney,0
+Internal products and services,Downstream,Impact,Midjourney,1
+External products and services,Downstream,Impact,Midjourney,1
+Users of internal products and services,Downstream,Impact,Midjourney,0
+Consumer/enterprise usage,Downstream,Impact,Midjourney,0
+Enterprise users,Downstream,Impact,Midjourney,0
+Government use,Downstream,Impact,Midjourney,0
+Benefits Assessment,Downstream,Impact,Midjourney,0
+AI bug bounty,Downstream,Post-deployment Monitoring,Midjourney,0
+Responsible disclosure policy,Downstream,Post-deployment Monitoring,Midjourney,0
+Safe harbor,Downstream,Post-deployment Monitoring,Midjourney,0
+Security incident reporting protocol,Downstream,Post-deployment Monitoring,Midjourney,0
+Misuse incident reporting protocol,Downstream,Post-deployment Monitoring,Midjourney,0
+Post-deployment coordination with government,Downstream,Post-deployment Monitoring,Midjourney,0
+Feedback mechanisms,Downstream,Post-deployment Monitoring,Midjourney,0
+"Permitted, restricted, and prohibited model behaviors",Downstream,Model Behavior Policy,Midjourney,0
+Model response characteristics,Downstream,Model Behavior Policy,Midjourney,1
+System prompt,Downstream,Model Behavior Policy,Midjourney,0
+Intermediate tokens,Downstream,Model Behavior Policy,Midjourney,0
+Internal product and service mitigations,Downstream,Downstream Mitigations,Midjourney,0
+External developer mitigations,Downstream,Downstream Mitigations,Midjourney,1
+Enterprise mitigations,Downstream,Downstream Mitigations,Midjourney,0
+Detection of machine-generated content,Downstream,Downstream Mitigations,Midjourney,0
+Documentation for responsible use,Downstream,Downstream Mitigations,Midjourney,1
+Permitted and prohibited users,Downstream,Acceptable Use Policy,Midjourney,1
+"Permitted, restricted, and prohibited uses",Downstream,Acceptable Use Policy,Midjourney,1
+AUP enforcement process,Downstream,Acceptable Use Policy,Midjourney,1
+AUP enforcement frequency,Downstream,Acceptable Use Policy,Midjourney,0
+Regional policy variations,Downstream,Acceptable Use Policy,Midjourney,0
+Oversight mechanism,Downstream,Accountability,Midjourney,0
+Whistleblower protection,Downstream,Accountability,Midjourney,0
+Government commitments,Downstream,Accountability,Midjourney,0
+Data acquisition methods,Upstream,Data Acquisition,Mistral,0
+Public datasets,Upstream,Data Acquisition,Mistral,0
+Crawling,Upstream,Data Acquisition,Mistral,0
+Usage data used in training,Upstream,Data Acquisition,Mistral,0
+Notice of usage data used in training,Upstream,Data Acquisition,Mistral,0
+Licensed data sources,Upstream,Data Acquisition,Mistral,0
+Licensed data compensation,Upstream,Data Acquisition,Mistral,0
+New human-generated data sources,Upstream,Data Acquisition,Mistral,0
+Instructions for data generation,Upstream,Data Acquisition,Mistral,0
+Data laborer practices,Upstream,Data Acquisition,Mistral,0
+Synthetic data sources,Upstream,Data Acquisition,Mistral,0
+Synthetic data purpose,Upstream,Data Acquisition,Mistral,0
+Data processing methods,Upstream,Data Processing,Mistral,0
+Data processing purpose,Upstream,Data Processing,Mistral,0
+Data processing techniques,Upstream,Data Processing,Mistral,0
+Data size,Upstream,Data Properties,Mistral,0
+Data language composition,Upstream,Data Properties,Mistral,0
+Data domain composition,Upstream,Data Properties,Mistral,0
+External data access,Upstream,Data Properties,Mistral,0
+Data replicability,Upstream,Data Properties,Mistral,0
+Compute usage for final training run,Upstream,Compute,Mistral,0
+Compute usage including R&D,Upstream,Compute,Mistral,0
+Development duration for final training run,Upstream,Compute,Mistral,0
+Compute hardware for final training run,Upstream,Compute,Mistral,0
+Compute provider,Upstream,Compute,Mistral,0
+Energy usage for final training run,Upstream,Compute,Mistral,0
+Carbon emissions for final training run,Upstream,Compute,Mistral,0
+Water usage for final training run,Upstream,Compute,Mistral,0
+Internal compute allocation,Upstream,Compute,Mistral,0
+Model stages,Upstream,Methods,Mistral,0
+Model objectives,Upstream,Methods,Mistral,0
+Code access,Upstream,Methods,Mistral,0
+Organization chart,Upstream,Other Resources,Mistral,0
+Model cost,Upstream,Other Resources,Mistral,0
+Basic model properties,Model,Model Information,Mistral,0
+Deeper model properties,Model,Model Information,Mistral,0
+Model dependencies,Model,Model Information,Mistral,0
+Benchmarked inference,Model,Model Information,Mistral,0
+Researcher credits,Model,Model Access,Mistral,0
+Specialized access,Model,Model Access,Mistral,0
+Open weights,Model,Model Access,Mistral,0
+Agent Protocols,Model,Model Access,Mistral,1
+Capabilities taxonomy,Model,Capabilities,Mistral,0
+Capabilities evaluation,Model,Capabilities,Mistral,1
+External reproducibility of capabilities evaluation,Model,Capabilities,Mistral,0
+Train-test overlap,Model,Capabilities,Mistral,0
+Risks taxonomy,Model,Risks,Mistral,0
+Risks evaluation,Model,Risks,Mistral,0
+External reproducibility of risks evaluation,Model,Risks,Mistral,0
+Pre-deployment risk evaluation,Model,Risks,Mistral,0
+External risk evaluation,Model,Risks,Mistral,0
+Mitigations taxonomy,Model,Model Mitigations,Mistral,0
+Mitigations taxonomy mapped to risk taxonomy,Model,Model Mitigations,Mistral,0
+Mitigations efficacy,Model,Model Mitigations,Mistral,0
+External reproducibility of mitigations evaluation,Model,Model Mitigations,Mistral,0
+Model theft prevention measures,Model,Model Mitigations,Mistral,1
+Release stages,Model,Release,Mistral,0
+Risk thresholds,Model,Release,Mistral,0
+Versioning protocol,Model,Release,Mistral,0
+Change log,Model,Release,Mistral,1
+Foundation model roadmap,Model,Release,Mistral,1
+Top distribution channels,Model,Release,Mistral,0
+Quantization,Model,Release,Mistral,0
+Terms of use,Model,Release,Mistral,1
+Distribution channels with usage data,Downstream,Usage Data,Mistral,0
+Amount of usage,Downstream,Usage Data,Mistral,0
+Classification of usage data,Downstream,Usage Data,Mistral,0
+Data retention and deletion policy,Downstream,Usage Data,Mistral,0
+Geographic statistics,Downstream,Usage Data,Mistral,0
+Internal products and services,Downstream,Impact,Mistral,1
+External products and services,Downstream,Impact,Mistral,0
+Users of internal products and services,Downstream,Impact,Mistral,0
+Consumer/enterprise usage,Downstream,Impact,Mistral,0
+Enterprise users,Downstream,Impact,Mistral,0
+Government use,Downstream,Impact,Mistral,0
+Benefits Assessment,Downstream,Impact,Mistral,0
+AI bug bounty,Downstream,Post-deployment Monitoring,Mistral,1
+Responsible disclosure policy,Downstream,Post-deployment Monitoring,Mistral,1
+Safe harbor,Downstream,Post-deployment Monitoring,Mistral,1
+Security incident reporting protocol,Downstream,Post-deployment Monitoring,Mistral,0
+Misuse incident reporting protocol,Downstream,Post-deployment Monitoring,Mistral,0
+Post-deployment coordination with government,Downstream,Post-deployment Monitoring,Mistral,0
+Feedback mechanisms,Downstream,Post-deployment Monitoring,Mistral,0
+"Permitted, restricted, and prohibited model behaviors",Downstream,Model Behavior Policy,Mistral,0
+Model response characteristics,Downstream,Model Behavior Policy,Mistral,0
+System prompt,Downstream,Model Behavior Policy,Mistral,0
+Intermediate tokens,Downstream,Model Behavior Policy,Mistral,0
+Internal product and service mitigations,Downstream,Downstream Mitigations,Mistral,0
+External developer mitigations,Downstream,Downstream Mitigations,Mistral,1
+Enterprise mitigations,Downstream,Downstream Mitigations,Mistral,1
+Detection of machine-generated content,Downstream,Downstream Mitigations,Mistral,1
+Documentation for responsible use,Downstream,Downstream Mitigations,Mistral,1
+Permitted and prohibited users,Downstream,Acceptable Use Policy,Mistral,1
+"Permitted, restricted, and prohibited uses",Downstream,Acceptable Use Policy,Mistral,1
+AUP enforcement process,Downstream,Acceptable Use Policy,Mistral,1
+AUP enforcement frequency,Downstream,Acceptable Use Policy,Mistral,0
+Regional policy variations,Downstream,Acceptable Use Policy,Mistral,0
+Oversight mechanism,Downstream,Accountability,Mistral,0
+Whistleblower protection,Downstream,Accountability,Mistral,0
+Government commitments,Downstream,Accountability,Mistral,1
+Data acquisition methods,Upstream,Data Acquisition,OpenAI,0
+Public datasets,Upstream,Data Acquisition,OpenAI,0
+Crawling,Upstream,Data Acquisition,OpenAI,1
+Usage data used in training,Upstream,Data Acquisition,OpenAI,0
+Notice of usage data used in training,Upstream,Data Acquisition,OpenAI,0
+Licensed data sources,Upstream,Data Acquisition,OpenAI,0
+Licensed data compensation,Upstream,Data Acquisition,OpenAI,0
+New human-generated data sources,Upstream,Data Acquisition,OpenAI,0
+Instructions for data generation,Upstream,Data Acquisition,OpenAI,0
+Data laborer practices,Upstream,Data Acquisition,OpenAI,0
+Synthetic data sources,Upstream,Data Acquisition,OpenAI,0
+Synthetic data purpose,Upstream,Data Acquisition,OpenAI,0
+Data processing methods,Upstream,Data Processing,OpenAI,0
+Data processing purpose,Upstream,Data Processing,OpenAI,0
+Data processing techniques,Upstream,Data Processing,OpenAI,0
+Data size,Upstream,Data Properties,OpenAI,0
+Data language composition,Upstream,Data Properties,OpenAI,0
+Data domain composition,Upstream,Data Properties,OpenAI,0
+External data access,Upstream,Data Properties,OpenAI,0
+Data replicability,Upstream,Data Properties,OpenAI,0
+Compute usage for final training run,Upstream,Compute,OpenAI,0
+Compute usage including R&D,Upstream,Compute,OpenAI,0
+Development duration for final training run,Upstream,Compute,OpenAI,0
+Compute hardware for final training run,Upstream,Compute,OpenAI,0
+Compute provider,Upstream,Compute,OpenAI,0
+Energy usage for final training run,Upstream,Compute,OpenAI,0
+Carbon emissions for final training run,Upstream,Compute,OpenAI,0
+Water usage for final training run,Upstream,Compute,OpenAI,0
+Internal compute allocation,Upstream,Compute,OpenAI,0
+Model stages,Upstream,Methods,OpenAI,0
+Model objectives,Upstream,Methods,OpenAI,0
+Code access,Upstream,Methods,OpenAI,0
+Organization chart,Upstream,Other Resources,OpenAI,0
+Model cost,Upstream,Other Resources,OpenAI,0
+Basic model properties,Model,Model Information,OpenAI,0
+Deeper model properties,Model,Model Information,OpenAI,0
+Model dependencies,Model,Model Information,OpenAI,0
+Benchmarked inference,Model,Model Information,OpenAI,0
+Researcher credits,Model,Model Access,OpenAI,0
+Specialized access,Model,Model Access,OpenAI,0
+Open weights,Model,Model Access,OpenAI,0
+Agent Protocols,Model,Model Access,OpenAI,0
+Capabilities taxonomy,Model,Capabilities,OpenAI,0
+Capabilities evaluation,Model,Capabilities,OpenAI,1
+External reproducibility of capabilities evaluation,Model,Capabilities,OpenAI,0
+Train-test overlap,Model,Capabilities,OpenAI,0
+Risks taxonomy,Model,Risks,OpenAI,1
+Risks evaluation,Model,Risks,OpenAI,1
+External reproducibility of risks evaluation,Model,Risks,OpenAI,0
+Pre-deployment risk evaluation,Model,Risks,OpenAI,0
+External risk evaluation,Model,Risks,OpenAI,1
+Mitigations taxonomy,Model,Model Mitigations,OpenAI,1
+Mitigations taxonomy mapped to risk taxonomy,Model,Model Mitigations,OpenAI,1
+Mitigations efficacy,Model,Model Mitigations,OpenAI,1
+External reproducibility of mitigations evaluation,Model,Model Mitigations,OpenAI,0
+Model theft prevention measures,Model,Model Mitigations,OpenAI,1
+Release stages,Model,Release,OpenAI,1
+Risk thresholds,Model,Release,OpenAI,1
+Versioning protocol,Model,Release,OpenAI,1
+Change log,Model,Release,OpenAI,1
+Foundation model roadmap,Model,Release,OpenAI,0
+Top distribution channels,Model,Release,OpenAI,0
+Quantization,Model,Release,OpenAI,0
+Terms of use,Model,Release,OpenAI,1
+Distribution channels with usage data,Downstream,Usage Data,OpenAI,0
+Amount of usage,Downstream,Usage Data,OpenAI,0
+Classification of usage data,Downstream,Usage Data,OpenAI,0
+Data retention and deletion policy,Downstream,Usage Data,OpenAI,1
+Geographic statistics,Downstream,Usage Data,OpenAI,0
+Internal products and services,Downstream,Impact,OpenAI,1
+External products and services,Downstream,Impact,OpenAI,0
+Users of internal products and services,Downstream,Impact,OpenAI,0
+Consumer/enterprise usage,Downstream,Impact,OpenAI,0
+Enterprise users,Downstream,Impact,OpenAI,0
+Government use,Downstream,Impact,OpenAI,0
+Benefits Assessment,Downstream,Impact,OpenAI,0
+AI bug bounty,Downstream,Post-deployment Monitoring,OpenAI,1
+Responsible disclosure policy,Downstream,Post-deployment Monitoring,OpenAI,1
+Safe harbor,Downstream,Post-deployment Monitoring,OpenAI,1
+Security incident reporting protocol,Downstream,Post-deployment Monitoring,OpenAI,1
+Misuse incident reporting protocol,Downstream,Post-deployment Monitoring,OpenAI,0
+Post-deployment coordination with government,Downstream,Post-deployment Monitoring,OpenAI,1
+Feedback mechanisms,Downstream,Post-deployment Monitoring,OpenAI,0
+"Permitted, restricted, and prohibited model behaviors",Downstream,Model Behavior Policy,OpenAI,1
+Model response characteristics,Downstream,Model Behavior Policy,OpenAI,1
+System prompt,Downstream,Model Behavior Policy,OpenAI,0
+Intermediate tokens,Downstream,Model Behavior Policy,OpenAI,1
+Internal product and service mitigations,Downstream,Downstream Mitigations,OpenAI,1
+External developer mitigations,Downstream,Downstream Mitigations,OpenAI,1
+Enterprise mitigations,Downstream,Downstream Mitigations,OpenAI,1
+Detection of machine-generated content,Downstream,Downstream Mitigations,OpenAI,1
+Documentation for responsible use,Downstream,Downstream Mitigations,OpenAI,1
+Permitted and prohibited users,Downstream,Acceptable Use Policy,OpenAI,1
+"Permitted, restricted, and prohibited uses",Downstream,Acceptable Use Policy,OpenAI,1
+AUP enforcement process,Downstream,Acceptable Use Policy,OpenAI,0
+AUP enforcement frequency,Downstream,Acceptable Use Policy,OpenAI,0
+Regional policy variations,Downstream,Acceptable Use Policy,OpenAI,1
+Oversight mechanism,Downstream,Accountability,OpenAI,1
+Whistleblower protection,Downstream,Accountability,OpenAI,1
+Government commitments,Downstream,Accountability,OpenAI,1
+Data acquisition methods,Upstream,Data Acquisition,Writer,1
+Public datasets,Upstream,Data Acquisition,Writer,0
+Crawling,Upstream,Data Acquisition,Writer,0
+Usage data used in training,Upstream,Data Acquisition,Writer,1
+Notice of usage data used in training,Upstream,Data Acquisition,Writer,1
+Licensed data sources,Upstream,Data Acquisition,Writer,0
+Licensed data compensation,Upstream,Data Acquisition,Writer,0
+New human-generated data sources,Upstream,Data Acquisition,Writer,0
+Instructions for data generation,Upstream,Data Acquisition,Writer,1
+Data laborer practices,Upstream,Data Acquisition,Writer,1
+Synthetic data sources,Upstream,Data Acquisition,Writer,1
+Synthetic data purpose,Upstream,Data Acquisition,Writer,1
+Data processing methods,Upstream,Data Processing,Writer,1
+Data processing purpose,Upstream,Data Processing,Writer,1
+Data processing techniques,Upstream,Data Processing,Writer,1
+Data size,Upstream,Data Properties,Writer,1
+Data language composition,Upstream,Data Properties,Writer,1
+Data domain composition,Upstream,Data Properties,Writer,0
+External data access,Upstream,Data Properties,Writer,0
+Data replicability,Upstream,Data Properties,Writer,0
+Compute usage for final training run,Upstream,Compute,Writer,1
+Compute usage including R&D,Upstream,Compute,Writer,1
+Development duration for final training run,Upstream,Compute,Writer,1
+Compute hardware for final training run,Upstream,Compute,Writer,1
+Compute provider,Upstream,Compute,Writer,1
+Energy usage for final training run,Upstream,Compute,Writer,1
+Carbon emissions for final training run,Upstream,Compute,Writer,1
+Water usage for final training run,Upstream,Compute,Writer,1
+Internal compute allocation,Upstream,Compute,Writer,1
+Model stages,Upstream,Methods,Writer,1
+Model objectives,Upstream,Methods,Writer,0
+Code access,Upstream,Methods,Writer,0
+Organization chart,Upstream,Other Resources,Writer,1
+Model cost,Upstream,Other Resources,Writer,1
+Basic model properties,Model,Model Information,Writer,1
+Deeper model properties,Model,Model Information,Writer,0
+Model dependencies,Model,Model Information,Writer,1
+Benchmarked inference,Model,Model Information,Writer,1
+Researcher credits,Model,Model Access,Writer,1
+Specialized access,Model,Model Access,Writer,0
+Open weights,Model,Model Access,Writer,0
+Agent Protocols,Model,Model Access,Writer,1
+Capabilities taxonomy,Model,Capabilities,Writer,1
+Capabilities evaluation,Model,Capabilities,Writer,1
+External reproducibility of capabilities evaluation,Model,Capabilities,Writer,0
+Train-test overlap,Model,Capabilities,Writer,0
+Risks taxonomy,Model,Risks,Writer,1
+Risks evaluation,Model,Risks,Writer,0
+External reproducibility of risks evaluation,Model,Risks,Writer,0
+Pre-deployment risk evaluation,Model,Risks,Writer,1
+External risk evaluation,Model,Risks,Writer,0
+Mitigations taxonomy,Model,Model Mitigations,Writer,1
+Mitigations taxonomy mapped to risk taxonomy,Model,Model Mitigations,Writer,0
+Mitigations efficacy,Model,Model Mitigations,Writer,0
+External reproducibility of mitigations evaluation,Model,Model Mitigations,Writer,0
+Model theft prevention measures,Model,Model Mitigations,Writer,1
+Release stages,Model,Release,Writer,1
+Risk thresholds,Model,Release,Writer,1
+Versioning protocol,Model,Release,Writer,1
+Change log,Model,Release,Writer,1
+Foundation model roadmap,Model,Release,Writer,0
+Top distribution channels,Model,Release,Writer,1
+Quantization,Model,Release,Writer,1
+Terms of use,Model,Release,Writer,1
+Distribution channels with usage data,Downstream,Usage Data,Writer,1
+Amount of usage,Downstream,Usage Data,Writer,1
+Classification of usage data,Downstream,Usage Data,Writer,1
+Data retention and deletion policy,Downstream,Usage Data,Writer,1
+Geographic statistics,Downstream,Usage Data,Writer,1
+Internal products and services,Downstream,Impact,Writer,1
+External products and services,Downstream,Impact,Writer,1
+Users of internal products and services,Downstream,Impact,Writer,1
+Consumer/enterprise usage,Downstream,Impact,Writer,1
+Enterprise users,Downstream,Impact,Writer,1
+Government use,Downstream,Impact,Writer,0
+Benefits Assessment,Downstream,Impact,Writer,1
+AI bug bounty,Downstream,Post-deployment Monitoring,Writer,1
+Responsible disclosure policy,Downstream,Post-deployment Monitoring,Writer,1
+Safe harbor,Downstream,Post-deployment Monitoring,Writer,1
+Security incident reporting protocol,Downstream,Post-deployment Monitoring,Writer,0
+Misuse incident reporting protocol,Downstream,Post-deployment Monitoring,Writer,1
+Post-deployment coordination with government,Downstream,Post-deployment Monitoring,Writer,1
+Feedback mechanisms,Downstream,Post-deployment Monitoring,Writer,1
+"Permitted, restricted, and prohibited model behaviors",Downstream,Model Behavior Policy,Writer,0
+Model response characteristics,Downstream,Model Behavior Policy,Writer,1
+System prompt,Downstream,Model Behavior Policy,Writer,0
+Intermediate tokens,Downstream,Model Behavior Policy,Writer,1
+Internal product and service mitigations,Downstream,Downstream Mitigations,Writer,1
+External developer mitigations,Downstream,Downstream Mitigations,Writer,1
+Enterprise mitigations,Downstream,Downstream Mitigations,Writer,1
+Detection of machine-generated content,Downstream,Downstream Mitigations,Writer,1
+Documentation for responsible use,Downstream,Downstream Mitigations,Writer,1
+Permitted and prohibited users,Downstream,Acceptable Use Policy,Writer,1
+"Permitted, restricted, and prohibited uses",Downstream,Acceptable Use Policy,Writer,1
+AUP enforcement process,Downstream,Acceptable Use Policy,Writer,1
+AUP enforcement frequency,Downstream,Acceptable Use Policy,Writer,0
+Regional policy variations,Downstream,Acceptable Use Policy,Writer,1
+Oversight mechanism,Downstream,Accountability,Writer,1
+Whistleblower protection,Downstream,Accountability,Writer,0
+Government commitments,Downstream,Accountability,Writer,1
+Data acquisition methods,Upstream,Data Acquisition,xAI,0
+Public datasets,Upstream,Data Acquisition,xAI,0
+Crawling,Upstream,Data Acquisition,xAI,0
+Usage data used in training,Upstream,Data Acquisition,xAI,0
+Notice of usage data used in training,Upstream,Data Acquisition,xAI,0
+Licensed data sources,Upstream,Data Acquisition,xAI,0
+Licensed data compensation,Upstream,Data Acquisition,xAI,0
+New human-generated data sources,Upstream,Data Acquisition,xAI,0
+Instructions for data generation,Upstream,Data Acquisition,xAI,0
+Data laborer practices,Upstream,Data Acquisition,xAI,0
+Synthetic data sources,Upstream,Data Acquisition,xAI,0
+Synthetic data purpose,Upstream,Data Acquisition,xAI,0
+Data processing methods,Upstream,Data Processing,xAI,0
+Data processing purpose,Upstream,Data Processing,xAI,0
+Data processing techniques,Upstream,Data Processing,xAI,0
+Data size,Upstream,Data Properties,xAI,0
+Data language composition,Upstream,Data Properties,xAI,0
+Data domain composition,Upstream,Data Properties,xAI,0
+External data access,Upstream,Data Properties,xAI,0
+Data replicability,Upstream,Data Properties,xAI,0
+Compute usage for final training run,Upstream,Compute,xAI,0
+Compute usage including R&D,Upstream,Compute,xAI,0
+Development duration for final training run,Upstream,Compute,xAI,0
+Compute hardware for final training run,Upstream,Compute,xAI,0
+Compute provider,Upstream,Compute,xAI,1
+Energy usage for final training run,Upstream,Compute,xAI,0
+Carbon emissions for final training run,Upstream,Compute,xAI,0
+Water usage for final training run,Upstream,Compute,xAI,0
+Internal compute allocation,Upstream,Compute,xAI,0
+Model stages,Upstream,Methods,xAI,0
+Model objectives,Upstream,Methods,xAI,0
+Code access,Upstream,Methods,xAI,0
+Organization chart,Upstream,Other Resources,xAI,0
+Model cost,Upstream,Other Resources,xAI,0
+Basic model properties,Model,Model Information,xAI,0
+Deeper model properties,Model,Model Information,xAI,0
+Model dependencies,Model,Model Information,xAI,0
+Benchmarked inference,Model,Model Information,xAI,0
+Researcher credits,Model,Model Access,xAI,0
+Specialized access,Model,Model Access,xAI,0
+Open weights,Model,Model Access,xAI,0
+Agent Protocols,Model,Model Access,xAI,0
+Capabilities taxonomy,Model,Capabilities,xAI,0
+Capabilities evaluation,Model,Capabilities,xAI,1
+External reproducibility of capabilities evaluation,Model,Capabilities,xAI,0
+Train-test overlap,Model,Capabilities,xAI,0
+Risks taxonomy,Model,Risks,xAI,0
+Risks evaluation,Model,Risks,xAI,0
+External reproducibility of risks evaluation,Model,Risks,xAI,0
+Pre-deployment risk evaluation,Model,Risks,xAI,0
+External risk evaluation,Model,Risks,xAI,0
+Mitigations taxonomy,Model,Model Mitigations,xAI,0
+Mitigations taxonomy mapped to risk taxonomy,Model,Model Mitigations,xAI,0
+Mitigations efficacy,Model,Model Mitigations,xAI,0
+External reproducibility of mitigations evaluation,Model,Model Mitigations,xAI,0
+Model theft prevention measures,Model,Model Mitigations,xAI,0
+Release stages,Model,Release,xAI,0
+Risk thresholds,Model,Release,xAI,0
+Versioning protocol,Model,Release,xAI,0
+Change log,Model,Release,xAI,1
+Foundation model roadmap,Model,Release,xAI,1
+Top distribution channels,Model,Release,xAI,1
+Quantization,Model,Release,xAI,0
+Terms of use,Model,Release,xAI,1
+Distribution channels with usage data,Downstream,Usage Data,xAI,0
+Amount of usage,Downstream,Usage Data,xAI,0
+Classification of usage data,Downstream,Usage Data,xAI,0
+Data retention and deletion policy,Downstream,Usage Data,xAI,0
+Geographic statistics,Downstream,Usage Data,xAI,0
+Internal products and services,Downstream,Impact,xAI,0
+External products and services,Downstream,Impact,xAI,0
+Users of internal products and services,Downstream,Impact,xAI,0
+Consumer/enterprise usage,Downstream,Impact,xAI,0
+Enterprise users,Downstream,Impact,xAI,0
+Government use,Downstream,Impact,xAI,0
+Benefits Assessment,Downstream,Impact,xAI,0
+AI bug bounty,Downstream,Post-deployment Monitoring,xAI,0
+Responsible disclosure policy,Downstream,Post-deployment Monitoring,xAI,0
+Safe harbor,Downstream,Post-deployment Monitoring,xAI,0
+Security incident reporting protocol,Downstream,Post-deployment Monitoring,xAI,0
+Misuse incident reporting protocol,Downstream,Post-deployment Monitoring,xAI,0
+Post-deployment coordination with government,Downstream,Post-deployment Monitoring,xAI,0
+Feedback mechanisms,Downstream,Post-deployment Monitoring,xAI,0
+"Permitted, restricted, and prohibited model behaviors",Downstream,Model Behavior Policy,xAI,0
+Model response characteristics,Downstream,Model Behavior Policy,xAI,1
+System prompt,Downstream,Model Behavior Policy,xAI,1
+Intermediate tokens,Downstream,Model Behavior Policy,xAI,1
+Internal product and service mitigations,Downstream,Downstream Mitigations,xAI,1
+External developer mitigations,Downstream,Downstream Mitigations,xAI,0
+Enterprise mitigations,Downstream,Downstream Mitigations,xAI,1
+Detection of machine-generated content,Downstream,Downstream Mitigations,xAI,0
+Documentation for responsible use,Downstream,Downstream Mitigations,xAI,0
+Permitted and prohibited users,Downstream,Acceptable Use Policy,xAI,1
+"Permitted, restricted, and prohibited uses",Downstream,Acceptable Use Policy,xAI,1
+AUP enforcement process,Downstream,Acceptable Use Policy,xAI,1
+AUP enforcement frequency,Downstream,Acceptable Use Policy,xAI,0
+Regional policy variations,Downstream,Acceptable Use Policy,xAI,0
+Oversight mechanism,Downstream,Accountability,xAI,0
+Whistleblower protection,Downstream,Accountability,xAI,0
+Government commitments,Downstream,Accountability,xAI,0
